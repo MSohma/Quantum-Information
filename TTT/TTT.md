@@ -56,3 +56,9 @@ $$
 the modular operator, which is non singular and positive.
 
 ###  2.2 Tomita-Takesaki Theory for finite dimensional von Neumann algebras
+In this sebsection we prove the Tomita-Takesaki theorem for finite dimensional
+von Neumann algebras.
+The Wedderburn theorem states that a finite dimensional $C*$ algebra is  *-isomorphic to a direct sum of simple matrix algebras. That is, there exists *-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}$ such that
+$$
+\varphi:\mathfrak{N}\simeq M(m_1,\mathbb{C})\otimes \cdots \otimes M(m_n,\mathbb{C}).
+$$
