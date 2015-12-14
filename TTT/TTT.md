@@ -48,6 +48,11 @@ $$
  &=(A\xi,B^* \xi)=(A\xi,F_0B\xi).
 \end{split}
 $$
-This means $S_0^* \supset F_0$ and hence the domain of $S_0$ is dense in $\mathfrak{H}$.  
+This means $S_0^* \supset F_0$ and hence the domain of $S_0$ is dense in $\mathfrak{H}$.
+In the following we call $F:=S_0^*$ the adjoint of $S_0$ and
+$$
+\Delta:=FS
+$$
+the modular operator, which is non singular and positive.
 
 ###  2.2 Tomita-Takesaki Theory for finite dimensional von Neumann algebras
