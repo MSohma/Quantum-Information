@@ -62,3 +62,12 @@ The Wedderburn theorem states that a finite dimensional $C*$ algebra is  *-isomo
 $$
 \varphi:\mathfrak{N}\simeq M(m_1,\mathbb{C})\otimes \cdots \otimes M(m_n,\mathbb{C}).
 $$
+Then we can define a faithful tracial state as
+$$
+A\in \mathfrak{N},\tau = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n. 
+$$
+Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}$ has a positive operator $H\in \mathfrak{N}$ such that 
+$$
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N},
+$$
+where $H$ is invertible iff $\omega$ is faithful.
