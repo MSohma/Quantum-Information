@@ -68,6 +68,8 @@ A\in \mathfrak{N},\tau = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n.
 $$
 Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}$ has a positive operator $H\in \mathfrak{N}$ such that 
 $$
-\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N},
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N},\tag{1.7}
 $$
 where $H$ is invertible iff $\omega$ is faithful.
+
+Let us consider GNS representation $\pi:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau)$ given by a faithful tracial state $\tau$, a faithful state $\omega$ and invertical positive operator $H$ given by (1.7). 
