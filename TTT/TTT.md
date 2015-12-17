@@ -73,3 +73,14 @@ $$
 where $H$ is invertible iff $\omega$ is faithful.
 
 Let us consider GNS representation $\pi:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau)$ given by a faithful tracial state $\tau$, a faithful state $\omega$ and invertical positive operator $H$ given by (1.7). 
+Here from the definition of GNS representation we have
+$\mathfrak{H}_\tau=\mathfrak{N},\pi(A)B=AB,A,B\in \mathfrak{N}$ and the inner product of $\mathfrak{H}_\tau$ is given by
+$$
+\langle A,B \rangle_\tau=\tau(A^*B).
+$$
+Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$
+as 
+$$
+\omega(A)=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,
+$$
+where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N})$.
