@@ -35,23 +35,23 @@ Let $\mathfrak{N}\subset \mathfrak{B}(\mathfrak{H})$ be a von Neumann algebras, 
 Then $\xi$ is also cyclic and separating for  combatant of $\mathfrak{N}$, $\mathfrak{N}'$.
 Here we consider anti-linear operators
 $$
-\begin{split}
-S_0 &: \mathfrak{N} \xi \ni A\xi \longrightarrow A^*\xi \in \mathfrak{N}\\
-F_0 &: \mathfrak{N}' \xi \ni B\xi  \longrightarrow B^*\xi \in \mathfrak{N}',
-\end{split}
+S_0 : \mathfrak{N} \xi \ni A\xi \longrightarrow A^*\xi \in \mathfrak{N}\tag{1.1}
+$$
+$$
+F_0 : \mathfrak{N}' \xi \ni B\xi  \longrightarrow B^*\xi \in \mathfrak{N}',\tag{1.2}
 $$
 which are closable operators.
 In fact, if $A\in \mathfrak{N},B\in\mathfrak{B}'$, we have
 $$
 \begin{split}
-(B\xi,S_0A\xi)&=(B\xi,A^* \xi)=(AB\xi,\xi)=(BA\xi,\xi)\\
+(B\xi,S_0A\xi)&=(B\xi,A^* \xi)=(AB\xi,\xi)=(BA\xi,\xi) \\
  &=(A\xi,B^* \xi)=(A\xi,F_0B\xi).
-\end{split}
+\end{split}\tag{1.3}
 $$
 This means $S_0^* \supset F_0$ and hence the domain of $S_0$ is dense in $\mathfrak{H}$.
 In the following we call $F:=S_0^*$ the adjoint of $S_0$ and
 $$
-\Delta:=FS
+\Delta:=FS\tag{1.4}
 $$
 the modular operator, which is non singular and positive.
 
@@ -84,3 +84,7 @@ $$
 \omega(A)=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,
 $$
 where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N})$.
+Then the modular operator $\Delta$ defined by (1.4) is given as
+$$
+\Delta:A\in \mathfrak{H}_\tau\to HAH^{-1}\in \mathfrak{H}_\tau.
+$$
