@@ -64,27 +64,35 @@ $$
 $$
 Then we can define a faithful tracial state as
 $$
-A\in \mathfrak{N},\tau = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n. 
+A\in \mathfrak{N},\tau = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n.
 $$
-Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}$ has a positive operator $H\in \mathfrak{N}$ such that 
+Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}$ has a positive operator $H\in \mathfrak{N}$ such that
 $$
 \omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N},\tag{1.7}
 $$
 where $H$ is invertible iff $\omega$ is faithful.
 
-Let us consider GNS representation $\pi:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau)$ given by a faithful tracial state $\tau$, a faithful state $\omega$ and invertical positive operator $H$ given by (1.7). 
+Let us consider GNS representation $\pi:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau)$ given by a faithful tracial state $\tau$, a faithful state $\omega$ and invertical positive operator $H$ given by (1.7).
 Here from the definition of GNS representation we have
 $\mathfrak{H}_\tau=\mathfrak{N},\pi(A)B=AB,A,B\in \mathfrak{N}$ and the inner product of $\mathfrak{H}_\tau$ is given by
 $$
-\langle A,B \rangle_\tau=\tau(A^*B).
+\langle A,B \rangle_\tau=\tau(A^*B).\tag{1.8}
 $$
 Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$
-as 
-$$
-\omega(A)=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,
+as
+$$\
+\omega(A)=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,\tag{1.9}
 $$
 where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N})$.
 Then the modular operator $\Delta$ defined by (1.4) is given as
 $$
-\Delta:A\in \mathfrak{H}_\tau\to HAH^{-1}\in \mathfrak{H}_\tau.
+\Delta:A\in \mathfrak{H}_\tau\to HAH^{-1}\in \mathfrak{H}_\tau.\tag{1.10}
+$$
+It follows from this equation that
+$$
+\Delta^{-it}\pi(A)\Delta^{it}=\pi(H^{-it}AH^{it}),\quad t \in \mathbb{R},
+$$
+that is,
+$$
+\Delta^{-it}\pi(\mathfrak{N})\Delta^{it}=\pi(\mathfrak{N}),\quad t \in \mathbb{R}.
 $$
