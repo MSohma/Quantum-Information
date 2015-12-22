@@ -17,10 +17,24 @@ we call $\parallel \cdot \parallel $ a norm and $X$ a normed space.
 #### 1.1.2  Hilbert space
 #### 1.1.3  Operator on Hilbert space
 
-### 1.2 Examples of operator algebras
-#### 1.2.1 Definition of *-algebras
-#### 1.2.2 Definition of C*-algebras
-#### 1.2.3 Definition of von Neumann algebras
+### 1.2 Operator Algebras
+#### 1.2.1 *-algebras
+#### 1.2.2 C*-algebras
+#### 1.2.3 von Neumann algebras
+#### 1.2.4 GNS construction for full matrix algebras
+A full matrix algebra $\mathfrak{M}=M(n,\mathbb{C})$ gives a simplest example of von Neumann algebra.
+Using trace on $\mathfrak{M}$, we can define 
+Let us consider  the map
+$$
+\pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{M}),
+$$
+which gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$ equipped with the inner product
+$\langle A,B\rangle=\tau(A^*B)$ 
+For simplicity we deal with the case of $n=2$ for a while.
+
+
+
+
 #### 1.2.4 State
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
 #### 1.3.1 Net
@@ -28,10 +42,14 @@ we call $\parallel \cdot \parallel $ a norm and $X$ a normed space.
 #### 1.3.3 Seven topologies on $\mathfrak{B}(\mathfrak{H})$
 
 ### 1.4 Involutive Antilinear operators
-In Sec. 2 we must deal with antilinear $S$ on a Hilbert space $\mathfrak{H}$,
+In Sec. 2 we must deal with antilinear $S$ on a Hilbert space $\mathfrak{H}$ ,
+
 $$
 S(\lambda \xi +\mu \eta)=\bar{\lambda}S\xi+\bar{\mu}S\eta.
 $$
+
+
+
 We can easily work with the antilinear operator by considering it as a real linear operator on $\mathfrak{H}_\mathbb{R}$.
 
 
