@@ -5,37 +5,46 @@
 
 ## 1. Preliminaries
 ### 1.1 Banach space and Hilbert space
- Let $X$ be a complex vector space. 
-If  a non-negative real number $\parallel x\parallel $ is defined for 
+ Let $X$ be a complex vector space.
+If  a non-negative real number $\parallel x\parallel$ is defined for
 any element $x$ of $X$ and the following conditions are satisfied,
-we call $\parallel \cdot \parallel $ a norm and $X$ a normed space.
+we call $\parallel \cdot \parallel$ a norm and $X$ a normed space.
 1) $\parallel x\parallel =0\Leftrightarrow x=0$
 2) $\parallel x+y \parallel\leq \parallel x\parallel +\parallel y\parallel,\quad x,y\in X$
 3) $\parallel \alpha x\parallel \leq |\alpha| \parallel x \parallel,\quad x\in X, \alpha \in \mathbb{C}$
- 
+
 #### 1.1.1 Banach space
 #### 1.1.2  Hilbert space
 #### 1.1.3  Operator on Hilbert space
 
 ### 1.2 Operator Algebras
 #### 1.2.1 *-algebras
+Let $\mathfrak{A}$ be a linear associative operator over a complex numbers. If there is an involution $\mathfrak{A}\ni A\to A^*\in \mathfrak{A}$ such that $(A^*)^*=A$,$(AB)^*=B^*A^*$,$(\alpha A+\beta B)^*=\bar{\alpha}A^*+\bar{\beta}B^*$,$B\in\mathfrak{A},\alpha,\beta\in \mathbb{C}$,
+we call $\mathfrak{A}$ a *-algebra.
+And a *-albebra $\mathfrak{A}$ with an identity $I$ is called a unital *-algebra.
+For the unital *-algebra, a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying $\omega(A^*A)\geq 0$,$\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+
+
+
+
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
-#### 1.2.4 GNS construction for full matrix algebras
+#### 1.2.5 GNS construction for full matrix algebras
 A full matrix algebra $\mathfrak{M}=M(n,\mathbb{C})$ gives a simplest example of von Neumann algebra.
-Using trace on $\mathfrak{M}$, we can define 
+Using the trace on $\mathfrak{M}$, we can define
+a quasi-bilinear form
+$$
+\ta
+$$
 Let us consider  the map
 $$
 \pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{M}),
 $$
 which gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$ equipped with the inner product
-$\langle A,B\rangle=\tau(A^*B)$ 
+$\langle A,B\rangle=\tau(A^*B)$.
 For simplicity we deal with the case of $n=2$ for a while.
 
 
-
-
-#### 1.2.4 State
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
 #### 1.3.1 Net
 #### 1.3.2 Locally Convex Topology
