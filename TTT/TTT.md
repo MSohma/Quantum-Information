@@ -22,7 +22,8 @@ we call $\parallel \cdot \parallel$ a norm and $X$ a normed space.
 Let $\mathfrak{A}$ be a linear associative operator over a complex numbers. If there is an involution $\mathfrak{A}\ni A\to A^*\in \mathfrak{A}$ such that $(A^*)^*=A$,$(AB)^*=B^*A^*$,$(\alpha A+\beta B)^*=\bar{\alpha}A^*+\bar{\beta}B^*$,$B\in\mathfrak{A},\alpha,\beta\in \mathbb{C}$,
 we call $\mathfrak{A}$ a *-algebra.
 And a *-albebra $\mathfrak{A}$ with an identity $I$ is called a unital *-algebra.
-For the unital *-algebra, a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying $\omega(A^*A)\geq 0$,$\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$  , 
+$\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
 
 
 
@@ -30,18 +31,20 @@ For the unital *-algebra, a linear functional $\omega:\mathfrak{A}\to \mathbb{C}
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
 #### 1.2.5 GNS construction for full matrix algebras
-A full matrix algebra $\mathfrak{M}=M(n,\mathbb{C})$ gives a simplest example of von Neumann algebra.
-Using the trace on $\mathfrak{M}$, we can define
-a quasi-bilinear form
+A full matrix algebra $\mathfrak{M}=M_n(\mathbb{C})$ gives a simple example of von Neumann algebra.
+Using the trace on $\mathfrak{M}$, we can define a tracial state,
 $$
-\ta
+\tau(A)=\mbox{Tr}A/n.
 $$
+For $A=(a_{ij})$ we have $\tau(A^* A)=\sum_{ij}| a_{ij} |^2$, which means 
+that $\tau(A^* A)=0\Leftrightarrow A=0$, i.e. $\tau$ is faithful.
+Hence we have an inner product $\langle A,B \rangle_\tau=\tau(A^* B) $ and we can regard $\mathfrak{M}$ as a Hilbert space and denote it by  $\mathfrak{H}_\tau$.
+
 Let us consider  the map
 $$
-\pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{M}),
+\pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{H}_\tau),
 $$
-which gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$ equipped with the inner product
-$\langle A,B\rangle=\tau(A^*B)$.
+which gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$.
 For simplicity we deal with the case of $n=2$ for a while.
 
 
