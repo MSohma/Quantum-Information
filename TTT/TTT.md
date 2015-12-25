@@ -22,8 +22,9 @@ we call $\parallel \cdot \parallel$ a norm and $X$ a normed space.
 Let $\mathfrak{A}$ be a linear associative operator over a complex numbers. If there is an involution $\mathfrak{A}\ni A\to A^*\in \mathfrak{A}$ such that $(A^*)^*=A$,$(AB)^*=B^*A^*$,$(\alpha A+\beta B)^*=\bar{\alpha}A^*+\bar{\beta}B^*$,$B\in\mathfrak{A},\alpha,\beta\in \mathbb{C}$,
 we call $\mathfrak{A}$ a *-algebra.
 And a *-albebra $\mathfrak{A}$ with an identity $I$ is called a unital *-algebra.
-For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$  , 
-$\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$ , $\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+
+
 
 
 
@@ -43,10 +44,59 @@ Hence we have an inner product $\langle A,B \rangle_\tau=\tau(A^* B) $ and we ca
 Let us consider  the map
 $$
 \pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{H}_\tau),
+$$  where $\pi(A)$ is a bounded operator given by $\pi(A)B=AB$ and this gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$. For simplicity we deal with the case of $n=2$ for a while. Then $\mathfrak{H}_\tau$ has a orthonormal basis,
 $$
-which gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$.
-For simplicity we deal with the case of $n=2$ for a while.
-
+E_{11}=
+\begin{pmatrix}
+\sqrt{n}&0\\
+0&0
+\end{pmatrix},
+E_{12}=
+\begin{pmatrix}
+0&\sqrt{n}\\
+0&0
+\end{pmatrix},
+$$
+$$
+E_{21}=
+\begin{pmatrix}
+0&0\\
+\sqrt{n}&0
+\end{pmatrix},
+E_{22}=
+\begin{pmatrix}
+0&0\\
+0&\sqrt{n}
+\end{pmatrix},
+$$
+by which a matrix
+$$
+A=
+\begin{pmatrix}
+a&b\\
+c&d
+\end{pmatrix}
+$$
+can be represented as
+$$
+A=\frac{1}{\sqrt{n}}(aE_{11}+bE_{12}+cE_{21}+dE_{22}).
+$$
+From 
+$$
+\begin{split}
+(\pi(A)E_{11},...,\pi(A)E_{22})&=(AE_{11},....,AE_{22})\\
+&=(E_{11},....,E_{22})
+\begin{pmatrix}
+aI_2 &bI_2  \\
+cI_2 &dI_2
+\end{pmatrix}
+\end{split}
+$$
+we can find that a matrix representation of $\pi(A)$ is 
+given by $A\otimes I_2$. It is easy to see 
+$$
+\pi(A)^*=\pi(A^*)=A^*\otimes I_2.
+$$
 
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
 #### 1.3.1 Net
