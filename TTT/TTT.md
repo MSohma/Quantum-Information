@@ -94,10 +94,37 @@ cI_2 &dI_2
 \end{split}
 $$
 we can find that a matrix representation of $\pi(A)$ is
-given by $A\otimes I_2$. It is easy to see
+given by $A\otimes I_2$. It is easy to see that
 $$
 \pi(A)^*=\pi(A^*)=A^*\otimes I_2.
 $$
+We are interested in von Neumann algebra $\pi(\mathfrak{M})=\mathfrak{M}\otimes I_2$ in $M_4(\mathbb{C})$.
+Let us obtain the commutant
+$$
+\pi(\mathfrak{M})^{\prime}=\{X\in M_4(\mathbb{C}); YX=XY, \forall Y\in \pi(\mathfrak{M})\}.
+$$
+We assume that $X\in M_4(\mathbb{C})$
+commutes with any elements of $\pi(\mathfrak{M})$.
+Taking into account that
+any elements of $M_4(\mathbb{C})$ has a form as
+$$
+X=X_{11}\otimes E_{11}+X_{12}\otimes E_{12}+X_{21}\otimes E_{21}+X_{22}\otimes E_{22},
+$$
+we have
+$$
+\sum_{i,j=1}^2(X_{ij}A-AX_{ij})\otimes E_{ij}=0.
+$$
+This means that
+$$
+X_{ij}A-AX_{ij}=0, \forall A\in \mathfrak{M}
+$$
+holds for any integer $1\leq i,j\leq 2$,that is,
+$X_{ij}=kI$.
+Thus we find that
+$$
+\pi(\mathfrak{M})^\prime=I_2\otimes \mathfrak{M}.
+$$
+
 
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
 #### 1.3.1 Net
