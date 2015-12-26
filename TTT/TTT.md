@@ -37,14 +37,15 @@ Using the trace on $\mathfrak{M}$, we can define a tracial state,
 $$
 \tau(A)=\mbox{Tr}A/n.
 $$
-For $A=(a_{ij})$ we have $\tau(A^* A)=\sum_{ij}| a_{ij} |^2$, which means 
+For $A=(a_{ij})$ we have $\tau(A^* A)=\sum_{ij}| a_{ij} |^2$, which means
 that $\tau(A^* A)=0\Leftrightarrow A=0$, i.e. $\tau$ is faithful.
-Hence we have an inner product $\langle A,B \rangle_\tau=\tau(A^* B) $ and we can regard $\mathfrak{M}$ as a Hilbert space and denote it by  $\mathfrak{H}_\tau$.
+Hence we have an inner product $\langle A,B \rangle_\tau=\tau(A^* B)$ and we can regard $\mathfrak{M}$ as a Hilbert space and denote it by  $\mathfrak{H}_\tau$.
 
 Let us consider  the map
 $$
 \pi:\mathfrak{M}\to\mathfrak{B}(\mathfrak{H}_\tau),
-$$  where $\pi(A)$ is a bounded operator given by $\pi(A)B=AB$ and this gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$. For simplicity we deal with the case of $n=2$ for a while. Then $\mathfrak{H}_\tau$ has a orthonormal basis,
+$$  
+where $\pi(A)$ is a bounded operator given by $\pi(A)B=AB$ and this gives a GNS representation of $\mathfrak{M}$ on the Hilbert space $\mathfrak{H}_\tau=\mathfrak{M}$. For simplicity we deal with the case of $n=2$ for a while. Then $\mathfrak{H}_\tau$ has a orthonormal basis,
 $$
 E_{11}=
 \begin{pmatrix}
@@ -81,7 +82,7 @@ can be represented as
 $$
 A=\frac{1}{\sqrt{n}}(aE_{11}+bE_{12}+cE_{21}+dE_{22}).
 $$
-From 
+From
 $$
 \begin{split}
 (\pi(A)E_{11},...,\pi(A)E_{22})&=(AE_{11},....,AE_{22})\\
@@ -92,8 +93,8 @@ cI_2 &dI_2
 \end{pmatrix}
 \end{split}
 $$
-we can find that a matrix representation of $\pi(A)$ is 
-given by $A\otimes I_2$. It is easy to see 
+we can find that a matrix representation of $\pi(A)$ is
+given by $A\otimes I_2$. It is easy to see
 $$
 \pi(A)^*=\pi(A^*)=A^*\otimes I_2.
 $$
