@@ -27,7 +27,11 @@ For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
 #### 1.2.5 GNS construction for full matrix algebras
-A full matrix algebra $\mathfrak{M}=M_n(\mathbb{C})$ gives a simple example of von Neumann algebra.
+A full matrix algebra
+$$
+\mathfrak{M}=M_n(\mathbb{C})
+$$
+gives a simple example of von Neumann algebra.
 Using the trace on $\mathfrak{M}$, we can define a tracial state,
 $$
 \tau(A)=\mbox{Tr}A/n.
@@ -77,7 +81,7 @@ can be represented as
 $$
 A=\frac{1}{\sqrt{n}}(aE_{11}+bE_{12}+cE_{21}+dE_{22}),
 $$
-and $\mathfrak{B}(\mathfrak{M})=M_4(\mathbb{C})$.
+and $\mathfrak{B}(\mathfrak{M})=M_4(\mathbb{C})\backsimeq M_2(\mathbb{C})\otimes M_2(\mathbb{C})$.
 From
 $$
 \begin{split}
@@ -120,6 +124,21 @@ Thus we find that
 $$
 \pi(\mathfrak{M})^\prime=I_2\otimes \mathfrak{M}.
 $$
+We can also consider another representation
+$$
+\tilde{\pi}:\mathfrak{M}\to \mathfrak{B}(\mathfrak{H}_\tau),
+$$
+where $\tilde{\pi}$ is given by
+$$
+\tilde{\pi}(A)B=BA^T.
+$$
+Then we have
+$$
+\tilde{\pi}(A)^*=\tilde{\pi}(A^*),
+\tilde{\pi}(A^*)B=B(A^T)^*
+$$
+
+
 
 
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
