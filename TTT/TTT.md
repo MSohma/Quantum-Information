@@ -24,11 +24,6 @@ we call $\mathfrak{A}$ a *-algebra.
 And a *-albebra $\mathfrak{A}$ with an identity $I$ is called a unital *-algebra.
 For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$ , $\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
 
-
-
-
-
-
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
 #### 1.2.5 GNS construction for full matrix algebras
@@ -76,12 +71,13 @@ A=
 \begin{pmatrix}
 a&b\\
 c&d
-\end{pmatrix}
+\end{pmatrix}\in \mathfrak{H}_\tau
 $$
 can be represented as
 $$
-A=\frac{1}{\sqrt{n}}(aE_{11}+bE_{12}+cE_{21}+dE_{22}).
+A=\frac{1}{\sqrt{n}}(aE_{11}+bE_{12}+cE_{21}+dE_{22}),
 $$
+and $\mathfrak{B}(\mathfrak{M})=M_4(\mathbb{C})$.
 From
 $$
 \begin{split}
