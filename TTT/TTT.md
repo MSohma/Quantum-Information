@@ -196,7 +196,7 @@ $$
 $$
 Then we can define a faithful tracial state as
 $$
-A\in \mathfrak{N},\tau = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n.
+A\in \mathfrak{N},\tau(A) = {\rm Tr}\varphi (A) /m,\quad m=m_1+\cdots + m_n.
 $$
 Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}$ has a positive operator $H\in \mathfrak{N}$ such that
 $$
@@ -220,6 +220,24 @@ Then the modular operator $\Delta$ defined by (1.4) is given as
 $$
 \Delta:A\in \mathfrak{H}_\tau\to HAH^{-1}\in \mathfrak{H}_\tau.\tag{1.10}
 $$
+In fact, $H\in GL_n(\mathbb{C})$
+is a cyclic and separating vector for
+$\mathfrak{N}$ and we can define an
+anti-linear operator as
+$$
+S_0:AH^{1/2}\to A^*H^{1/2}.
+$$
+Putting $X=AH^{1/2}$, we have
+$A=XH^{-1/2}$, $A^*=H^{-1/2}X^*$
+and hence
+$$
+S_0X=H^{-1/2}X^*H^{1/2}.
+$$
+On the other hand, for
+$$
+F_0:H^{1/2}A^T
+$$
+
 It follows from this equation that
 $$
 \Delta^{-it}\pi(A)\Delta^{it}=\pi(H^{-it}AH^{it}),\quad t \in \mathbb{R},
