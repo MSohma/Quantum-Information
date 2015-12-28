@@ -134,12 +134,25 @@ $$
 $$
 Then we have
 $$
-\tilde{\pi}(A)^*=\tilde{\pi}(A^*),
-\tilde{\pi}(A^*)B=B(A^T)^*
+\begin{split}
+(\tilde{\pi}(A)E_{11},...,\tilde{\pi}(A)E_{22})&=(E_{11}A^T,....,E_{22}A^T)\\
+&=(E_{11},...,E_{22})
+\begin{pmatrix}
+a&b&0&0\\
+c&d&0&0\\
+0&0&a&b\\
+0&0&c&d
+\end{pmatrix}\\
+&=(E_{11},...,E_{22})(I_2\otimes A),
+\end{split}
 $$
-
-
-
+This means that action of $\pi(\mathfrak{M})^{\prime}$  on $\mathfrak{H}_\tau$ is represented
+by $\tilde{\pi}$ using $A\in\mathfrak{M}$ and that $\pi(\mathfrak{M})^{\prime}H^{1/2}=\{H^{1/2}A^T;A\in \mathfrak{M}\}$.
+Note that
+$$
+\tilde{\pi}(A)^*=\tilde{\pi}(A^*),
+\tilde{\pi}(A^*)B=B(A^T)^*.
+$$
 
 ### 1.3 Topology on $\mathfrak{B}(\mathfrak{H})$
 #### 1.3.1 Net
@@ -210,9 +223,8 @@ $\mathfrak{H}_\tau=\mathfrak{N},\pi(A)B=AB,A,B\in \mathfrak{N}$ and the inner pr
 $$
 \langle A,B \rangle_\tau=\tau(A^*B).\tag{1.8}
 $$
-Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$
-as
-$$\
+Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$ as
+$$
 \omega(A)=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,\tag{1.9}
 $$
 where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N})$.
