@@ -105,3 +105,9 @@ $$
 $$
 
 ### 2.3 Matrix representation of modular operator 
+Let us consider the case $\mathfrak{M}=M_2(\mathbb{C})$ with the basis $\{E_{ij}\}$  and a positive operator $H$ as in Sec. 1.2.5. 
+In this section we consider $\mathfrak{M}$ as a $8$-dimensional real vector space. Then we take a new basis 
+$$
+\{ U^* E_{kl}U,U^* \tilde{E}_{kl}U; k,l=1,2 \},
+$$
+where $\tilde{E}_{kl}=iE_{kl}$.
