@@ -111,3 +111,35 @@ $$
 \{ U^* E_{kl}U,U^* \tilde{E}_{kl}U; k,l=1,2 \},
 $$
 where $\tilde{E}_{kl}=iE_{kl}$.
+Firstly, we will obtain the  matrix representation for a multiplication by i.
+From
+$$
+\begin{split}
+i(U^* E_{kl}U)&=U^* iE_{kl}U=U^* \tilde{E}_{kl}U\\
+i(U^* \tilde{E}_{kl}U)&=U^* i\tilde{E}_{kl}U=-U^* E_{kl}U,
+\end{split}
+$$
+we have
+$$
+\begin{split}
+(iU^* E_{11}U &, iU^* \tilde{E}_{11}U,....,iU^* E_{22}U,iU^* \tilde{E}_{22}U)\\
+=&(U^* E_{11}U,...,U^*\tilde{E}_{22}U)
+\begin{pmatrix}
+J_2&0&0&0\\
+0&J_2&0&0\\
+0&0&J_2&0\\
+0&0&0&J_2
+\end{pmatrix}
+\end{split},
+$$
+with 
+$$
+J_2=
+\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}.
+$$
+
+
+
