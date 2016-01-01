@@ -86,7 +86,7 @@ Putting $X=H^{1/2}A^T$, we have $A^T=H^{-1/2}X$, $(A^T)^*=X^*H^{-1/2}$ and hence
 $$
 F_0X=H^{1/2}X^*H^{-1/2}.
 $$
-Thus 
+Thus
 $$
 \begin{split}
 \Delta X&=F_0S_0X=F_0(H^{-1/2}X^*H^{1/2})\\
@@ -104,9 +104,9 @@ $$
 \Delta^{-it}\pi(\mathfrak{N})\Delta^{it}=\pi(\mathfrak{N}),\quad t \in \mathbb{R}.
 $$
 
-### 2.3 Matrix representation of modular operator 
-Let us consider the case $\mathfrak{M}=M_2(\mathbb{C})$ with the basis $\{E_{ij}\}$  and a positive operator $H$ as in Sec. 1.2.5. 
-In this section we consider $\mathfrak{M}$ as a $8$-dimensional real vector space. Then we take a new basis 
+### 2.3 Matrix representation of modular operator
+Let us consider the case $\mathfrak{M}=M_2(\mathbb{C})$ with the basis $\{E_{ij}\}$  and a positive operator $H$ as in Sec. 1.2.5.
+In this section we consider $\mathfrak{M}$ as a $8$-dimensional real vector space. Then we take a new basis
 $$
 \{ U^* E_{kl}U,U^* \tilde{E}_{kl}U; k,l=1,2 \},
 $$
@@ -132,7 +132,7 @@ J_2&0&0&0\\
 \end{pmatrix}
 \end{split},
 $$
-with 
+with
 $$
 J_2=
 \begin{pmatrix}
@@ -140,6 +140,103 @@ J_2=
 1&0
 \end{pmatrix}.
 $$
+This indicates matrix representation for a multiplication by i is given by
+$I_4\otimes J_2$.
 
-
-
+Secondly we will obtain the matrix representation of $S_0$, which is given as $S_0X=H^{-1/2}X^*H^{1/2}$.
+Since $H$ is a positive operator,
+$$
+H^{1/2}=U^*
+\begin{pmatrix}
+\lambda_1&0\\
+0&\lambda_2
+\end{pmatrix}
+U,
+$$
+with $\lambda_1,\lambda_2\geq 0$ and a unitary operator $U$.
+Hence we get
+$$
+U(S_0 X)U^* =
+\begin{pmatrix}
+\lambda_1^{-1}&0\\
+0&\lambda_2^{-1}
+\end{pmatrix}
+(UXU^*)^*
+\begin{pmatrix}
+\lambda_1&0\\
+0&\lambda_2
+\end{pmatrix}.
+$$
+Now we consider a basis
+$$
+\{U^* E_{kl} U,U^* \tilde{E}_{kl} U; k,l=1,2\}.
+$$
+Then
+$$
+\begin{split}
+S_0U^* E_{11}U&=
+U^*
+\begin{pmatrix}
+\lambda_1^{-1}&0\\
+0&\lambda_2^{-1}
+\end{pmatrix}
+\begin{pmatrix}
+1&0\\
+0&0
+\end{pmatrix}
+\begin{pmatrix}
+\lambda_1&0\\
+0&\lambda_2
+\end{pmatrix}
+U\\
+&=U^* E_{11}U.
+\end{split}
+$$
+In a similar manner, we have
+$$
+\begin{split}
+S_0U^*\tilde{E}_{11}U&=-U^*\tilde{E}_{11}U\\
+S_0U^*{E}_{12}U&=\lambda_1\lambda_2^{-1}U^*{E}_{21}U\\
+S_0U^*\tilde{E}_{12}U&=-\lambda_1\lambda_2^{-1}U^*\tilde{E}_{21}U\\
+S_0U^*{E}_{21}U&=\lambda_1^{-1}\lambda_2U^*{E}_{12}U\\
+S_0U^*\tilde{E}_{21}U&=-\lambda_1^{-1}\lambda_2U^*\tilde{E}_{12}U\\
+S_0U^* {E}_{22}U&=U^* {E}_{22}U\\
+S_0U^*\tilde{E}_{22}U&=-U^*\tilde{E}_{22}U.
+\end{split}
+$$
+Thus we find the matrix representation of $S_0$ as
+$$
+\begin{pmatrix}
+1&0&0&0&0&0&0&0\\
+0&-1&0&0&0&0&0&0\\
+0&0&0&0&\lambda_1^{-1}\lambda_2&0&0&0\\
+0&0&0&0&0&-\lambda_1^{-1}\lambda_2&0&0\\
+0&0&\lambda_1\lambda_2^{-1}&0&0&0&0&0\\
+0&0&0&-\lambda_1\lambda_2^{-1}&0&0&0&0\\
+0&0&0&0&0&0&1&0\\
+0&0&0&0&0&0&0&-1
+\end{pmatrix},
+$$
+which can be also written as
+$$
+A_{S_0}\otimes J^{\prime}_2,
+$$
+with
+$$
+\begin{split}
+A_{S_0}&=
+\begin{pmatrix}
+1&0&0&0\\
+0&0&\lambda_1^{-1}\lambda_2&0\\
+0&\lambda_1\lambda_2^{-1}&0&0\\
+0&0&0&1
+\end{pmatrix},\\
+J^{\prime}_2&=
+\begin{pmatrix}
+1&0\\
+0&-1
+\end{pmatrix}.
+\end{split}
+$$
+Remark that $(A_{S_0}\otimes J^{\prime}_2)(I_4\otimes J_2)=-(I_4\otimes J_2)(A_{S_0}\otimes J^{\prime}_2)$
+means anti-linearity of $S_0$, i.e. $S_0i=-iS_0$.
