@@ -9,8 +9,11 @@
 If  a non-negative real number $\parallel x\parallel$ is defined for
 any element $x$ of $X$ and the following conditions are satisfied,
 we call $\parallel \cdot \parallel$ a norm and $X$ a normed space.
+
 1) $\parallel x\parallel =0\Leftrightarrow x=0$
+
 2) $\parallel x+y \parallel\leq \parallel x\parallel +\parallel y\parallel,\quad x,y\in X$
+
 3) $\parallel \alpha x\parallel \leq |\alpha| \parallel x \parallel,\quad x\in X, \alpha \in \mathbb{C}$
 
 #### 1.1.1 Banach space
