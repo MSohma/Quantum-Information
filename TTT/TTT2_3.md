@@ -158,12 +158,11 @@ J^{\prime}_2&=
 \end{split}
 $$
 Finally we obtain the matrix representation
-of $\Delta$ as
+of $\Delta=F_0S_0$ as
 $$
-\begin{split}
-\Delta&=F_0S_0=A_{F_0}A_{S_0}\otimes J_2^2\\
-&=A_{\Delta}\otimes I_2,
-\end{split}
+(A_{F_0}\otimes J_2)(A_{S_0}\otimes J_2)=
+A_{F_0}A_{S_0}\otimes J_2^2
+=A_{\Delta}\otimes I_2,
 $$
 with
 $$
@@ -173,5 +172,46 @@ A_{\Delta}=
 0&{\lambda_1\lambda_2^{-1}}&0&0\\
 0&0&{\lambda_1^{-1}\lambda_2}&0\\
 0&0&0&1
+\end{pmatrix},
+$$
+which gives a complex matrix representation of $\Delta$.
+From this we can define $\Delta^{it}$
+through the complex matrix representation as
+$$
+\Delta^{it}\Leftrightarrow
+A_{\Delta^{it}}=
+\begin{pmatrix}
+1&0&0&0\\
+0&(\lambda_1\lambda_2^{-1})^{it}&0&0\\
+0&0&(\lambda_1^{-1}\lambda_2)^{it}&0\\
+0&0&0&1
 \end{pmatrix}.
+$$
+On the other hand the complex matrix representation for $X\to H^{it}XH^{-it}$
+is
+$$
+\begin{pmatrix}
+1&0&0&0\\
+0&\lambda_1^{it}(\lambda_2^{it})^{-1}&0&0\\
+0&0&(\lambda_1^{it})^{-1}\lambda_2^{it}&0\\
+0&0&0&1
+\end{pmatrix},
+$$
+and hence we have
+$$
+\Delta^{it}X=H^{it}XH^{-it}.
+$$
+Now we can easily show the following relation.
+$$
+\Delta^{-it}\pi(A)\Delta^{it} =\pi(H^{-it}AH^{it}).
+$$
+In fact,
+since $\pi(A)B=AB$,
+$$
+\begin{split}
+\Delta^{-it}\pi(A)\Delta^{it}B&=\Delta^{-it}\pi(A)(H^{it}BH^{-it})\\
+&=\Delta^{-it}(AH^{it}BH^{-it})\\
+&=H^{-it}AH^{it}BH^{-it}H^{it}\\
+&=H^{-it}AH^{it}B=\pi(H^{-it}AH^{it})B.
+\end{split}
 $$
