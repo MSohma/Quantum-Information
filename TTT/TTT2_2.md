@@ -1,8 +1,8 @@
-<h3> 2.2 Tomita-Takesaki Theory for finite dimensional von Neumann algebras</h3>
+<h3> 2.2 Tomita-Takesaki Theory for finite dimensional von Neumann algebras </h3>
 
 In this sebsection we prove the Tomita-Takesaki theorem for finite dimensional
 von Neumann algebras.
-The Wedderburn theorem states that a finite dimensional $C*$ algebra is  *-isomorphic to a direct sum of simple matrix algebras. That is, there exists *-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}$ such that
+The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}$ such that
 $$
 \varphi:\mathfrak{N}\simeq \mathfrak{M}:=M(m_1,\mathbb{C})\otimes \cdots \otimes M(m_n,\mathbb{C}).
 $$
@@ -64,7 +64,7 @@ $$
 $$
 that is,
 $$
-\Delta_\tau ^{-it}\pi(\mathfrak{M})\Delta_\tau ^{it}=\pi(\mathfrak{M}),\quad t \in \mathbb{R}.
+\Delta_\tau ^{-it}\pi(\mathfrak{M})\Delta_\tau ^{it}=\pi(\mathfrak{M}),\quad t \in \mathbb{R} \tag{2.2.4}.
 $$
 
 Let us consider the state on $\mathfrak{N}$
@@ -85,10 +85,14 @@ $$
 $$
 which means
 $$
-U:\mathfrak{H}_\tau\ni\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{H}, \quad A\in \mathfrak{M} \tag{2.2.4}
+U:\mathfrak{H}_\tau\ni\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{H}, \quad A\in \mathfrak{M}
 $$
 gives a unitary operator from $\mathfrak{H}_\tau$ to $\mathfrak{H}$.
-Since $\phi$ is bijective, Eq.(2.2.4) can be rewritten as
+This unitary operator combines $\Delta$ and $\Delta_{\tau}$ as
 $$
-U:\mathfrak{H}_\tau\ni\pi(\phi(A))H^{1/2}\to A\xi\in\mathfrak{H},\quad  A\in\mathfrak{N}
+\Delta_\tau=U^{\ast}\Delta U,
+$$
+and gives the main result of Tomita-Takesaki Theory,
+$$
+\Delta^{-it}\mathfrak{N}\Delta^{it}=\mathfrak{N}.
 $$
