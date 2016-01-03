@@ -12,7 +12,7 @@ A\in \mathfrak{M},\tau(A) = {\rm Tr}A /m,\quad m=m_1+\cdots + m_n.
 $$
 Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{M}$ has a positive operator $H\in \mathfrak{M}$ such that
 $$
-\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{M},\tag{1.7}
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{M},\tag{2.2.1}
 $$
 where $H$ is invertible iff $\omega$ is faithful.
 
@@ -20,11 +20,11 @@ Let us consider GNS representation $\pi:\mathfrak{M}\to \mathfrak{B}(\mathfrak{H
 Here from the definition of GNS representation we have
 $\mathfrak{H}_\tau=\mathfrak{M},\pi(A)B=AB,A,B\in \mathfrak{M}$ and the inner product of $\mathfrak{H}_\tau$ is given by
 $$
-\langle A,B \rangle_\tau=\tau(A^*B).\tag{1.8}
+\langle A,B \rangle_\tau=\tau(A^*B).\tag{2.2.2}
 $$
 Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$ as
 $$
-\omega(A)=\tau(H^{1/2}AH^{1/2})=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,\tag{1.9}
+\omega(A)=\tau(H^{1/2}AH^{1/2})=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,\tag{2.2.3}
 $$
 where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{M})$.
 Then  the
@@ -85,6 +85,10 @@ $$
 $$
 which means
 $$
-U:\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi
+U:\mathfrak{H}_\tau\ni\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{H}, \quad A\in \mathfrak{M} \tag{2.2.4}
 $$
 gives a unitary operator from $\mathfrak{H}_\tau$ to $\mathfrak{H}$.
+Since $\phi$ is bijective, Eq.(2.2.4) can be rewritten as
+$$
+U:\mathfrak{H}_\tau\ni\pi(\phi(A))H^{1/2}\to A\xi\in\mathfrak{H},\quad  A\in\mathfrak{N}
+$$
