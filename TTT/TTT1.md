@@ -22,10 +22,27 @@ we call $\parallel \cdot \parallel$ a norm and $X$ a normed space.
 
 ### 1.2 Operator Algebras
 #### 1.2.1 *-algebras
-Let $\mathfrak{A}$ be a linear associative operator over a complex numbers. If there is an involution $\mathfrak{A}\ni A\to A^*\in \mathfrak{A}$ such that $(A^*)^*=A$,$(AB)^*=B^*A^*$,$(\alpha A+\beta B)^*=\bar{\alpha}A^*+\bar{\beta}B^*$,$B\in\mathfrak{A},\alpha,\beta\in \mathbb{C}$,
-we call $\mathfrak{A}$ a *-algebra.
-And a *-albebra $\mathfrak{A}$ with an identity $I$ is called a unital *-algebra.
-For the unital *-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$ , $\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+
+
+Let $\mathfrak{A}$ be a linear associative algebra over a complex numbers. If there is an involution $\mathfrak{A}\ni A\to A^*\in \mathfrak{A}$ such that $(A^*)^*=A$,$(AB)^*=B^*A^*$,$(\alpha A+\beta B)^*=\bar{\alpha}A^*+\bar{\beta}B^*$,$B\in\mathfrak{A},\alpha,\beta\in \mathbb{C}$,
+we call $\mathfrak{A}$ a $\ast$-algebra.
+And a $\ast$-albebra $\mathfrak{A}$ with an identity $I$ is called a unital $\ast$-algebra.
+For the unital $\ast$-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$ , $\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
+
+Let $\mathfrak{A},\mathfrak{B}$ be *-algebra. A linear map $\phi$ satisfying the following conditions is called <b> $\ast$-homomorphism </b>.
+
+1. $\phi(AB)=\phi(A)\phi(B),\quad A,B\in\mathfrak{A}$
+
+2. $\phi(A^{\ast} )=\phi(A)^{\ast}$
+
+
+If $\ast$-homomorphism $\phi$ is bijective, $\phi$ is called
+$\ast$- **isomorphism**.
+Let $\mathfrak{A}$ be a unital $\ast$-algebra, $\mathfrak{B}$ a $\ast$-algebra and $\phi:\mathfrak{A}\to\mathfrak{B}$
+a $\ast$-isomorphism. Then $\mathfrak{B}$ is also unital and
+$\phi(I)=I$.In fact, $\forall A\in\mathfrak{A},IA=A$ and hence $\phi(I)\phi(A)=\phi(A)$, which means
+$\phi(I)$ is the unit element of $\mathfrak{B}$. 
+
 
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
@@ -150,7 +167,7 @@ c&d&0&0\\
 \end{split}
 $$
 This means that action of $\pi(\mathfrak{M})^{\prime}$  on $\mathfrak{H}_\tau$ is represented
-by $\tilde{\pi}$ using $A\in\mathfrak{M}$ and that 
+by $\tilde{\pi}$ using $A\in\mathfrak{M}$ and that
 $$
 \pi(\mathfrak{M})^{\prime}H^{1/2}=\{\tilde{\pi}(A)H^{1/2};A\in \mathfrak{M}\}=\{H^{1/2}A^T;A\in \mathfrak{M}\}.
 $$
@@ -176,6 +193,3 @@ $$
 
 We can easily work with the antilinear operator by considering it as a real linear operator on $\mathfrak{H}_\mathbb{R}$.
 test
-
-
-
