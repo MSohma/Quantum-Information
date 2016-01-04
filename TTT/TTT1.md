@@ -29,7 +29,7 @@ we call $\mathfrak{A}$ a $\ast$-algebra.
 And a $\ast$-albebra $\mathfrak{A}$ with an identity $I$ is called a unital $\ast$-algebra.
 For the unital $\ast$-algebra $\mathfrak{A}$,  a linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying  $\omega (A^{ * } A)\geq 0$ , $\forall A\in \mathfrak{A}$ and $\omega(I)=1$ is called a **state**.
 
-Let $\mathfrak{A},\mathfrak{B}$ be *-algebra. A linear map $\phi$ satisfying the following conditions is called <b> $\ast$-homomorphism </b>.
+Let $\mathfrak{A},\mathfrak{B}$ be $\ast$-algebra. A linear map $\phi$ satisfying the following conditions is called <b> $\ast$-homomorphism </b>.
 
 1. $\phi(AB)=\phi(A)\phi(B),\quad A,B\in\mathfrak{A}$
 
@@ -41,11 +41,22 @@ $\ast$- **isomorphism**.
 Let $\mathfrak{A}$ be a unital $\ast$-algebra, $\mathfrak{B}$ a $\ast$-algebra and $\phi:\mathfrak{A}\to\mathfrak{B}$
 a $\ast$-isomorphism. Then $\mathfrak{B}$ is also unital and
 $\phi(I)=I$.In fact, $\forall A\in\mathfrak{A},IA=A$ and hence $\phi(I)\phi(A)=\phi(A)$, which means
-$\phi(I)$ is the unit element of $\mathfrak{B}$. 
+$\phi(I)$ is the unit element of $\mathfrak{B}$.
 
 
 #### 1.2.2 C*-algebras
 #### 1.2.3 von Neumann algebras
+Let $\mathfrak{M}$ be a von Neumann algebra and $\omega$ a positive linear functional on $\mathfrak{M}$.
+If $\omega(\mbox{l.u.b.}_\alpha A_\alpha)=\mbox{l.u.b.}_\alpha \omega(A_\alpha)$ for all increasing nets $\{A_\alpha\}$ in $\mathfrak{M}_+$ with an upper bound then $\omega$ is defined to be **normal**.
+
+Let $\omega$ be a state on a von Neumann algebra $\mathfrak{M}$ acting on a Hilbert space $\mathfrak{H}$.
+The following conditions are equivalen:
+
+1. $\omega$ is normal.
+2. $\omega$ is $\sigma$-weakly continuous.
+3. there exists a density matrix $\rho$, i.e., a positive trace-class operator $\rho$ on $\mathfrak{H}$ with $\mbox{Tr}(\rho)=1$, such that $\omega(A)=\mbox{Tr}(\rho A)$.
+(Bratteli p.76)
+
 #### 1.2.5 GNS construction for full matrix algebras
 A full matrix algebra
 $$
