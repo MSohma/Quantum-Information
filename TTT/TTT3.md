@@ -15,3 +15,11 @@ involution $X\to X^{\ast}$ is an anti-unitary operator with respect to to it, i.
 $$
 \mathfrak{a}(Y^*,X^*)=\overline{\mathfrak{a}(Y,X)}.
 $$
+
+$$
+\begin{split}
+\left(1+\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_j}{s_j+s_k}x_{jk}\right]\\
+\left(1-\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_k}{s_j+s_k}x_{jk}\right]\\
+\left(1+\frac{1}{4}\mathfrak{D}^2\right)([x_{jk}])&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
+\end{split}
+$$
