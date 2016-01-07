@@ -16,6 +16,61 @@ $$
 \mathfrak{a}(Y^*,X^*)=\overline{\mathfrak{a}(Y,X)}.
 $$
 
+
+## Holevo's commutation operator
+
+We call a operator satisfying the following equation a commutation operator.
+$$
+[A,X]=\langle A, \mathfrak{D}X\rangle, \quad A,X\in H
+$$
+$$
+\begin{split}
+[A,X]&=i\omega(A^\ast X-XA^\ast)=i\mbox{Tr}\rho(A^\ast X-XA^\ast)\\
+     &=\mbox{Tr}A^\ast i(X\rho-\rho X)\\
+\langle A,Y\rangle&=\omega((YA^\ast+A^\ast Y)/2)=\mbox{Tr}\rho((YA^\ast+A^\ast Y)/2)\\
+&=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2
+\end{split}
+$$
+より、
+$$
+(\rho Y+Y\rho)/2=i(X\rho-\rho X)
+$$
+
+Putting $X=(x_{jk}),Y=\mathfrak{D}X=(y_{jk}),\rho=\mbox{diag}(s_1,s_2)$,
+let us obtain matrix representation for the commutation operator 
+  $$
+  \begin{pmatrix}
+  s_1y_{11}&\frac{s_1+s_2}{2}y_{12}\\
+  \frac{s_1+s_2}{2}y_{21}&s_2y_{22}
+  \end{pmatrix}
+  =
+  i \begin{pmatrix}
+  0&(s_2-s_1)x_{12}\\
+  (s_1-s_2)x_{21}&0
+  \end{pmatrix}
+  $$
+  より
+  $$
+  \begin{pmatrix}
+  y_{11}\\
+  y_{12}\\
+  y_{21}\\
+  y_{22}
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+  0&0&0&0\\
+  0&\frac{2i(s_2-s_1)}{s_1+s_2}&0&0\\
+  0&0&\frac{2i(s_1-s_2)}{s_1+s_2}&0\\
+  0&0&0&0
+  \end{pmatrix}
+  \begin{pmatrix}
+  x_{11}\\
+  x_{12}\\
+  x_{21}\\
+  x_{22}
+  \end{pmatrix}
+  $$
 $$
 \begin{split}
 \left(1+\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_j}{s_j+s_k}x_{jk}\right]\\
