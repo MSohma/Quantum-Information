@@ -23,3 +23,16 @@ $$
 \left(1+\frac{1}{4}\mathfrak{D}^2\right)([x_{jk}])&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
 \end{split}
 $$
+
+
+The elements of ${\cal L}^2_h(S)$ can be naturally identified with the equivalence classes of suquare-summable operators with the inner product
+defined by
+  $$
+     \langle Y,X \rangle_S=\mbox{Re}\sum_{j}s_j\langle Y\psi_j|X\psi_j\rangle
+  $$
+  namely, if $\{X_n\}$ be a Cauchy sequences with respect to the pre-inner product
+  $$
+    \langle Y,X\rangle_S =\mbox{Re}\mbox{Tr}SYX,\quad  X,Y\in \mathfrak{B}_h(\mathfrak{H}),
+  $$
+  then there is  a square-summable operator $X$ such that $\lim_n\langle X_n-X,X_n-X\rangle =0$, and conversly any square-summable operator is a
+  limit of a Cauchy sequence $\{X_n\}\subset \mathfrak{B}_h(\mathfrak{H})$.
