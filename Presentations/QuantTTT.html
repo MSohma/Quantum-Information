@@ -86,7 +86,7 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 <!---------------------------------------------------------------------------->
 
 <section>
-<h3> <font color=skyblue> $Examples of \ast$ algebra</font></h3>
+<h3> <font color=skyblue> Examples of $\ast$ algebra</font></h3>
 <div align="left">
 <ul>
 	<li> $M_n(\mathbb{C})$:full matrix algebra of all $n\times n$ complex matrices.
@@ -100,6 +100,58 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 </div>
 </section>
 
+<!---------------------------------------------------------------------------->
+
+<section>
+<h3><font color=skyblue>Self-adjoint element </font> </h3>
+<div align="left">
+	$\mathfrak{A}$:$\ast$ algebra<br>
+	<ul>
+	<li> We call $A\in\mathfrak{A}$ satisfying $A=A^\ast$ a <font color=yellow>self-adjoint element</font>.</li>
+	<li>	The self-adoint elements represent  observables in the quantum physics.  </li>
+	<li>  $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast \}$ </li>
+　<li> $\mathfrak{A}\ni A=A_{{re}}+iA_{{im}}$
+	$$A_{{re}}:=\frac{A+A^\ast}{2}\in\mathfrak{A}_S：\mbox{real part of }A$$
+	$$A_{{im}}:=\frac{A-A^\ast}{2i}\in\mathfrak{A}_S：\mbox{imaginary part of }A$$</li>
+  </ul>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------->
+<section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>State </font> </h3>
+<div align="left">
+<p>$\mathfrak{A}$:$ast$ algebra with the identity $I$</p>
+<p>A linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying the following conditions is called
+a <font color=yellow>state</font>.
+</p>
+<ul>
+	<li> $\omega(A^\ast A)\geq 0,\quad A\in \mathfrak{A}$</li>
+	<li> $\omega(I)=1$</li>
+</ul>
+<p> When $\omega(A^{\ast}A)=0\Leftrightarrow A=0$,
+	$\omega$ is called <font color=yellow>faithful</font>.</p>
+<p>It holds that $\omega(A^\ast)=\overline{\omega(A)}$.
+
+</div>
+</section>
+
+<section>
+<h3><font color=skyblue>Normal State</font> </h3>
+<div align="left">
+<p>$\mathfrak{A}$ : von Neumann algebra</p>
+<p>$\rho$ : density operator  ($\rho\geq 0,\mbox{Tr}\rho=1$)</p>
+<p>The state defined as </p>
+$$
+\omega(A)=\mbox{Tr}\rho A
+$$
+is called a <font color=yellow> normal state</font>.
+</div>
+</section>
+<!---------------------------------------------------------------------------->
+</section>
 <!---------------------------------------------------------------------------->
 
 
