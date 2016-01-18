@@ -253,6 +253,91 @@ $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 </section>
 <!---------------------------------------------------------------------------->
 
+<!--------------------------------------------------------------------------->
+<section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Matrix expression for GNS representation</font> </h3>
+	<div align="left">
+	<p>
+	Let us consider a basis of $H_{-}$ as 
+	$$
+	E_{11}=
+	\begin{pmatrix}
+	1&0\\
+	0&0
+	\end{pmatrix},
+	E_{12}=
+	\begin{pmatrix}
+	0&1\\
+	0&0
+	\end{pmatrix}
+	$$
+	$$
+	E_{21}=
+	\begin{pmatrix}
+	0&0\\
+	1&0
+	\end{pmatrix},
+	E_{22}=
+	\begin{pmatrix}
+	0&0\\
+	0&1
+	\end{pmatrix}
+	$$
+</p>
+$$
+\begin{split}
+H_{-}\ni X&=
+\begin{pmatrix}
+x_{11}&x_{12}\\
+x_{21}&x_{22}
+\end{pmatrix}\\
+&=x_{11}E_{11}+x_{12}E_{12}+x_{21}E_{21}+x_{22}E_{22}
+\end{split}
+$$
+</div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+<div align="left">
+$$
+\begin{split}
+A=&
+\begin{pmatrix}
+a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{pmatrix}
+\in \mathfrak{A}\\
+\pi(A)X=&AX=
+\begin{pmatrix}
+a_{11}x_{11}+a_{12}x_{21}&a_{11}x_{12}+a_{12}x_{22}\\
+a_{21}x_{11}+a_{22}x_{21}&a_{21}x_{12}+a_{22}x_{22}
+\end{pmatrix}\\
+=&(a_{11}x_{11}+a_{12}x_{21})E_{11}+(a_{11}x_{12}+a_{12}x_{22})E_{21}\\
+&+(a_{21}x_{11}+a_{22}x_{21})E_{21}+(a_{21}x_{12}+a_{22}x_{22})E_{22}
+\end{split}
+$$
+<p>
+Thefore we have a expression of $\pi(A)$ as
+</p>
+$$
+\pi(A)\sim
+\begin{pmatrix}
+a_{11}I_2&a_{12}I_2\\
+a_{21}I_2&a_{22}I_2
+\end{pmatrix}
+=A\otimes I_2
+\in M_4(\mathbb{C})
+$$
+<p>
+where $I_2$ is a $2\times 2$ identity matrix.
+</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+</section>
+<!--------------------------------------------------------------------------->
 
 
 			</div>	<!--End of div class="reveal"-->
