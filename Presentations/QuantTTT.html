@@ -501,6 +501,125 @@ Since
 </section>
 <!--------------------------------------------------------------------------->
 
+<section>
+	<h3><font color=skyblue>Anti-linear map $S$</font> </h3>
+	<div align="left">
+	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi(\mathfrak{A})$</p>
+	<p> $\pi(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $S(A\rho^{1/2})=A^\ast \rho^{1/2},\quad A\in M_2(\mathbb{C})$ </p>
+	<p> Putting $X=A\rho^{1/2}$,$Y=A^\ast \rho^{1/2}$, we get
+	$$
+    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+  $$
+	that is,
+	$$
+    S(X)=\rho^{-1/2}X^*\rho^{1/2}
+ 	$$
+  </p>
+  </div>
+</section>
+
+<!--------------------------------------------------------------------------->
+
+<section>
+	<h3><font color=skyblue>$\pi(\mathfrak{A})^\prime$</font> </h3>
+	<div align="left">
+	<p>
+		Since 
+		$
+		\pi(A)\sim A\otimes I_2 \in M_4(\mathbb{C}),\quad A\in \mathfrak{A}=M_2(\mathbb{C})
+		$
+		we get
+		$$
+     \pi(\mathfrak{A})\sim \mathfrak{A}\otimes I_2.
+		$$
+		Therefore
+		$$
+     \pi(\mathfrak{A})^{\prime}\sim I_2\otimes \mathfrak{A}.
+		$$
+		
+	</p>
+	<p>
+		When we define the representation
+		$$
+		\tilde{\pi}:\mathfrak{A}\to \mathfrak{B}(H_{-})
+		$$
+		by $\tilde{\pi}(A)B=BA^T$, its matrix expression is given as
+		$I_2\otimes A$.
+	</p>
+
+  </div>
+</section>
+
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Anti-linear operator $F$</font> </h3>
+	<div align="left">
+	<p> $F:\mathfrak{N}^\prime\Omega\ni M \Omega \to M^\ast\Omega\in\mathfrak{N}^{\prime}\Omega,\quad 	\mathfrak{N}^{\prime}=\tilde{\pi}(\mathfrak{A})$</p>
+	<p> $\tilde{\pi}(A)\Omega=\rho^{1/2}A^T,\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $F(\rho^{1/2}A^T)= \rho^{1/2}(A^T)^\ast,\quad A\in M_2(\mathbb{C})$ </p>
+	<p> Putting $X=\rho^{1/2}A^T$,$Y= \rho^{1/2}(A^T)^\ast$ we get
+	$$
+    Y=\rho^{1/2}(\rho^{-1/2}X)^\ast =\rho^{1/2}X^\ast\rho^{-1/2},
+  $$
+	that is,
+	$$
+    F(X)=\rho^{1/2}X^*\rho^{-1/2}
+ 	$$
+  </p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Matrix expression of modular operator</font> </h3>
+	<div align="left">
+	<p>
+	Since
+		$
+		  S(X)=\rho^{-1/2}X^*\rho^{1/2},
+		\quad
+	    F(X)=\rho^{1/2}X^*\rho^{-1/2},
+	 	$
+	</p>
+	<p>
+		$
+		  \Delta(X)=F(S(X))=\rho X \rho^{-1}.
+		$
+	</p>
+	<p>
+		Thus the matrix expression of modular operator is give as
+		$$
+      \Delta([x_{jk}])=\left[\frac{s_j}{s_k}x_{jk}\right]
+		$$
+	</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+
+<section>
+	<h3><font color=skyblue>Relation between modular operator and commutation operator</font> </h3>
+	<div align="left">
+	<p>
+		Since $$
+		\begin{split}
+		  \left(1+\frac{i}{2}\mathfrak{D}\right)\left(\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}([x_{jk}])\right)=&\left[\frac{2s_j}{s_j+s_k}\frac{s_j+s_k}{2s_k}x_{jk}\right]\\
+			=&\Delta([x_{jk}]),
+    \end{split}
+		$$
+		we get
+		$$
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}
+		$$
+	</p>
+	<p>
+		Similarly
+		$$
+     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
+		$$
+	</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
 
 
 
