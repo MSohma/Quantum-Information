@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Holevo's commutation super operator and Tomita-Takesaki Theory</title>
+
+		<meta name="description" content="Holevo's commutation super operator and Tomita-Takesaki Theory">
+		<meta name="author" content="Masaki Sohma">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2><font color=skyblue>Modular operator <br>and<br> Holevo's commutation operator</font></h2>
+					<p>
+						Masaki Sohma
+					</p>
+				</section>
+				<!---------------------------------------------------------------------------->
+				<section>
+					<h3> <font color=skyblue>Holevo's book</font></h3>
+					<img src="images/Holevobook.jpg">
+				</section>
+
+<section>
+<h3> <font color=skyblue>Exercise about operator algebras</font></h3>
+
+
+<img src="images/Holex.jpg">
+
+
+</section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3> <font color=skyblue>$\ast$ algebra</font></h3>
+<div align="left">
+We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=yellow>$\ast$ algebra</font>.
+
+<ul>
+<li> For any $A,B\in \mathfrak{A}$ we can define the <font color=yellow>product</font>
+	$AB\in\mathfrak{A}$:
+	<ol>
+  <li> $A(BC)=(AB)C$
+  <li> $A(B+C)=AB+AC,(A+B)C=AC+BC$
+  <li> $\alpha(AB)=A(\alpha B)=(\alpha A)B,\alpha\in \mathbb{C}$
+  </ol>
+<li> For any $A\in\mathfrak{A}$ we can define the <font color=yellow>involution</font> $A^\ast\in\mathfrak{A}$:
+	<ol>
+	<li> $(A^\ast)^\ast=A,(AB)^\ast=B^\ast A^\ast, B\in\mathfrak{A}$
+	<li> $(\alpha A+\beta B)^\ast=\bar{\alpha} A^\ast +\bar{\beta} B^\ast$,$\alpha,\beta\in\mathbb{C}$
+  </ol>
+</ul>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------->
+
+<section>
+<h3> <font color=skyblue> Examples of $\ast$ algebra</font></h3>
+<div align="left">
+<ul>
+	<li> $M_n(\mathbb{C})$:full matrix algebra of all $n\times n$ complex matrices.
+	<li> $\mathfrak{B}(\mathfrak{H})$:algebra of bounded operators on a Hilbert space $\mathfrak{H}$
+	<li> von Neumann algebra $\mathfrak{M}$: $\ast$ algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
+		$\mathfrak{M}^{\prime\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}^{\prime}\}$
+</ul>
+		<font size=5 color=green>
+		We can also consider $C^\ast$ algebra, which is a broader concept than von Neumann algebra.
+		</font>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------->
+
+<section>
+<h3><font color=skyblue>Self-adjoint element </font> </h3>
+<div align="left">
+	$\mathfrak{A}$:$\ast$ algebra<br>
+	<ul>
+	<li> We call $A\in\mathfrak{A}$ satisfying $A=A^\ast$ a <font color=yellow>self-adjoint element</font>.</li>
+	<li>	The self-adoint elements represent  observables in the quantum physics.  </li>
+	<li>  $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast \}$ </li>
+　<li> $\mathfrak{A}\ni A=A_{{re}}+iA_{{im}}$
+	$$A_{{re}}:=\frac{A+A^\ast}{2}\in\mathfrak{A}_S：\mbox{real part of }A$$
+	$$A_{{im}}:=\frac{A-A^\ast}{2i}\in\mathfrak{A}_S：\mbox{imaginary part of }A$$</li>
+  </ul>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------->
+<section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>State </font> </h3>
+<div align="left">
+<p>$\mathfrak{A}$:$\ast$ algebra with the identity $I$</p>
+<p>A linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying the following conditions is called
+a <font color=yellow>state</font>.
+</p>
+<ul>
+	<li> $\omega(A^\ast A)\geq 0,\quad A\in \mathfrak{A}$</li>
+	<li> $\omega(I)=1$</li>
+</ul>
+<p> When $\omega(A^{\ast}A)=0\Leftrightarrow A=0$,
+	$\omega$ is called <font color=yellow>faithful</font>.</p>
+<p>It holds that $\omega(A^\ast)=\overline{\omega(A)}$.
+
+</div>
+</section>
+
+<section>
+<h3><font color=skyblue>Normal State</font> </h3>
+<div align="left">
+<p>$\mathfrak{A}$ : von Neumann algebra</p>
+<p>$\rho$ : density operator  ($\rho\geq 0,\mbox{Tr}\rho=1$)</p>
+<p>The state defined as </p>
+$$
+\omega(A)=\mbox{Tr}\rho A
+$$
+is called a <font color=yellow> normal state</font>.
+</div>
+</section>
+<!---------------------------------------------------------------------------->
+</section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Representation </font> </h3>
+<div align="left">
+<p>$\mathfrak{A},\mathfrak{B}$ : $\ast$ algebra</p>
+<ul>
+	<li> A linear map $\phi:\mathfrak{A}\to\mathfrak{B}$ satisfying the following conditions
+		is called
+		a $\ast$homomorphism</font>.</li>
+	<ol>
+		<li>$\phi(AB)=\phi(A)\phi(B),\quad A,B\in \mathfrak{A}$
+		<li>$\phi(A^\ast)=\phi(A)^\ast$
+	</ol>
+	<li> A $\ast$ homomorphism $\pi:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=yellow>representation</font> on $\mathfrak{A}$,where
+		$\mathfrak{B}(\mathfrak{L})$ is a set of bounded operators on $\mathfrak{L}$.
+</ul>
+</div>
+</section>
+
+<!---------------------------------------------------------------------------->
+<section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Remark </font> </h3>
+<div align="left">
+<p>We consider only the following cases.</p>
+<ul>　
+	<li> $\mathfrak{M}=M_2(\mathbb{C})$</li>
+	<ol>
+	 <li> $M_2(\mathbb{C})$ is a von Neumann algebra on a $2$-dimensional Hilbert space.</li>
+	 <li> It is easy to extend to the case of $M_n(\mathbb{C})$.</li>
+	 <li> It is easy to extend to the case of a finite dimenstional von Neumann albebra since it is $\ast$ isomorphic to $M_{m_1}(\mathbb{C})\otimes \cdots \otimes M_{m_n}(\mathbb{C})$.</li>
+	</ol>
+</ul>
+</div>
+</section>
+
+<section>
+<div align="left">
+	<ul>
+		<li> We suppose that $\omega$ is a faithful normal state of the form
+			$$
+			\rho=
+			\begin{pmatrix}
+			s_1&0\\
+			0&s_2
+			\end{pmatrix},
+			\quad s_1>0,s_2>0
+			$$
+		</li>
+
+		<ol>
+			<li> It is easy to extend to the case of a general non-degenerated density operator $\rho$.
+				<li> It is easy to extend to the case of a finite dimensional von Neumann algebra $\mathfrak{M}$.
+		</ol>
+	</ul>
+</div>
+</section>
+<!---------------------------------------------------------------------------->
+</section>
+<!---------------------------------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------->
+<section>
+<!---------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Inner product on a $\ast$ algebra $\mathfrak{A}$</font> </h3>
+<div align="left">
+<p>	 $A,B\in\mathfrak{A}$</p>
+<ol>
+	<li> $\langle A,B \rangle_{-} = \omega(A^{\ast}B)$ , which is used in the GNS representation </li>
+	<li> $\langle A,B \rangle_{+} = \omega(BA^{\ast})$</li>
+	<li> $\langle A,B \rangle = \omega(\frac{1}{2}(BA^{\ast}+A^{\ast}B))$
+</ol>
+<p>
+	We can consider $\mathfrak{A}$ as a <font color=yellow>Hilbert space</font> in three different ways.
+	Hilbert spaces with these inner products are denoted by <font color=yellow>$H_{-},H_{+},H$</font> respectively.</p>
+</div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Properties of $\langle A,B \rangle$</font> </h3>
+<div align="left">
+<p>	 $A,B\in\mathfrak{A}$</p>
+<ol>
+	<li> Involution $A\to A^*$ is a anti-unitary operator, i.e.
+		$\langle A^{\ast},B^{\ast}\rangle=\overline{\langle A,B\rangle}$</li>
+	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set of $\mathfrak{A}$,$\mathfrak{A}_S$, where
+$\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
+</ol>
+<p> With the inner product $\langle \cdot , \cdot \rangle$,$\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=yellow>$H_S$</font>.
+</p>
+
+</div>
+</section>
+
+<!--------------------------------------------------------------------------->
+</section>
+<!---------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Matrix expression for GNS representation</font> </h3>
+	<div align="left">
+	<p>
+	Let us consider a vec operator  
+$$
+\mbox{vec}:H_{-}\ni X=
+\begin{pmatrix}
+x_{11}&x_{12}\\
+x_{21}&x_{22}
+\end{pmatrix}
+\to \mbox{vec}(X)=
+\begin{pmatrix}
+x_{11}\\
+x_{21}\\
+x_{12}\\
+x_{22}
+\end{pmatrix}
+$$
+	$$
+	E_{11}=
+	\begin{pmatrix}
+	1&0\\
+	0&0
+	\end{pmatrix},
+	E_{12}=
+	\begin{pmatrix}
+	0&1\\
+	0&0
+	\end{pmatrix}
+	$$
+	$$
+	E_{21}=
+	\begin{pmatrix}
+	0&0\\
+	1&0
+	\end{pmatrix},
+	E_{22}=
+	\begin{pmatrix}
+	0&0\\
+	0&1
+	\end{pmatrix}
+	$$
+</p>
+$$
+\begin{split}
+H_{-}\ni X&=
+\begin{pmatrix}
+x_{11}&x_{12}\\
+x_{21}&x_{22}
+\end{pmatrix}\\
+&=x_{11}E_{11}+x_{12}E_{12}+x_{21}E_{21}+x_{22}E_{22}
+\end{split}
+$$
+</div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+<div align="left">
+$$
+\begin{split}
+A=&
+\begin{pmatrix}
+a_{11}&a_{12}\\
+a_{21}&a_{22}
+\end{pmatrix}
+\in \mathfrak{A}\\
+\pi(A)X=&AX=
+\begin{pmatrix}
+a_{11}x_{11}+a_{12}x_{21}&a_{11}x_{12}+a_{12}x_{22}\\
+a_{21}x_{11}+a_{22}x_{21}&a_{21}x_{12}+a_{22}x_{22}
+\end{pmatrix}\\
+=&(a_{11}x_{11}+a_{12}x_{21})E_{11}+(a_{11}x_{12}+a_{12}x_{22})E_{21}\\
+&+(a_{21}x_{11}+a_{22}x_{21})E_{21}+(a_{21}x_{12}+a_{22}x_{22})E_{22}
+\end{split}
+$$
+<p>
+Thefore we have a expression of $\pi(A)$ as
+</p>
+$$
+\pi(A)\sim
+\begin{pmatrix}
+a_{11}I_2&a_{12}I_2\\
+a_{21}I_2&a_{22}I_2
+\end{pmatrix}
+=A\otimes I_2
+\in M_4(\mathbb{C})
+$$
+<p>
+where $I_2$ is a $2\times 2$ identity matrix.
+</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Uncertainty Relation</font> </h3>
+<div align="left">
+<p>
+we consider the following bilinear form on
+$\mathfrak{A}$.
+</p>
+$$
+[A,B]=i\omega(A^{\ast}B-BA^{\ast}),\quad A,B\in\mathfrak{A}
+$$
+<p>
+Then it holds that
+</p>
+$$
+\begin{split}
+\langle A,A\rangle\geq\pm\frac{i}{2}[A,A],A\in H\\
+\langle A,A \rangle +\langle B,B \rangle\geq [A,B],A,B\in H_S\\
+\langle A,A \rangle \langle B,B \rangle\geq \frac{1}{4}[A,B]^2,A,B\in H_S
+\end{split}
+$$
+<p>
+	<font size=5, color=green>
+		The last inequality gives the most general form of uncertainty relation.
+</font>
+</p>
+</div>
+</section>
+
+<!--------------------------------------------------------------------------->
+<section>
+<!--------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Holevo's commutation operator</font> </h3>
+<div align="left">
+<p>	The anti-Hermitian operator satifying the following conditions is called  <font color=yellow>commutation operator</font>.</p>
+$$
+[A,X]=\langle A, \mathfrak{D}X\rangle, \quad A,X\in H
+$$
+<p>
+Let us obtain a matrix expression of commutation operator.
+</p>
+Since
+ $$
+ \begin{split}
+ [A,X]&=i\omega(A^\ast X-XA^\ast)=i\mbox{Tr}\rho(A^\ast X-XA^\ast)\\
+      &=\mbox{Tr}A^\ast i(X\rho-\rho X)\\
+ \langle A,Y\rangle&=\omega((YA^\ast+A^\ast Y)/2)=\mbox{Tr}\rho((YA^\ast+A^\ast Y)/2)\\
+ &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2,
+ \end{split}
+ $$
+ we have
+ $$
+ (\rho Y+Y\rho)/2=i(X\rho-\rho X)
+ $$
+</div>
+</section>
+
+<section>
+	<div align="left">
+		Putting $X=(x_{jk}),Y=\mathfrak{D}X=(y_{jk}),\rho=\mbox{diag}(s_1,s_2)$
+		we obtain a matrix expression of commutation operator.
+			$$
+			\begin{pmatrix}
+			s_1y_{11}&\frac{s_1+s_2}{2}y_{12}\\
+			\frac{s_1+s_2}{2}y_{21}&s_2y_{22}
+			\end{pmatrix}
+			=
+      i \begin{pmatrix}
+			0&(s_2-s_1)x_{12}\\
+			(s_1-s_2)x_{21}&0
+			\end{pmatrix}
+			$$
+			より
+			$$
+      \begin{pmatrix}
+			y_{11}\\
+			y_{12}\\
+			y_{21}\\
+			y_{22}
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+			0&0&0&0\\
+			0&\frac{2i(s_2-s_1)}{s_1+s_2}&0&0\\
+			0&0&\frac{2i(s_1-s_2)}{s_1+s_2}&0\\
+			0&0&0&0
+			\end{pmatrix}
+			\begin{pmatrix}
+			x_{11}\\
+			x_{12}\\
+			x_{21}\\
+			x_{22}
+			\end{pmatrix}
+			$$
+	</div>
+</section>
+<section>
+	<div align="left">
+		That is,
+		$$
+		[y_{jk}]=\mathfrak{D}([x_{jk}])=\left[\frac{2i(s_k-s_j)}{s_j+s_k}x_{jk} \right],
+		$$
+	  and
+		$$
+		\begin{split}
+    \left(1+\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_j}{s_j+s_k}x_{jk}\right]\\
+    \left(1-\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_k}{s_j+s_k}x_{jk}\right]\\
+    \left(1+\frac{1}{4}\mathfrak{D}^2\right)([x_{jk}])&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
+    \end{split}
+		$$
+	</div>
+</section>
+<!--------------------------------------------------------------------------->
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Properties of commutation operator</font> </h3>
+	<div align="left">
+		<ul>
+     <li> $1\pm\frac{i}{2}\mathfrak{D}\geq 0$
+		 <li> $1+\frac{1}{4}\mathfrak{D}\geq 0$
+     <li> $\omega$is fatihful$\Leftrightarrow$ $1\pm\frac{i}{2}\mathfrak{D}$,
+			 $1+\frac{1}{4}\mathfrak{D}^2$ is non-degenerated.
+		</ul>
+  </div>
+</section>
+
+<!--------------------------------------------------------------------------->
+<section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Modular operator</font> </h3>
+	<div align="left">
+	<p> $\mathfrak{A}=M_2(\mathbb{C})$ </p>
+	<p> $\omega(A)=\mbox{Tr}\rho A$: faithful state on $\mathfrak{A}$</p>
+	<p> $\pi:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
+	<p> $\mathfrak{N}=\pi(\mathfrak{A})$ is a von Neumann algebra.</p>
+	<p> Let us consider $\rho^{1/2}$ as a cyclic and separating vector $\Omega$.
+		$$H_{-}=\mathfrak{N}\Omega=\mathfrak{N}^\prime \Omega$$</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+	<div align="left">
+<p> $\bullet$ Consider  anti-linear operoator on $H_{-}$, $S$ and $F$
+	$$
+	 \begin{split}
+		 S&:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega\\
+		 F&:\mathfrak{N}^\prime \Omega\ni M\Omega \to M^\ast\Omega\in \mathfrak{N}^\prime \Omega
+	 \end{split}
+	$$
+</p>
+<p> $\bullet$ The linear operator on $H_{-}$ defined as follows is called a <font color=yellow>modular operator.</font>
+	$$
+	\Delta=FS
+	$$
+</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+</section>
+<!--------------------------------------------------------------------------->
+
+<section>
+	<h3><font color=skyblue>Anti-linear map $S$</font> </h3>
+	<div align="left">
+	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi(\mathfrak{A})$</p>
+	<p> $\pi(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $S(A\rho^{1/2})=A^\ast \rho^{1/2},\quad A\in M_2(\mathbb{C})$ </p>
+	<p> Putting $X=A\rho^{1/2}$,$Y=A^\ast \rho^{1/2}$, we get
+	$$
+    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+  $$
+	that is,
+	$$
+    S(X)=\rho^{-1/2}X^*\rho^{1/2}
+ 	$$
+  </p>
+  </div>
+</section>
+
+<!--------------------------------------------------------------------------->
+
+<section>
+	<h3><font color=skyblue>$\pi(\mathfrak{A})^\prime$</font> </h3>
+	<div align="left">
+	<p>
+		Since 
+		$
+		\pi(A)\sim A\otimes I_2 \in M_4(\mathbb{C}),\quad A\in \mathfrak{A}=M_2(\mathbb{C}),
+		$
+		we get
+		$$
+     \pi(\mathfrak{A})\sim \mathfrak{A}\otimes I_2.
+		$$
+		Therefore
+		$$
+     \pi(\mathfrak{A})^{\prime}\sim I_2\otimes \mathfrak{A}.
+		$$
+		
+	</p>
+	<p>
+		On the other hand, when we define the representation
+		$$
+		\tilde{\pi}:\mathfrak{A}\to \mathfrak{B}(H_{-})
+		$$
+		by $\tilde{\pi}(A)B=BA^T$, its matrix expression is given as
+		$I_2\otimes A$.
+	</p>
+
+  </div>
+</section>
+
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Anti-linear operator $F$</font> </h3>
+	<div align="left">
+	<p> $F:\mathfrak{N}^\prime\Omega\ni M \Omega \to M^\ast\Omega\in\mathfrak{N}^{\prime}\Omega,\quad 	\mathfrak{N}^{\prime}=\tilde{\pi}(\mathfrak{A})$</p>
+	<p> $\tilde{\pi}(A)\Omega=\rho^{1/2}A^T,\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $F(\rho^{1/2}A^T)= \rho^{1/2}(A^T)^\ast,\quad A\in M_2(\mathbb{C})$ </p>
+	<p> Putting $X=\rho^{1/2}A^T$,$Y= \rho^{1/2}(A^T)^\ast$ we get
+	$$
+    Y=\rho^{1/2}(\rho^{-1/2}X)^\ast =\rho^{1/2}X^\ast\rho^{-1/2},
+  $$
+	that is,
+	$$
+    F(X)=\rho^{1/2}X^*\rho^{-1/2}
+ 	$$
+  </p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Matrix expression of modular operator</font> </h3>
+	<div align="left">
+	<p>
+	Since
+		$
+		  S(X)=\rho^{-1/2}X^*\rho^{1/2},
+		\quad
+	    F(X)=\rho^{1/2}X^*\rho^{-1/2},
+	 	$
+	</p>
+	<p>
+		$
+		  \Delta(X)=F(S(X))=\rho X \rho^{-1}.
+		$
+	</p>
+	<p>
+		Thus the matrix expression of modular operator is give as
+		$$
+      \Delta([x_{jk}])=\left[\frac{s_j}{s_k}x_{jk}\right]
+		$$
+	</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+
+<section>
+	<h3><font color=skyblue>Relation between modular operator and commutation operator</font> </h3>
+	<div align="left">
+	<p>
+		Since $$
+		\begin{split}
+		  \left(1+\frac{i}{2}\mathfrak{D}\right)\left(\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}([x_{jk}])\right)=&\left[\frac{2s_j}{s_j+s_k}\frac{s_j+s_k}{2s_k}x_{jk}\right]\\
+			=&\Delta([x_{jk}]),
+    \end{split}
+		$$
+		we get
+		$$
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}
+		$$
+	</p>
+	<p>
+		Similarly
+		$$
+     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
+		$$
+	</p>
+  </div>
+</section>
+<!--------------------------------------------------------------------------->
+
+
+
+			</div>	<!--End of div class="reveal"-->
+		</div>  <!--End of div class="slides"-->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					// MathJax
+          { src: 'plugin/math/math.js', async: true }
+				]
+
+			});
+
+		</script>
+	</body>
+</html>
