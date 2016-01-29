@@ -275,47 +275,29 @@ x_{12}\\
 x_{22}
 \end{pmatrix}
 $$
-Matrix expression for GNS representation is given by
-$$
-\mbox{vec}(X)\to\mbox{vec}(\pi(A)X) 
-$$
 	</div>
 </section>
 <!--------------------------------------------------------------------------->
+
 <section>
 <div align="left">
+To get a matrix expression for GNS representation let us consider a map,
 $$
-\begin{split}
-A=&
-\begin{pmatrix}
-a_{11}&a_{12}\\
-a_{21}&a_{22}
-\end{pmatrix}
-\in \mathfrak{A}\\
-\pi(A)X=&AX=
-\begin{pmatrix}
-a_{11}x_{11}+a_{12}x_{21}&a_{11}x_{12}+a_{12}x_{22}\\
-a_{21}x_{11}+a_{22}x_{21}&a_{21}x_{12}+a_{22}x_{22}
-\end{pmatrix}\\
-=&(a_{11}x_{11}+a_{12}x_{21})E_{11}+(a_{11}x_{12}+a_{12}x_{22})E_{21}\\
-&+(a_{21}x_{11}+a_{22}x_{21})E_{21}+(a_{21}x_{12}+a_{22}x_{22})E_{22}
-\end{split}
+\mbox{vec}(X)\to\mbox{vec}(\pi(A)X), 
 $$
+where we have
+$$
+\mbox{vec}(\pi(A)X)=\mbox{vec}(AX)=(I_2\otimes A)\mbox{vec}(X),
+$$
+with a $2\times 2$ identity matrix $I_2$.
 <p>
-Thefore we have a expression of $\pi(A)$ as
+This means that a matrix expression of $\pi(A)$ is given by
 </p>
 $$
 \pi(A)\sim
-\begin{pmatrix}
-a_{11}I_2&a_{12}I_2\\
-a_{21}I_2&a_{22}I_2
-\end{pmatrix}
-=A\otimes I_2
-\in M_4(\mathbb{C})
+I_2\otimes A
+\in M_4(\mathbb{C}).
 $$
-<p>
-where $I_2$ is a $2\times 2$ identity matrix.
-</p>
   </div>
 </section>
 <!--------------------------------------------------------------------------->
