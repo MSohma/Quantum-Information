@@ -353,55 +353,30 @@ Since
  &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2,
  \end{split}
  $$
- we have
- $$
- (\rho Y+Y\rho)/2=i(X\rho-\rho X)
- $$
 </div>
 </section>
 
 <section>
 	<div align="left">
-	<p>The relation $(\rho Y+Y\rho)/2=i(X\rho-\rho X)$ can be written by a vec operator as
+	<p>
+	we have
+ $$
+ (\rho Y+Y\rho)/2=i(X\rho-\rho X),
+ $$
+	which can be written by a vec operator as
 	</p>
 	$$
-	(I_2\otimes \rho + \rho\otimes I_2)\mbox{vec}(Y)=2i(\rho\otimes I_2 -I_2\otimes \rho )\mbox{vec}(X)
+	(I_2\otimes \rho + \rho\otimes I_2)\mbox{vec}(Y)=2i(\rho\otimes I_2 -I_2\otimes \rho )\mbox{vec}(X).
 	$$
-		Putting $X=(x_{jk}),Y=\mathfrak{D}X=(y_{jk}),\rho=\mbox{diag}(s_1,s_2)$
-		we obtain a matrix expression of commutation operator.
-			$$
-			\begin{pmatrix}
-			s_1y_{11}&\frac{s_1+s_2}{2}y_{12}\\
-			\frac{s_1+s_2}{2}y_{21}&s_2y_{22}
-			\end{pmatrix}
-			=
-      i \begin{pmatrix}
-			0&(s_2-s_1)x_{12}\\
-			(s_1-s_2)x_{21}&0
-			\end{pmatrix}
-			$$
-			より
-			$$
-      \begin{pmatrix}
-			y_{11}\\
-			y_{12}\\
-			y_{21}\\
-			y_{22}
-			\end{pmatrix}
-			=
-			\begin{pmatrix}
-			0&0&0&0\\
-			0&\frac{2i(s_2-s_1)}{s_1+s_2}&0&0\\
-			0&0&\frac{2i(s_1-s_2)}{s_1+s_2}&0\\
-			0&0&0&0
-			\end{pmatrix}
-			\begin{pmatrix}
-			x_{11}\\
-			x_{12}\\
-			x_{21}\\
-			x_{22}
-			\end{pmatrix}
-			$$
+	Thus 
+	$$
+	\mbox{vec}(Y)=2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )\mbox{vec}(X),
+
+	$$
+	which means that the matrix expression of $\mathfrak{D}$ is given by
+	$$
+	\mathfrak{D}=2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )
+	$$
 	</div>
 </section>
 <section>
