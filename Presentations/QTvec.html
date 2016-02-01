@@ -111,8 +111,12 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 	<li>	The self-adoint elements represent  observables in the quantum physics.  </li>
 	<li>  $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast \}$ </li>
 　<li> $\mathfrak{A}\ni A=A_{{re}}+iA_{{im}}$
-	$$A_{{re}}:=\frac{A+A^\ast}{2}\in\mathfrak{A}_S：\mbox{real part of }A$$
-	$$A_{{im}}:=\frac{A-A^\ast}{2i}\in\mathfrak{A}_S：\mbox{imaginary part of }A$$</li>
+	$$
+        \begin{split}
+        A_{{re}}:=&\frac{A+A^\ast}{2}\in\mathfrak{A}_S：\mbox{real part of }A\\
+	A_{{im}}:=&\frac{A-A^\ast}{2i}\in\mathfrak{A}_S：\mbox{imaginary part of }A
+        \end{split}
+$$</li>
   </ul>
 </div>
 </section>
@@ -381,16 +385,12 @@ Since
 </section>
 <section>
 	<div align="left">
-		That is,
-		$$
-		[y_{jk}]=\mathfrak{D}([x_{jk}])=\left[\frac{2i(s_k-s_j)}{s_j+s_k}x_{jk} \right],
-		$$
-	  and
+	  Moreover
 		$$
 		\begin{split}
-    \left(1+\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_j}{s_j+s_k}x_{jk}\right]\\
-    \left(1-\frac{i}{2}\mathfrak{D}\right)([x_{jk}])&=\left[\frac{2s_k}{s_j+s_k}x_{jk}\right]\\
-    \left(1+\frac{1}{4}\mathfrak{D}^2\right)([x_{jk}])&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
+    \left(1+\frac{i}{2}\mathfrak{D}\right)\mbox{vec}(X)&=2(I_2\otimes \rho+\rho\otimes I_2)^{-1}\rho \otimes I_2\\
+    \left(1-\frac{i}{2}\mathfrak{D}\right)\mbox{vec}(X)&=2(I_2\otimes \rho+\rho\otimes I_2)^{-1}I_2\otimes \rho\\
+    \left(1+\frac{1}{4}\mathfrak{D}^2\right)\mbox{vec}(X)&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
     \end{split}
 		$$
 	</div>
