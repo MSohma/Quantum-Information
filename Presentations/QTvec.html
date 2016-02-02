@@ -379,7 +379,7 @@ Since
 	$$
 	which means that the matrix expression of $\mathfrak{D}$ is given by
 	$$
-	\mathfrak{D}=2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )
+	\mathfrak{D}\sim 2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )
 	$$
 	</div>
 </section>
@@ -388,9 +388,10 @@ Since
 	  Moreover
 		$$
 		\begin{split}
-    \left(1+\frac{i}{2}\mathfrak{D}\right)\mbox{vec}(X)&=2(I_2\otimes \rho+\rho\otimes I_2)^{-1}\rho \otimes I_2\\
-    \left(1-\frac{i}{2}\mathfrak{D}\right)\mbox{vec}(X)&=2(I_2\otimes \rho+\rho\otimes I_2)^{-1}I_2\otimes \rho\\
-    \left(1+\frac{1}{4}\mathfrak{D}^2\right)\mbox{vec}(X)&=\left[\frac{4s_js_k}{(s_j+s_k)^2}x_{jk}\right]
+    1+\frac{i}{2}\mathfrak{D}&\sim 2(I_2\otimes \rho+\rho\otimes I_2)^{-1}  I_2\otimes \rho\\
+    1-\frac{i}{2}\mathfrak{D}&\sim 2(I_2\otimes \rho+\rho\otimes I_2)^{-1}\rho \otimes I_2\\
+    1+\frac{1}{4}\mathfrak{D}^2&\sim 4(I_2\otimes \rho+\rho\otimes I_2)^{-2}\rho \otimes \rho\\
+
     \end{split}
 		$$
 	</div>
@@ -472,15 +473,15 @@ Since
 	<p>
 		Since 
 		$
-		\pi(A)\sim A\otimes I_2 \in M_4(\mathbb{C}),\quad A\in \mathfrak{A}=M_2(\mathbb{C}),
+		\pi(A)\sim I_2 \otimes A \in M_4(\mathbb{C}),\quad A\in \mathfrak{A}=M_2(\mathbb{C}),
 		$
 		we get
 		$$
-     \pi(\mathfrak{A})\sim \mathfrak{A}\otimes I_2.
-		$$
+     \pi(\mathfrak{A})\sim I_2 \otimes \mathfrak{A}. 	
+        	$$
 		Therefore
 		$$
-     \pi(\mathfrak{A})^{\prime}\sim I_2\otimes \mathfrak{A}.
+     \pi(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_2.
 		$$
 		
 	</p>
@@ -490,7 +491,7 @@ Since
 		\tilde{\pi}:\mathfrak{A}\to \mathfrak{B}(H_{-})
 		$$
 		by $\tilde{\pi}(A)B=BA^T$, its matrix expression is given as
-		$I_2\otimes A$.
+		$A\otimes I_2$.
 	</p>
 
   </div>
@@ -534,7 +535,7 @@ Since
 	<p>
 		Thus the matrix expression of modular operator is give as
 		$$
-      \Delta([x_{jk}])=\left[\frac{s_j}{s_k}x_{jk}\right]
+      \Delta \sim \rho^{-1}\otimes \rho 
 		$$
 	</p>
   </div>
@@ -545,13 +546,7 @@ Since
 	<h3><font color=skyblue>Relation between modular operator and commutation operator</font> </h3>
 	<div align="left">
 	<p>
-		Since $$
-		\begin{split}
-		  \left(1+\frac{i}{2}\mathfrak{D}\right)\left(\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}([x_{jk}])\right)=&\left[\frac{2s_j}{s_j+s_k}\frac{s_j+s_k}{2s_k}x_{jk}\right]\\
-			=&\Delta([x_{jk}]),
-    \end{split}
-		$$
-		we get
+		We get
 		$$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}
 		$$
