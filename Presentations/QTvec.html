@@ -258,16 +258,13 @@ $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 	Let us consider a vec operator  
 $$
 \mbox{vec}:H_{-}\ni X=
-\begin{pmatrix}
-x_{11}&x_{12}\\
-x_{21}&x_{22}
-\end{pmatrix}
+(x_1,...,x_n)
 \to \mbox{vec}(X)=
 \begin{pmatrix}
-x_{11}\\
-x_{21}\\
-x_{12}\\
-x_{22}
+x_{1}\\
+x_{2}\\
+:\\
+x_{n}
 \end{pmatrix}
 $$
 	</div>
@@ -282,16 +279,16 @@ $$
 $$
 where we have
 $$
-\mbox{vec}(\pi(A)X)=\mbox{vec}(AX)=(I_2\otimes A)\mbox{vec}(X),
+\mbox{vec}(\pi(A)X)=\mbox{vec}(AX)=(I_n\otimes A)\mbox{vec}(X),
 $$
-with a $2\times 2$ identity matrix $I_2$.
+with a $n\times n$ identity matrix $I_n$.
 <p>
-This means that a matrix expression of $\pi(A)$ is given by $I_2\otimes A$:
+This means that a matrix expression of $\pi(A)$ is given by $I_n\otimes A$:
 </p>
 $$
 \pi(A)\sim
-I_2\otimes A
-\in M_4(\mathbb{C}).
+I_n\otimes A
+\in M_{n^2}(\mathbb{C}).
 $$
   </div>
 </section>
@@ -408,7 +405,7 @@ Since
 <section>
 	<h3><font color=skyblue>Modular operator</font> </h3>
 	<div align="left">
-	<p> $\mathfrak{A}=M_2(\mathbb{C})$ </p>
+	<p> $\mathfrak{A}=M_n(\mathbb{C})$ </p>
 	<p> $\omega(A)=\mbox{Tr}\rho A$: faithful state on $\mathfrak{A}$</p>
 	<p> $\pi:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
 	<p> $\mathfrak{N}=\pi(\mathfrak{A})$ is a von Neumann algebra.</p>
@@ -464,15 +461,15 @@ Since
 	<p>
 		Since 
 		$
-		\pi(A)\sim I_2 \otimes A \in M_4(\mathbb{C}),\quad A\in \mathfrak{A}=M_2(\mathbb{C}),
+		\pi(A)\sim I_n \otimes A \in M_{n^2}(\mathbb{C}),\quad A\in \mathfrak{A}=M_n(\mathbb{C}),
 		$
 		we get
 		$$
-     \pi(\mathfrak{A})\sim I_2 \otimes \mathfrak{A}. 	
+     \pi(\mathfrak{A})\sim I_n \otimes \mathfrak{A}. 	
         	$$
 		Therefore
 		$$
-     \pi(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_2.
+     \pi(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_n.
 		$$
 		
 	</p>
@@ -482,7 +479,7 @@ Since
 		\tilde{\pi}:\mathfrak{A}\to \mathfrak{B}(H_{-})
 		$$
 		by $\tilde{\pi}(A)B=BA^T$, its matrix expression is given as
-		$A\otimes I_2$.
+		$A\otimes I_n$.
 	</p>
 
   </div>
