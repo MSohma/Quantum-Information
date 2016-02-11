@@ -290,7 +290,7 @@ $$
 <div align="left">
 <p>
 A complex matrix $A=(a_{i,j})\in M_n(\mathbb{C})$ corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{i,j})\in M_{2n}(\mathbb{C})$ with
+a real matrix $\tilde{A}=(\tilde{a}_{i,j})\in M_{2n}(\mathbb{R})$ with
 $$
 \tilde{a}_{i,j}=
 \begin{pmatrix}
@@ -306,6 +306,7 @@ J_2=\begin{pmatrix}
 1&0
 \end{pmatrix}.
 $$
+The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 </p>
 </div>
 </section>
@@ -317,6 +318,10 @@ given on a real Hilbert space  by
 $$
 e_ie_j^T\otimes I_2 \to e_je_i^T\otimes I_2, e_ie_j^T\otimes J_2 \to -e_je_i^T\otimes J_2,
 $$
+<p>We define a bijection $$v:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+by $v(e_ie_j^T\otimes I_2)=e_j\otimes e_i\otimes f_1,v(e_ie_j^T\otimes J_2)=e_j\otimes e_i\otimes f_2$,
+with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
+</p>
 </div>
 </section>
 <!--------------------------------------------------------------------------->
