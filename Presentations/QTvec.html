@@ -354,7 +354,7 @@ Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r\simeq \mathbb{R}^n\otimes \mathbb{R
 
 <!--------------------------------------------------------------------------->
 <section>
-<h3><font color=skyblue>Example of Real Matrix Representation</font></h3>
+<h3><font color=skyblue>Real Matrix Expression</font></h3>
 <div align="left">
 <p>
 
@@ -362,7 +362,7 @@ Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r\simeq \mathbb{R}^n\otimes \mathbb{R
 $$
 \mbox{vec}_r:M_n(\mathbb{C})\ni Z=
 (z_1,...,z_n)
-\to \mbox{vec}_r(Z)=
+\to 
 \begin{pmatrix}
 \tilde{z}_{1}\\
 \tilde{z}_{2}\\
@@ -370,10 +370,20 @@ $$
 \tilde{z}_{n}
 \end{pmatrix}
 $$
-where $\tilde{z}_{i}$ is a $2n$-dimensional real vector given as $(x_{1,i},y_{1,i},...,x_{n,i},y_{n,i})^T$
-for $z=(x_{1,i}+y_{1,i},...,x_{n,i}+y_{n,i})^T$.
-
+where $\tilde{z}_{k}$ is a $2n$-dimensional real vector given as $(x_{1,k},y_{1,k},...,x_{n,k},y_{n,k})^T$
+for $z_k=(x_{1,k}+iy_{1,k},...,x_{n,k}+iy_{n,k})^T$.
  
+</p>
+</div>
+</section>
+<!--------------------------------------------------------------------------->
+<section>
+<h3><font color=skyblue>Relation between Real and Complex Matrix Expressions</font></h3>
+<div align="left">
+<p>
+ A linear map $A$ on $\mbox{vec}(M_n(\mathbb{C}))$, corresponds to a linear map
+ $A\otimes I_2$ on $\mbox{vec}(M_n(\mathbb{C}))$. 
+
 </p>
 </div>
 </section>
