@@ -271,7 +271,10 @@ $$
 $$
 Since 
 $$
-v(\varphi_{P,Q}(fg^T))=v(Qf(Pg)^T)=Pg\otimes Qf=P\otimes Q v(fg^T)
+\begin{split}
+v(\varphi_{P,Q}(fg^T))&=v(Qf(Pg)^T)=Pg\otimes Qf\\
+&=P\otimes Q v(fg^T)
+\end{split}
 $$
 we have
 $$
@@ -287,24 +290,6 @@ $$
 <!--------------------------------------------------------------------------->
 <section>
 <h3><font color=skyblue>Real Matrix Representation</font></h3>
-A complex matrix $A=(a_{i,j})\in M_n(\mathbb{C})$ corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{i,j})\in M_{2n}(\mathbb{R})$ with
-$$
-\tilde{a}_{i,j}=
-\begin{pmatrix}
-x_{i,j}&-y_{i,j}\\
-y_{i,j}&x_{i,j}
-\end{pmatrix}\in M_2(\mathbb{R}).
-$$
-Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
-with a $2\times 2$-identity matrix $I_2$ and
-$$
-J_2=\begin{pmatrix}
-0&-1\\
-1&0
-\end{pmatrix}.
-$$
-The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 <div align="left">
 <p>
 A complex matrix $A=(a_{i,j})\in M_n(\mathbb{C})$ corresponds to
@@ -347,7 +332,7 @@ v(e_ie_j^T\otimes J_2)&=e_j\otimes e_i\otimes f_2,
 \end{split}
 $$
 with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
-Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2 $
+Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2 $
 </p>
 </div>
 </section>
@@ -381,9 +366,11 @@ for $z_k=(x_{1,k}+iy_{1,k},...,x_{n,k}+iy_{n,k})^T$.
 <h3><font color=skyblue>Relation between Real and Complex Matrix Expressions</font></h3>
 <div align="left">
 <p>
- A linear map $A$ on $\mbox{vec}(M_n(\mathbb{C}))$, corresponds to a linear map
- $A\otimes I_2$ on $\mbox{vec}(M_n(\mathbb{C}))$. 
-
+ <ul>
+<li> A linear map $A$ on $\mbox{vec}(M_n(\mathbb{C}))$, corresponds to a linear map
+ $A\otimes I_2$ on $\mbox{vec}(M_{2n}^r(\mathbb{R}))$. 
+<li> $\ast$-operation corresponds to a linear operator $P\otimes K_2$
+</ul>
 </p>
 </div>
 </section>
