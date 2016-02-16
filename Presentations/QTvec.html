@@ -62,9 +62,9 @@
 </section>
 <!---------------------------------------------------------------------------->
 <section>
-<h3> <font color=skyblue>$\ast$ algebra</font></h3>
+<h3> <font color=skyblue>$\ast$-algebra</font></h3>
 <div align="left">
-We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=yellow>$\ast$ algebra</font>.
+We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=yellow>$\ast$-algebra</font>.
 
 <ul>
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=yellow>product</font>
@@ -86,12 +86,12 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 <!---------------------------------------------------------------------------->
 
 <section>
-<h3> <font color=skyblue> Examples of $\ast$ algebra</font></h3>
+<h3> <font color=skyblue> Examples of $\ast$-algebra</font></h3>
 <div align="left">
 <ul>
 	<li> $M_n(\mathbb{C})$:full matrix algebra of all $n\times n$ complex matrices.
 	<li> $\mathfrak{B}(\mathfrak{H})$:algebra of bounded operators on a Hilbert space $\mathfrak{H}$
-	<li> von Neumann algebra $\mathfrak{M}$: $\ast$ algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
+	<li> von Neumann algebra $\mathfrak{M}$: $\ast$-algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
 		$\mathfrak{M}^{\prime\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}^{\prime}\}$
 </ul>
 		<font size=5 color=green>
@@ -105,7 +105,7 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 <section>
 <h3><font color=skyblue>Self-adjoint element </font> </h3>
 <div align="left">
-	$\mathfrak{A}$:$\ast$ algebra<br>
+	$\mathfrak{A}$:$\ast$-algebra<br>
 	<ul>
 	<li> We call $A\in\mathfrak{A}$ satisfying $A=A^\ast$ a <font color=yellow>self-adjoint element</font>.</li>
 	<li>	The self-adoint elements represent  observables in the quantum physics.  </li>
@@ -127,7 +127,7 @@ $$</li>
 <section>
 <h3><font color=skyblue>State </font> </h3>
 <div align="left">
-<p>$\mathfrak{A}$:$\ast$ algebra with the identity $I$</p>
+<p>$\mathfrak{A}$:$\ast$-algebra with the identity $I$</p>
 <p>A linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying the following conditions is called
 a <font color=yellow>state</font>.
 </p>
@@ -164,13 +164,13 @@ is called a <font color=yellow> normal state</font>.
 <ul>
 	<li> A linear map $\phi:\mathfrak{A}\to\mathfrak{B}$ satisfying the following conditions
 		is called
-		a $\ast$homomorphism</font>.</li>
+		a $\ast$-homomorphism</font>.</li>
 	<ol>
 		<li>$\phi(AB)=\phi(A)\phi(B),\quad A,B\in \mathfrak{A}$
 		<li>$\phi(A^\ast)=\phi(A)^\ast$
 	</ol>
-	<li> A $\ast$ homomorphism $\pi:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=yellow>representation</font> on $\mathfrak{A}$,where
-		$\mathfrak{B}(\mathfrak{L})$ is a set of bounded operators on $\mathfrak{L}$.
+	<li> A $\ast$-homomorphism $\pi:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=yellow>representation</font> on $\mathfrak{A}$, where
+		$\mathfrak{B}(\mathfrak{L})$ is the set of bounded operators on $\mathfrak{L}$.
 </ul>
 </div>
 </section>
@@ -186,7 +186,7 @@ is called a <font color=yellow> normal state</font>.
 	<li> $\mathfrak{M}=M_n(\mathbb{C})$</li>
 	<ol>
 	 <li> $M_n(\mathbb{C})$ is a von Neumann algebra on a $n$-dimensional Hilbert space.</li>
-	 <li> It is easy to extend to the case of a finite dimenstional von Neumann albebra since it is $\ast$ isomorphic to $M_{m_1}(\mathbb{C})\otimes \cdots \otimes M_{m_n}(\mathbb{C})$.</li>
+	 <li> It is easy to extend to the case of a finite dimenstional von Neumann albebra since it is $\ast$-isomorphic to $M_{m_1}(\mathbb{C})\otimes \cdots \otimes M_{m_n}(\mathbb{C})$.</li>
 	</ol>
 </ul>
 </div>
@@ -229,7 +229,7 @@ is called a <font color=yellow> normal state</font>.
 </section>
 <!--------------------------------------------------------------------------->
 <section>
-<h3><font color=skyblue>Properties of $\langle A,B \rangle$</font> </h3>
+<h3><font color=skyblue>Properties of $\langle \cdot,\cdot \rangle$</font> </h3>
 <div align="left">
 <p>	 $A,B\in\mathfrak{A}$</p>
 <ol>
@@ -238,7 +238,7 @@ is called a <font color=yellow> normal state</font>.
 	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set of $\mathfrak{A}$,$\mathfrak{A}_S$, where
 $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 </ol>
-<p> With the inner product $\langle \cdot , \cdot \rangle$,$\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=yellow>$H_S$</font>.
+<p> With the inner product $\langle \cdot , \cdot \rangle$, $\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=yellow>$H_S$</font>.
 </p>
 
 </div>
@@ -370,6 +370,7 @@ for $z_k=(x_{1,k}+iy_{1,k},...,x_{n,k}+iy_{n,k})^T$.
 <li> A linear map $A$ on $\mbox{vec}(M_n(\mathbb{C}))$, corresponds to a linear map
  $A\otimes I_2$ on $\mbox{vec}(M_{2n}^r(\mathbb{R}))$. 
 <li> $\ast$-operation corresponds to a linear operator $P\otimes K_2$
+<li> The muliplication by $i$ coresponds to $I\otimes J_2$.
 </ul>
 </p>
 </div>
