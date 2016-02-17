@@ -70,7 +70,7 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=yellow>product</font>
 	$AB\in\mathfrak{A}$:
 	<ol>
-  <li> $A(BC)=(AB)C$
+  <li> <medium> $A(BC)=(AB)C$ </medium>
   <li> $A(B+C)=AB+AC,(A+B)C=AC+BC$
   <li> $\alpha(AB)=A(\alpha B)=(\alpha A)B,\alpha\in \mathbb{C}$
   </ol>
@@ -91,8 +91,8 @@ We call a complex vector space $\mathfrak{A}$ satisfying the following propertie
 <ul>
 	<li> $M_n(\mathbb{C})$:full matrix algebra of all $n\times n$ complex matrices.
 	<li> $\mathfrak{B}(\mathfrak{H})$:algebra of bounded operators on a Hilbert space $\mathfrak{H}$
-	<li> von Neumann algebra $\mathfrak{M}$: $\ast$-algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
-		$\mathfrak{M}^{\prime\prime}=\{A\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}^{\prime}\}$
+	<li> von Neumann algebra $\mathfrak{M}$: $\ast$-algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{B\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
+		$\mathfrak{M}^{\prime\prime}=\{B\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}^{\prime}\}$
 </ul>
 		<font size=5 color=green>
 		We can also consider $C^\ast$ algebra, which is a broader concept than von Neumann algebra.
@@ -160,7 +160,7 @@ is called a <font color=yellow> normal state</font>.
 <section>
 <h3><font color=skyblue>Representation </font> </h3>
 <div align="left">
-<p>$\mathfrak{A},\mathfrak{B}$ : $\ast$ algebra</p>
+<p>$\mathfrak{A},\mathfrak{B}$ : $\ast$-algebra</p>
 <ul>
 	<li> A linear map $\phi:\mathfrak{A}\to\mathfrak{B}$ satisfying the following conditions
 		is called
@@ -214,7 +214,7 @@ is called a <font color=yellow> normal state</font>.
 <section>
 <!---------------------------------------------------------------------------->
 <section>
-<h3><font color=skyblue>Inner product on a $\ast$ algebra $\mathfrak{A}$</font> </h3>
+<h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
 <div align="left">
 <p>	 $A,B\in\mathfrak{A}$</p>
 <ol>
@@ -233,9 +233,9 @@ is called a <font color=yellow> normal state</font>.
 <div align="left">
 <p>	 $A,B\in\mathfrak{A}$</p>
 <ol>
-	<li> Involution $A\to A^*$ is a anti-unitary operator, i.e.
+	<li> Involution $A\to A^*$ is an anti-unitary operator, i.e.
 		$\langle A^{\ast},B^{\ast}\rangle=\overline{\langle A,B\rangle}$</li>
-	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set of $\mathfrak{A}$,$\mathfrak{A}_S$, where
+	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set $\mathfrak{A}_S$ of $\mathfrak{A}$, where
 $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 </ol>
 <p> With the inner product $\langle \cdot , \cdot \rangle$, $\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=yellow>$H_S$</font>.
@@ -273,7 +273,7 @@ Since
 $$
 \begin{split}
 v(\varphi_{P,Q}(fg^T))&=v(Qf(Pg)^T)=Pg\otimes Qf\\
-&=P\otimes Q v(fg^T)
+&=P\otimes Q v(fg^T),
 \end{split}
 $$
 we have
@@ -292,7 +292,9 @@ $$
 <h3><font color=skyblue>Real Matrix Representation</font></h3>
 <div align="left">
 <p>
-A complex matrix $A=(a_{i,j})\in M_n(\mathbb{C})$ corresponds to
+A complex matrix $A=(a_{i,j})\in M_n(\mathbb{C})$ with 
+$$a_{i,j}=x_{i,j}+iy_{i,j}$$
+ corresponds to
 a real matrix $\tilde{A}=(\tilde{a}_{i,j})\in M_{2n}(\mathbb{R})$ with
 $$
 \tilde{a}_{i,j}=
@@ -301,6 +303,15 @@ x_{i,j}&-y_{i,j}\\
 y_{i,j}&x_{i,j}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
+</p>
+</div>
+</section>
+
+<!--------------------------------------------------------------------------->
+
+<section>
+<div align="left">
+<p>
 Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
 with a $2\times 2$-identity matrix $I_2$ and
 $$
@@ -309,7 +320,8 @@ J_2=\begin{pmatrix}
 1&0
 \end{pmatrix}.
 $$
-The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
+The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$:
+$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$
 </p>
 </div>
 </section>
