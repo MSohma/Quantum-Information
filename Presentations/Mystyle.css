@@ -1,0 +1,77 @@
+/* CSS ファイルではWebページのスタイルを設定します */
+/* 共通設定 */
+body {
+	margin: 0;
+	background-color: lavender;
+	/* 色の名前は例えば　http://www.tagindex.com/color/color_name.html で調べることができる */
+	font-size: 0.9em;
+}
+/* a要素（リンクの目印となるanchor）の設定　*/
+/* この↓行を書かないと、リンクに下線が引かれる */
+a { text-decoration:none; }
+
+/* a要素にマウスポインタがのった時の処理 */
+a:hover { color: red; }
+
+h1,h2,nav,nav a { color: white; }
+
+/* コンテナ */
+div#container {
+	width: 800px;
+	margin: auto;
+	padding: 0;
+	background-color: mintcream;
+}
+
+/* ヘッダー */
+header h1 {
+	font-size: 1.8em;
+	font-family: serif;
+	margin: 0px;
+	padding: 24px 28px;
+	height:  100px;
+	color: black;
+	background-color: #071b7e;
+	background-image: url(./images/mathheader.jpg);
+	background-repeat: round;
+	/* round:大き調整あり、repeat:繰り返し表示、no-repeat：繰り返し表示なし */
+}
+
+
+/* コンテンツ */
+section {
+	padding: 20px;  /* ボーダーと内容領域の間の空間領域　*/
+}
+
+section h2 {
+	font-size: 1.1em;
+	font-family: sans-serif;
+	padding: 6px 14px;
+	margin: 20px 0px;
+	color: brown;
+	background-color: palegoldenrod;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 1px gray;
+}
+section p {
+	margin: 20px;
+	line-height: 1.5;
+}
+section img {
+	display: block;
+	margin: auto;
+}
+ol,ul {
+	margin-left: 24px;
+	padding-left: 20px;
+	line-height: 2;
+}
+/*ol {
+	list-style-type: katakana-iroha;
+}*/
+/* フッター */
+footer {
+	padding: 20px;
+	font-size: 0.8em;
+	text-align: center;
+}
