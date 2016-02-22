@@ -41,11 +41,11 @@ $$
 $$
 and consider a representation 
 $$
-\pi:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}),
+\pi_l:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}),
 $$
 where $\mathfrak{B}(\mathfrak{H})$ is the ensemble of bounded operators on $\mathfrak{H}$
-and $\pi(A)$ is given by $\pi(A)B=AB$. Such a way to give a representation of von Neumann algebra 
-$\mathfrak{N}$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi(\mathfrak{N})$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
+and $\pi_l(A)$ is given by $\pi_l(A)B=AB$. Such a way to give a representation of von Neumann algebra 
+$\mathfrak{N}$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi_l(\mathfrak{N})$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
 
 $$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}.
@@ -66,7 +66,37 @@ Fig. 2    Problem posed in the Holevo's book.
 </center>
 
 </section>
-<!---------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+<section>
+	<h3><font color=skyblue>Representation on $\mathbb{C}^n\times \mathbb{C}^n$</font> </h3>
+ We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\times \mathbb{C}^n$ using the 
+ bijection given by $v(e_je_k^T)=e_k\otimes e_j$ for O.N.B $\{e_j\}$.
+ Then $\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is written as $\tilde{\pi}_l(A)=I_n\otimes A$. In fact
+ $$
+ \begin{split}
+ v(\pi_l(A)e_je_k^T)&=v(Ae_je_k^T)=e_k\otimes A e_j\\
+ &= (I_n\otimes A)v(e_je_k^T)=\tilde{\pi}_l(A)v(e_je_k^T).
+ \end{split} 
+ $$
+ 
+		 Note that, when we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
+		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
+    
+		the operator is called a <font color=red> vec operator</font>.
+On the other hand,$\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is 
+written as $\tilde{\pi}_r(A)=A^T\otimes I_n$. 
+In fact,
+ $$
+ \begin{split}
+ v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=A^Te_k\otimes  e_j\\
+ &= (A^T\otimes I_n)v(e_je_k^T)=\tilde{\pi}_r(A)v(e_je_k^T).
+ \end{split} 
+ $$
+
+	
+</section>
+
+	<!---------------------------------------------------------------------------->
 <section>
 <h3> <font color=skyblue>$\ast$-algebra</font></h3>
 <div align="left">
@@ -180,7 +210,7 @@ is called a <font color=red> normal state</font>.
 		<li>$\phi(AB)=\phi(A)\phi(B),\quad A,B\in \mathfrak{A}$
 		<li>$\phi(A^\ast)=\phi(A)^\ast$
 	</ol>
-	<li> A $\ast$-homomorphism $\pi:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=red>representation</font> on $\mathfrak{A}$, where
+	<li> A $\ast$-homomorphism $\pi_l:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=red>representation</font> on $\mathfrak{A}$, where
 		$\mathfrak{B}(\mathfrak{L})$ is the set of bounded operators on $\mathfrak{L}$.
 </ul>
 </div>
@@ -432,18 +462,18 @@ $$
 <div align="left">
 To get a matrix expression for GNS representation let us consider a map,
 $$
-\mbox{vec}(X)\to\mbox{vec}(\pi(A)X), 
+\mbox{vec}(X)\to\mbox{vec}(\pi_l(A)X), 
 $$
 where we have
 $$
-\mbox{vec}(\pi(A)X)=\mbox{vec}(AX)=(I_n\otimes A)\mbox{vec}(X),
+\mbox{vec}(\pi_l(A)X)=\mbox{vec}(AX)=(I_n\otimes A)\mbox{vec}(X),
 $$
 with a $n\times n$ identity matrix $I_n$.
 <p>
-This means that a matrix expression of $\pi(A)$ is given by $I_n\otimes A$:
+This means that a matrix expression of $\pi_l(A)$ is given by $I_n\otimes A$:
 </p>
 $$
-\pi(A)\sim
+\pi_l(A)\sim
 I_n\otimes A
 \in M_{n^2}(\mathbb{C}).
 $$
@@ -564,8 +594,8 @@ Since
 	<div align="left">
 	<p> $\mathfrak{A}=M_n(\mathbb{C})$ </p>
 	<p> $\omega(A)=\mbox{Tr}\rho A$: faithful state on $\mathfrak{A}$</p>
-	<p> $\pi:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
-	<p> $\mathfrak{N}=\pi(\mathfrak{A})$ is a von Neumann algebra.</p>
+	<p> $\pi_l:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
+	<p> $\mathfrak{N}=\pi_l(\mathfrak{A})$ is a von Neumann algebra.</p>
 	<p> Let us consider $\rho^{1/2}$ as a cyclic and separating vector $\Omega$.
 		$$H_{-}=\mathfrak{N}\Omega=\mathfrak{N}^\prime \Omega$$</p>
   </div>
@@ -595,8 +625,8 @@ Since
 <section>
 	<h3><font color=skyblue>Anti-linear map $S$</font> </h3>
 	<div align="left">
-	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi(\mathfrak{A})$</p>
-	<p> $\pi(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi_l(\mathfrak{A})$</p>
+	<p> $\pi_l(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
 	<p> $S(A\rho^{1/2})=A^\ast \rho^{1/2},\quad A\in M_2(\mathbb{C})$ </p>
 	<p> Putting $X=A\rho^{1/2}$,$Y=A^\ast \rho^{1/2}$, we get
 	$$
@@ -613,29 +643,29 @@ Since
 <!--------------------------------------------------------------------------->
 
 <section>
-	<h3><font color=skyblue>$\pi(\mathfrak{A})^\prime$</font> </h3>
+	<h3><font color=skyblue>$\pi_l(\mathfrak{A})^\prime$</font> </h3>
 	<div align="left">
 	<p>
 		Since 
 		$
-		\pi(A)\sim I_n \otimes A \in M_{n^2}(\mathbb{C}),\quad A\in \mathfrak{A}=M_n(\mathbb{C}),
+		\pi_l(A)\sim I_n \otimes A \in M_{n^2}(\mathbb{C}),\quad A\in \mathfrak{A}=M_n(\mathbb{C}),
 		$
 		we get
 		$$
-     \pi(\mathfrak{A})\sim I_n \otimes \mathfrak{A}. 	
+     \pi_l(\mathfrak{A})\sim I_n \otimes \mathfrak{A}. 	
         	$$
 		Therefore
 		$$
-     \pi(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_n.
+     \pi_l(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_n.
 		$$
 		
 	</p>
 	<p>
 		On the other hand, when we define the representation
 		$$
-		\tilde{\pi}:\mathfrak{A}\to \mathfrak{B}(H_{-})
+		\tilde{\pi_l}:\mathfrak{A}\to \mathfrak{B}(H_{-})
 		$$
-		by $\tilde{\pi}(A)B=BA^T$, its matrix expression is given as
+		by $\tilde{\pi_l}(A)B=BA^T$, its matrix expression is given as
 		$A\otimes I_n$.
 	</p>
 
@@ -646,8 +676,8 @@ Since
 <section>
 	<h3><font color=skyblue>Anti-linear operator $F$</font> </h3>
 	<div align="left">
-	<p> $F:\mathfrak{N}^\prime\Omega\ni M \Omega \to M^\ast\Omega\in\mathfrak{N}^{\prime}\Omega,\quad 	\mathfrak{N}^{\prime}=\tilde{\pi}(\mathfrak{A})$</p>
-	<p> $\tilde{\pi}(A)\Omega=\rho^{1/2}A^T,\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> $F:\mathfrak{N}^\prime\Omega\ni M \Omega \to M^\ast\Omega\in\mathfrak{N}^{\prime}\Omega,\quad 	\mathfrak{N}^{\prime}=\tilde{\pi_l}(\mathfrak{A})$</p>
+	<p> $\tilde{\pi_l}(A)\Omega=\rho^{1/2}A^T,\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
 	<p> $F(\rho^{1/2}A^T)= \rho^{1/2}(A^T)^\ast,\quad A\in M_2(\mathbb{C})$ </p>
 	<p> Putting $X=\rho^{1/2}A^T$,$Y= \rho^{1/2}(A^T)^\ast$ we get
 	$$
