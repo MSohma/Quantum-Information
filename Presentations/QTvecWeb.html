@@ -69,6 +69,7 @@ Fig. 2    Problem posed in the Holevo's book.
 <!--------------------------------------------------------------------------->
 <section>
 	<h3><font color=skyblue>Preliminaries</font> </h3>
+ <p>
  We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using the 
  bijection given by $v(e_je_k^T)=e_k\otimes e_j$ for O.N.B $\{e_j\}$ in $\mathbb{C}^n\otimes \mathbb{C}^n$.
  Then $\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is written as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
@@ -84,7 +85,7 @@ In fact
 		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
     
 		the operator is called a <font color=red> vec operator</font>.
-On the other hand,$\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
+On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
 written as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
@@ -93,17 +94,10 @@ In fact,
  &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T).
  \end{split} 
  $$
-
-	
-</section>
-
-	<!---------------------------------------------------------------------------->
-<section>
-<h3> <font color=skyblue>$\ast$-algebra</font></h3>
-<div align="left">
+</p>
+<p>
 In order to deal with anti-linear operators on $\mathbb{C}^n\otimes \mathbb{C}^n$,
 we view them as real operators on $\mathfrak{H}_\mathbb{R}$.
-We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
 A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ with 
 $$a_{j,k}=x_{j,k}+iy_{j,k}$$
  corresponds to
@@ -140,14 +134,19 @@ v_r(e_je_k^T\otimes I_2)&=e_k\otimes e_j\otimes f_1,\\
 v_r(e_je_k^T\otimes J_2)&=-e_k\otimes e_j\otimes f_2,
 \end{split}
 $$
-with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
+with $f_1=(1,0)^T,f_2=(0,1)$. 
 The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
 is given by
 $$
-
 e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
 $$
-Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2 $
+</p>
+</section>
+	<!---------------------------------------------------------------------------->
+<section>
+<h3> <font color=skyblue>$\ast$-algebra</font></h3>
+<div align="left">
+We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
 <ul>
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=red>product</font>
 	$AB\in\mathfrak{A}$:
