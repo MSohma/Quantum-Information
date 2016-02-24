@@ -101,8 +101,53 @@ In fact,
 <section>
 <h3> <font color=skyblue>$\ast$-algebra</font></h3>
 <div align="left">
+In order to deal with anti-linear operators on $\mathbb{C}^n\otimes \mathbb{C}^n$,
+we view them as real operators on $\mathfrak{H}_\mathbb{R}$.
 We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
+A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ with 
+$$a_{j,k}=x_{j,k}+iy_{j,k}$$
+ corresponds to
+a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
+$$
+\tilde{a}_{j,k}=
+\begin{pmatrix}
+x_{j,k}&-y_{j,k}\\
+y_{j,k}&x_{j,k}
+\end{pmatrix}\in M_2(\mathbb{R}).
+$$
 
+Then we can take a natural basis $\{ e_je_k^T\otimes I_2,e_je_k^T\otimes J_2\}$
+with a $2\times 2$-identity matrix $I_2$ and
+$$
+J_2=\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}.
+$$
+The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$:
+$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
+
+Using this representation we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
+given on a real Hilbert space  by
+$$
+e_je_k^T\otimes I_2 \to e_ke_j^T\otimes I_2, e_je_k^T\otimes J_2 \to -e_ke_j^T\otimes J_2,
+$$
+We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+by 
+$$
+\begin{split}
+v_r(e_je_k^T\otimes I_2)&=e_k\otimes e_j\otimes f_1,\\
+v_r(e_je_k^T\otimes J_2)&=-e_k\otimes e_j\otimes f_2,
+\end{split}
+$$
+with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
+The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
+is given by
+$$
+
+e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
+$$
+Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2 $
 <ul>
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=red>product</font>
 	$AB\in\mathfrak{A}$:
@@ -334,15 +379,15 @@ $$
 <h3><font color=skyblue>Real Matrix Representation</font></h3>
 <div align="left">
 <p>
-A complex matrix $A=(a_{k,l})\in M_n(\mathbb{C})$ with 
-$$a_{k,l}=x_{k,l}+iy_{k,l}$$
+A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ with 
+$$a_{j,k}=x_{j,k}+iy_{j,k}$$
  corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{k,l})\in M_{2n}(\mathbb{R})$ with
+a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{k,l}=
+\tilde{a}_{j,k}=
 \begin{pmatrix}
-x_{k,l}&-y_{k,l}\\
-y_{k,l}&x_{k,l}
+x_{j,k}&-y_{j,k}\\
+y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 </p>
@@ -363,7 +408,7 @@ J_2=\begin{pmatrix}
 \end{pmatrix}.
 $$
 The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$:
-$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$
+$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
 </p>
 </div>
 </section>
@@ -377,12 +422,12 @@ given on a real Hilbert space  by
 $$
 e_ie_j^T\otimes I_2 \to e_je_i^T\otimes I_2, e_ie_j^T\otimes J_2 \to -e_je_i^T\otimes J_2,
 $$
-<p>We define a bijection $$v:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+<p>We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
 by 
 $$
 \begin{split}
-v(e_ie_j^T\otimes I_2)&=e_j\otimes e_i\otimes f_1,\\
-v(e_ie_j^T\otimes J_2)&=e_j\otimes e_i\otimes f_2,
+v_r(e_ie_j^T\otimes I_2)&=e_j\otimes e_i\otimes f_1,\\
+v_r(e_ie_j^T\otimes J_2)&=e_j\otimes e_i\otimes f_2,
 \end{split}
 $$
 with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
@@ -696,13 +741,13 @@ Since
 	<h3><font color=skyblue>Matrix Expression of modular operator</font> </h3>
 	<div align="left">
 <p>
-A complex matrix $A=(a_{k,l})\in M_n(\mathbb{C})$ corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{k,l})\in M_{2n}(\mathbb{R})$ with
+A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
+a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{k,l}=
+\tilde{a}_{j,k}=
 \begin{pmatrix}
-x_{k,l}&-y_{k,l}\\
-y_{k,l}&x_{k,l}
+x_{j,k}&-y_{j,k}\\
+y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
@@ -719,13 +764,13 @@ The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 </section>
 <!--------------------------------------------------------------------------->
 <section>
-A complex matrix $A=(a_{k,l})\in M_n(\mathbb{C})$ corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{k,l})\in M_{2n}(\mathbb{R})$ with
+A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
+a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{k,l}=
+\tilde{a}_{j,k}=
 \begin{pmatrix}
-x_{k,l}&-y_{k,l}\\
-y_{k,l}&x_{k,l}
+x_{j,k}&-y_{j,k}\\
+y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
