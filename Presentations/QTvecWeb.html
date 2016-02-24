@@ -68,14 +68,15 @@ Fig. 2    Problem posed in the Holevo's book.
 </section>
 <!--------------------------------------------------------------------------->
 <section>
-	<h3><font color=skyblue>Representation on $\mathbb{C}^n\times \mathbb{C}^n$</font> </h3>
- We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\times \mathbb{C}^n$ using the 
- bijection given by $v(e_je_k^T)=e_k\otimes e_j$ for O.N.B $\{e_j\}$.
- Then $\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is written as $\tilde{\pi}_l(A)=I_n\otimes A$. In fact
+	<h3><font color=skyblue>Preliminaries</font> </h3>
+ We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using the 
+ bijection given by $v(e_je_k^T)=e_k\otimes e_j$ for O.N.B $\{e_j\}$ in $\mathbb{C}^n\otimes \mathbb{C}^n$.
+ Then $\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is written as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+In fact
  $$
  \begin{split}
  v(\pi_l(A)e_je_k^T)&=v(Ae_je_k^T)=e_k\otimes A e_j\\
- &= (I_n\otimes A)v(e_je_k^T)=\tilde{\pi}_l(A)v(e_je_k^T).
+ &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T).
  \end{split} 
  $$
  
@@ -83,13 +84,13 @@ Fig. 2    Problem posed in the Holevo's book.
 		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
     
 		the operator is called a <font color=red> vec operator</font>.
-On the other hand,$\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is 
-written as $\tilde{\pi}_r(A)=A^T\otimes I_n$. 
+On the other hand,$\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
+written as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
  \begin{split}
  v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=A^Te_k\otimes  e_j\\
- &= (A^T\otimes I_n)v(e_je_k^T)=\tilde{\pi}_r(A)v(e_je_k^T).
+ &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T).
  \end{split} 
  $$
 
