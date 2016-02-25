@@ -21,7 +21,7 @@
 <body>
 <!-- コンテナ -->
 <div id="container">
-	<!-- ヘッダー -->
+	<!-- ヘッダー --> 
 	<header>
 		<h1>Modular operator and Holevo's commutation operator</h1>
 	</header>
@@ -68,11 +68,12 @@ Fig. 2    Problem posed in the Holevo's book.
 </section>
 <!--------------------------------------------------------------------------->
 <section>
-	<h3><font color=skyblue>Preliminaries</font> </h3>
+	<h3><font color=skyblue>Vector Representation</font> </h3>
  <p>
  We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using the 
- bijection given by $v(e_je_k^T)=e_k\otimes e_j$ for O.N.B $\{e_j\}$ in $\mathbb{C}^n\otimes \mathbb{C}^n$.
- Then $\pi_l(A):\mathfrak{N}\in X \to AX\ni\mathfrak{N}$ is written as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+ bijection given by $v(e_je_k^T)=e_k\otimes e_j$ 
+ where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$.
+ Then for $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
  \begin{split}
@@ -84,9 +85,9 @@ In fact
 		 Note that, when we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
     
-		the operator is called a <font color=red> vec operator</font>.
+		the operator $v$ is called a <font color=red> vec operator</font>.
 On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
-written as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+given by $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
  \begin{split}
@@ -96,9 +97,9 @@ In fact,
  $$
 </p>
 <p>
-In order to deal with anti-linear operators on $\mathbb{C}^n\otimes \mathbb{C}^n$,
-we view them as real operators on $\mathfrak{H}_\mathbb{R}$.
-A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ with 
+In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}$,
+we view $\mathfrak{H}$ as a real Hilbert space.
+A complex matrix $A=(a_{j,k})\in \mathfrak{N}=M_n(\mathbb{C})$ with 
 $$a_{j,k}=x_{j,k}+iy_{j,k}$$
  corresponds to
 a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
@@ -118,27 +119,21 @@ J_2=\begin{pmatrix}
 1&0
 \end{pmatrix}.
 $$
-The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$:
+The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$;
 $M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
 
-Using this representation we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
-given on a real Hilbert space  by
-$$
-e_je_k^T\otimes I_2 \to e_ke_j^T\otimes I_2, e_je_k^T\otimes J_2 \to -e_ke_j^T\otimes J_2,
-$$
-We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+In addition, We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
 by 
 $$
 \begin{split}
 v_r(e_je_k^T\otimes I_2)&=e_k\otimes e_j\otimes f_1,\\
-v_r(e_je_k^T\otimes J_2)&=-e_k\otimes e_j\otimes f_2,
+v_r(e_je_k^T\otimes J_2)&=e_k\otimes e_j\otimes f_2,
 \end{split}
 $$
-with $f_1=(1,0)^T,f_2=(0,1)$. 
-The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
-is given by
+with $f_1=(1,0)^T,f_2=(0,1)^T$. 
+Thus we have obtained convenient relations
 $$
-e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
+M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2.
 $$
 </p>
 </section>
@@ -147,6 +142,16 @@ $$
 <h3> <font color=skyblue>$\ast$-algebra</font></h3>
 <div align="left">
 We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
+Using this representation we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
+given on a real Hilbert space  by
+$$
+e_je_k^T\otimes I_2 \to e_ke_j^T\otimes I_2, e_je_k^T\otimes J_2 \to -e_ke_j^T\otimes J_2,
+$$
+The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
+is given by
+$$
+e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
+$$
 <ul>
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=red>product</font>
 	$AB\in\mathfrak{A}$:
