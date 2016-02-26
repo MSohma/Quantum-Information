@@ -85,7 +85,7 @@ In fact
 		 Note that, when we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
     
-		the operator $v$ is called a <font color=red> vec operator</font>.
+		the operator $v$ is called a  vec operator or col operator.
 On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
 given by $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
@@ -111,8 +111,8 @@ y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 
-Then we can take a natural basis $\{ e_je_k^T\otimes I_2,e_je_k^T\otimes J_2\}$
-with a $2\times 2$-identity matrix $I_2$ and
+Here we can take a natural basis $\{ e_je_k^T\otimes I_2,e_je_k^T\otimes J_2\}$
+with the $2\times 2$-identity matrix $I_2$ and
 $$
 J_2=\begin{pmatrix}
 0&-1\\
@@ -122,7 +122,7 @@ $$
 The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$;
 $M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
 
-In addition, We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+In addition, we define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
 by 
 $$
 \begin{split}
@@ -139,10 +139,10 @@ $$
 </section>
 	<!---------------------------------------------------------------------------->
 <section>
-<h3> <font color=skyblue>$\ast$-algebra</font></h3>
+<h3> <font color=skyblue>$\ast$-operation</font></h3>
 <div align="left">
-We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
-Using this representation we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
+Let us represent the transpose operator on $\mathbb{R}^n\otimes \mathbb{R}^n$.
+Using the representation introduced in the previous section, we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
 given on a real Hilbert space  by
 $$
 e_je_k^T\otimes I_2 \to e_ke_j^T\otimes I_2, e_je_k^T\otimes J_2 \to -e_ke_j^T\otimes J_2,
@@ -152,6 +152,7 @@ is given by
 $$
 e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
 $$
+We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
 <ul>
 <li> For any $A,B\in \mathfrak{A}$ we can define the <font color=red>product</font>
 	$AB\in\mathfrak{A}$:
