@@ -23,7 +23,8 @@
 <div id="container">
 	<!-- ヘッダー --> 
 	<header>
-		<h1>Modular operator and Holevo's commutation operator</h1>
+		<h1>Modular operator and Holevo's commutation operator <br> <font size="3"><i>Masaki Sohma</i></font></h1>
+		<h2>Masaki Sohma</h2>
 	</header>
 
 
@@ -139,171 +140,25 @@ $$
 </section>
 	<!---------------------------------------------------------------------------->
 <section>
-<h3> <font color=skyblue>$\ast$-operation</font></h3>
+<h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
 <div align="left">
-Let us represent the transpose operator on $\mathbb{R}^n\otimes \mathbb{R}^n$.
-Using the representation introduced in the previous section, we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
-given on a real Hilbert space  by
-$$
-e_je_k^T\otimes I_2 \to e_ke_j^T\otimes I_2, e_je_k^T\otimes J_2 \to -e_ke_j^T\otimes J_2,
-$$
+	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is a operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
+	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
 The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
-is given by
+is given by $O_{\ast}=O_T\otimes K_2$ with
 $$
-e_k\otimes e_j\otimes f_1\to e_j\otimes e_k\otimes f_1,e_k\otimes e_j\otimes f_2\to -e_j\otimes e_k\otimes f_2
+K_2=\begin{pmatrix}
+1&0\\
+0&-1
+\end{pmatrix}.
 $$
-We call a complex vector space $\mathfrak{A}$ satisfying the following properties  <font color=red>$\ast$-algebra</font>.
-<ul>
-<li> For any $A,B\in \mathfrak{A}$ we can define the <font color=red>product</font>
-	$AB\in\mathfrak{A}$:
-	<ol>
-  <li> <medium> $A(BC)=(AB)C$ </medium>
-  <li> $A(B+C)=AB+AC,(A+B)C=AC+BC$
-  <li> $\alpha(AB)=A(\alpha B)=(\alpha A)B,\alpha\in \mathbb{C}$
-  </ol>
-<li> For any $A\in\mathfrak{A}$ we can define the <font color=red>involution</font> $A^\ast\in\mathfrak{A}$:
-	<ol>
-	<li> $(A^\ast)^\ast=A,(AB)^\ast=B^\ast A^\ast, B\in\mathfrak{A}$
-	<li> $(\alpha A+\beta B)^\ast=\bar{\alpha} A^\ast +\bar{\beta} B^\ast$,$\alpha,\beta\in\mathbb{C}$
-  </ol>
-</ul>
+The operators $\pi_l(A)$ and $\pi_r(A)$ introduced in the previous section are represented on
+$\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ as
+$\tilde{\pi}_l(A)\otimes I_2$ and $\tilde{\pi}_r(A)\otimes I_2$ respectively.
 </div>
 </section>
 
-<!---------------------------------------------------------------------------->
 
-<section>
-<h3> <font color=skyblue>Settings of our problem </font></h3>
-<div align="left">
-<!---------------------------------------------------------------------------->
-
-<section>
-<h3> <font color=skyblue> Examples of $\ast$-algebra</font></h3>
-<div align="left">
-<ul>
-	<li> $M_n(\mathbb{C})$:full matrix algebra of all $n\times n$ complex matrices.
-	<li> $\mathfrak{B}(\mathfrak{H})$:algebra of bounded operators on a Hilbert space $\mathfrak{H}$
-	<li> von Neumann algebra $\mathfrak{M}$: $\ast$-algebra $\mathfrak{M}\subset \mathfrak{B}(\mathfrak{H})$ satisfying $\mathfrak{M}^{\prime\prime}=\mathfrak{M}$, where $\mathfrak{M}^{\prime}=\{B\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}\}$
-		$\mathfrak{M}^{\prime\prime}=\{B\in \mathfrak{B}(\mathfrak{H})|AB=BA,\forall A\in\mathfrak{M}^{\prime}\}$
-</ul>
-		<font color=green>
-		We can also consider $C^\ast$ algebra, which is a broader concept than von Neumann algebra.
-		</font>
-</div>
-</section>
-
-<!---------------------------------------------------------------------------->
-
-<section>
-<h3><font color=skyblue>Self-adjoint element </font> </h3>
-<div align="left">
-	$\mathfrak{A}$:$\ast$-algebra<br>
-	<ul>
-	<li> We call $A\in\mathfrak{A}$ satisfying $A=A^\ast$ a <font color=red>self-adjoint element</font>.</li>
-	<li>	The self-adoint elements represent  observables in the quantum physics.  </li>
-	<li>  $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast \}$ </li>
-　<li> $\mathfrak{A}\ni A=A_{{re}}+iA_{{im}}$
-	$$
-        \begin{split}
-        A_{{re}}:=&\frac{A+A^\ast}{2}\in\mathfrak{A}_S：\mbox{real part of }A\\
-	A_{{im}}:=&\frac{A-A^\ast}{2i}\in\mathfrak{A}_S：\mbox{imaginary part of }A
-        \end{split}
-$$</li>
-  </ul>
-</div>
-</section>
-
-<!---------------------------------------------------------------------------->
-<section>
-<!---------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>State </font> </h3>
-<div align="left">
-<p>$\mathfrak{A}$:$\ast$-algebra with the identity $I$</p>
-<p>A linear functional $\omega:\mathfrak{A}\to \mathbb{C}$ satisfying the following conditions is called
-a <font color=red>state</font>.
-</p>
-<ul>
-	<li> $\omega(A^\ast A)\geq 0,\quad A\in \mathfrak{A}$</li>
-	<li> $\omega(I)=1$</li>
-</ul>
-<p> When $\omega(A^{\ast}A)=0\Leftrightarrow A=0$,
-	$\omega$ is called <font color=red>faithful</font>.</p>
-<p>It holds that $\omega(A^\ast)=\overline{\omega(A)}$.
-
-</div>
-</section>
-
-<section>
-<h3><font color=skyblue>Normal State</font> </h3>
-<div align="left">
-<p>$\mathfrak{A}$ : von Neumann algebra</p>
-<p>$\rho$ : density operator  ($\rho\geq 0,\mbox{Tr}\rho=1$)</p>
-<p>The state defined as </p>
-$$
-\omega(A)=\mbox{Tr}\rho A
-$$
-is called a <font color=red> normal state</font>.
-</div>
-</section>
-<!---------------------------------------------------------------------------->
-</section>
-<!---------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>Representation </font> </h3>
-<div align="left">
-<p>$\mathfrak{A},\mathfrak{B}$ : $\ast$-algebra</p>
-<ul>
-	<li> A linear map $\phi:\mathfrak{A}\to\mathfrak{B}$ satisfying the following conditions
-		is called
-		a $\ast$-homomorphism</font>.</li>
-	<ol>
-		<li>$\phi(AB)=\phi(A)\phi(B),\quad A,B\in \mathfrak{A}$
-		<li>$\phi(A^\ast)=\phi(A)^\ast$
-	</ol>
-	<li> A $\ast$-homomorphism $\pi_l:\mathfrak{A}\to \mathfrak{B}(\mathfrak{L})$ is called <font color=red>representation</font> on $\mathfrak{A}$, where
-		$\mathfrak{B}(\mathfrak{L})$ is the set of bounded operators on $\mathfrak{L}$.
-</ul>
-</div>
-</section>
-
-<!---------------------------------------------------------------------------->
-<section>
-<!---------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>Remark </font> </h3>
-<div align="left">
-<p>We consider only the following cases.</p>
-<ul>　
-	<li> $\mathfrak{M}=M_n(\mathbb{C})$</li>
-	<ol>
-	 <li> $M_n(\mathbb{C})$ is a von Neumann algebra on a $n$-dimensional Hilbert space.</li>
-	 <li> It is easy to extend to the case of a finite dimenstional von Neumann albebra since it is $\ast$-isomorphic to $M_{m_1}(\mathbb{C})\otimes \cdots \otimes M_{m_n}(\mathbb{C})$.</li>
-	</ol>
-</ul>
-</div>
-</section>
-
-<section>
-<div align="left">
-	<ul>
-		<li> We suppose that $\omega$ is a faithful normal state on $M_n(\mathbb{C})$
-		</li>
-
-		<ol>
-			<li> $\omega(A)=\mbox{Tr} \rho A$, where $\rho$ is a density operator  with eigenvalue $s_j>0,j=1,..,n$.
-				<li> It is easy to extend to the case of a finite dimensional von Neumann algebra $\mathfrak{M}$.
-		</ol>
-	</ul>
-</div>
-</section>
-<!---------------------------------------------------------------------------->
-</section>
-<!---------------------------------------------------------------------------->
-
-
-<!---------------------------------------------------------------------------->
-<section>
 <!---------------------------------------------------------------------------->
 <section>
 <h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
@@ -319,7 +174,9 @@ is called a <font color=red> normal state</font>.
 	Hilbert spaces with these inner products are denoted by <font color=red>$H_{-},H_{+},H$</font> respectively.</p>
 </div>
 </section>
+
 <!--------------------------------------------------------------------------->
+
 <section>
 <h3><font color=skyblue>Properties of $\langle \cdot,\cdot \rangle$</font> </h3>
 <div align="left">
@@ -337,156 +194,8 @@ $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 </section>
 
 <!--------------------------------------------------------------------------->
-</section>
-<!---------------------------------------------------------------------------->
-
-<section>
-	<h3><font color=skyblue>Vec Operator</font> </h3>
-	<div align="left">
-		<p>We define a bijection $v:M_n(\mathbb{C})\to \mathbb{C}^n\otimes \mathbb{C}^n$
-		by $v(fg^T)=g\otimes f$; in particular $v(e_ie_j^T)=e_j\otimes e_i$ for 
-		O.N.B. $\{e_i\}$.
-		</p>
-		<p> Note that, when we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
-		by using the basis $\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$
-                the operator is called a <font color=red> vec operator</font>.
-	</p>
-	</div>
-</section>
-<section>
-<h3><font color=skyblue>$X\to QXP^T$</font></h3>
-<div align="left">
-<p>
-Let us define $\varphi_{P,Q}$ as 
-$$
-\varphi_{P,Q}=QXP^T.
-$$
-Since 
-$$
-\begin{split}
-v(\varphi_{P,Q}(fg^T))&=v(Qf(Pg)^T)=Pg\otimes Qf\\
-&=P\otimes Q v(fg^T),
-\end{split}
-$$
-we have
-$$
-\varphi_{P,Q}\sim P\otimes Q
-$$
-</p>
-</div>
-</section>
 
 
-<!--------------------------------------------------------------------------->
-<section>
-<!--------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>Real Matrix Representation</font></h3>
-<div align="left">
-<p>
-A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ with 
-$$a_{j,k}=x_{j,k}+iy_{j,k}$$
- corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
-$$
-\tilde{a}_{j,k}=
-\begin{pmatrix}
-x_{j,k}&-y_{j,k}\\
-y_{j,k}&x_{j,k}
-\end{pmatrix}\in M_2(\mathbb{R}).
-$$
-</p>
-</div>
-</section>
-
-<!--------------------------------------------------------------------------->
-
-<section>
-<div align="left">
-<p>
-Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
-with a $2\times 2$-identity matrix $I_2$ and
-$$
-J_2=\begin{pmatrix}
-0&-1\\
-1&0
-\end{pmatrix}.
-$$
-The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$:
-$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
-</p>
-</div>
-</section>
-
-<!--------------------------------------------------------------------------->
-
-<section>
-<div align="left">
-Using this representation we can consider $\ast$-operation, which is an anti-linear operator on a complex Hilbert space, as a linear operator 
-given on a real Hilbert space  by
-$$
-e_ie_j^T\otimes I_2 \to e_je_i^T\otimes I_2, e_ie_j^T\otimes J_2 \to -e_je_i^T\otimes J_2,
-$$
-<p>We define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
-by 
-$$
-\begin{split}
-v_r(e_ie_j^T\otimes I_2)&=e_j\otimes e_i\otimes f_1,\\
-v_r(e_ie_j^T\otimes J_2)&=e_j\otimes e_i\otimes f_2,
-\end{split}
-$$
-with O.N.B. $\{f_1,f_2\}$ in $\mathbb{R}^2$.
-Thus we have $M_n(\mathbb{C})\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2 $
-</p>
-</div>
-</section>
-
-<!--------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>Real Matrix Expression</font></h3>
-<div align="left">
-<p>
-
-	Let us consider a vec operator  
-$$
-\mbox{vec}_r:M_n(\mathbb{C})\ni Z=
-(z_1,...,z_n)
-\to 
-\begin{pmatrix}
-\tilde{z}_{1}\\
-\tilde{z}_{2}\\
-:\\
-\tilde{z}_{n}
-\end{pmatrix}
-$$
-where $\tilde{z}_{k}$ is a $2n$-dimensional real vector given as $(x_{1,k},y_{1,k},...,x_{n,k},y_{n,k})^T$
-for $z_k=(x_{1,k}+iy_{1,k},...,x_{n,k}+iy_{n,k})^T$.
- 
-</p>
-</div>
-</section>
-<!--------------------------------------------------------------------------->
-<section>
-<h3><font color=skyblue>Relation between Real and Complex Matrix Expressions</font></h3>
-<div align="left">
-<p>
- <ul>
-<li> A linear map $A$ on $\mbox{vec}(M_n(\mathbb{C}))$, corresponds to a linear map
- $A\otimes I_2$ on $\mbox{vec}(M_{2n}^r(\mathbb{R}))$. 
-<li> $\ast$-operation corresponds to a linear operator $P\otimes K_2$
-<li> The muliplication by $i$ coresponds to $I\otimes J_2$.
-</ul>
-</p>
-</div>
-</section>
-<!--------------------------------------------------------------------------->
-</section>
-<!--------------------------------------------------------------------------->
-
-
-<!--------------------------------------------------------------------------->
-<section>
-<!--------------------------------------------------------------------------->
 <section>
 	<h3><font color=skyblue>Matrix expression for GNS representation</font> </h3>
 	<div align="left">
@@ -529,8 +238,6 @@ I_n\otimes A
 \in M_{n^2}(\mathbb{C}).
 $$
   </div>
-</section>
-<!--------------------------------------------------------------------------->
 </section>
 <!--------------------------------------------------------------------------->
 <section>
