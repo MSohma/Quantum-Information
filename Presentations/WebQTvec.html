@@ -33,11 +33,10 @@
 We will do an exercise given in the Holevo's book in a case of finite dimensional 
 von Neumann algebra. Let us start with GNS construction for a 
 von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$. 
-Let $\rho$ be a non-degenerated density operator and 
-$\omega$ be the corresponding normal state given by $\omega(A)=\mbox{Tr}\rho A$.
+Let $\tau$ be a tracial state given by $\tau(A)=\frac{1}{n}\mbox{Tr}A$.
 We introduce a Hilbert space $\mathfrak{H}=\mathfrak{N}$ with an inner product 
 $$
-\langle A, B \rangle =\omega(A^{\ast}B),
+\langle A, B \rangle_\tau =\tau(A^{\ast}B),
 $$
 and consider a representation 
 $$
@@ -71,8 +70,12 @@ Fig. 2    Problem posed in the Holevo's book.
 	<h3><font color=skyblue>Vector Representation</font> </h3>
  <p>
  We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using the 
- bijection given by $v(e_je_k^T)=e_k\otimes e_j$ 
- where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$.
+ unitary map given by $v(e_je_k^T)=e_k\otimes e_j$ 
+ where $e_j=\sqrt{n}(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$ constitues a orthonormal basis with the 
+ inner product $\langle \cdot,\cdot\rangle_\tau$.
+Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
+\langle f_1\otimes g_1, f_2\otimes g_2 \rangle =\frac{1}{n}\sum_j f_{1,j}\bar{g}_{1,j}\sum_j f_{2,j}\bar{g}_{2,j}
+$$
  Then for $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
