@@ -1,4 +1,4 @@
-doctype html>
+<doctype html>
 <html lang="ja">
 
 	<head>
@@ -34,15 +34,15 @@ We will do an exercise given in the Holevo's book in a case of finite dimensiona
 von Neumann algebra. Let us start with GNS construction for a 
 von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$. 
 Let $\tau$ be a tracial state given by $\tau(A)=\frac{1}{n}\mbox{Tr}A$.
-We introduce a Hilbert space $\mathfrak{H}=\mathfrak{N}$ with an inner product 
+We introduce a Hilbert space $\mathfrak{H}_\tau=\mathfrak{N}$ with an inner product 
 $$
 \langle A, B \rangle_\tau =\tau(A^{\ast}B),
 $$
 and consider a representation 
 $$
-\pi_l:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}),
+\pi_l:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau),
 $$
-where $\mathfrak{B}(\mathfrak{H})$ is the ensemble of bounded operators on $\mathfrak{H}$
+where $\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of bounded operators on $\mathfrak{H}_\tau$
 and $\pi_l(A)$ is given by $\pi_l(A)B=AB$. Such a way to give a representation of von Neumann algebra 
 $\mathfrak{N}$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi_l(\mathfrak{N})$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
 
@@ -71,11 +71,12 @@ Fig. 2    Problem posed in the Holevo's book.
  <p>
  We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
  unitary map given by $v(e_je_k^T)=e_k\otimes e_j$ 
- where $e_j=\sqrt{n}(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$ constitues an orthonormal basis with the 
+ where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
  inner product $\langle \cdot,\cdot\rangle_\tau$.
 Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
-\langle f_1\otimes g_1, f_2\otimes g_2 \rangle =\frac{1}{n}\sum_j f_{1,j}\bar{f}_{2,j}\sum_j g_{1,j}\bar{g}_{2,j}.
+\langle f_1\otimes g_1, f_2\otimes g_2 \rangle =\frac{1}{n}\sum_j f_{1,j}\bar{f}_{2,j}\sum_j g_{1,j}\bar{g}_{2,j},
 $$
+for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j\}$.
  Then for $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
