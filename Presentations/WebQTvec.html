@@ -77,14 +77,14 @@ Fig. 2    Problem posed in the Holevo's book.
  <p>
  For a whle we consider a tracial state $\tau(A)=\frac{1}{n}\mbox{Tr}A$ on $\mathfrak{N}=M_N(\mathbb{C})$.
  Then the inner product on $\mathfrak{N}$ is denotedy by  $\langle \cdot,\cdot\rangle_\tau$,
-  and $\sqrt{n}e_je_k^T$ constitue an orthonormal basis,
+  and $\sqrt{n}e_je_k^T$ ($j,k=1,2,...,n$) constitue an orthonormal basis,
  where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
  We identify $\mathfrak{N}$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
  unitary map given by $v(e_je_k^T)=e_k\otimes e_j$. 
 Here we assume $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
-\langle f_1\otimes g_1, f_2\otimes g_2 \rangle =\frac{1}{n}(f_1,g_1)(f_2,g_2)
+(f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,g_1)(f_2,g_2)
 $$
-for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j\}$.
+for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,...n\}$.
  </p>
  <p>
 For $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
@@ -96,10 +96,10 @@ In fact
  \end{split} 
  $$
  
-		 Note that, when we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
-		by using the basis $$\{e_1\otimes e_1,..,e_1\otimes e_n,....,e_n\otimes e_1,...,e_n\otimes e_n\}$$
+		 Note that, in the field of matrxi calculus, identifying $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
+		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
-		the operator $v$ is called a  vec operator or a col operator.
+		we call the operator $v$ a vec operator or a col operator.
 On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
 given by $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
@@ -373,17 +373,17 @@ Since
 We explain results of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
-Let us recall that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H})$ 
-is the GNS representation for the faithful state 
-$\omega(A)=\mbox{Tr}\rho A$ with a non-degenerated density operator $\rho$.
-Here $\mathfrak{H}=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
-$\mathfrak{B}(\mathfrak{H})$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
+We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
+is the GNS representation for the tracial state 
+$\tau(A)=\fram{1}{n}\mbox{Tr} A$. 
+Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
+$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
 Then we have 
 $$
 \mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
 $$
 and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
-In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}$;
+In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
 $$
 \mathfrak{H}=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
 $$
