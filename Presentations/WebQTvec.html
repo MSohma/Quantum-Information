@@ -81,34 +81,35 @@ Fig. 2    Problem posed in the Holevo's book.
  where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
  We identify $\mathfrak{N}$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
  unitary map given by $v(e_je_k^T)=e_k\otimes e_j$. 
-Here we assume $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
+Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
 (f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,g_1)(f_2,g_2)
 $$
 for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,...n\}$.
  </p>
  <p>
-For $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+For $A\in \mathfrak{N}$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
  \begin{split}
  v(\pi_l(A)e_je_k^T)&=v(Ae_je_k^T)=e_k\otimes A e_j\\
- &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T).
+ &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T),
  \end{split} 
  $$
- 
-		 Note that, in the field of matrxi calculus, identifying $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
+and hence $\pi_l(A)=v^\ast\tilde{\pi}_l(A)v$. 
+		 Note that, in the field of matrix calculus, we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
-		we call the operator $v$ a vec operator or a col operator.
+		and call the operator $v$ a vec operator or a col operator.
 On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
-given by $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+represented as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
  \begin{split}
  v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=A^Te_k\otimes  e_j\\
- &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T).
+ &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T),
  \end{split} 
  $$
+and hence $\pi_r(A)=v^\ast\tilde{\pi}_r(A) v$. 
 </p>
 <p>
 In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}$,
