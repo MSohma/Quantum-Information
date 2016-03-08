@@ -126,7 +126,7 @@ y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 
-Here we can take a natural basis $\{ e_je_k^T\otimes I_2,e_je_k^T\otimes J_2\}$
+Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes J_2\}$
 with the $2\times 2$-identity matrix $I_2$ and
 $$
 J_2=\begin{pmatrix}
@@ -375,8 +375,9 @@ We explain results of Tomita-Takesaki theory in the case of
 $\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
-is the GNS representation for the tracial state 
-$\tau(A)=\fram{1}{n}\mbox{Tr} A$. 
+is the GNS representation for the tracial state
+
+$\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
 Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
 $\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
 Then we have 
@@ -386,31 +387,16 @@ $$
 and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
 In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
 $$
-\mathfrak{H}=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
+\mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
 $$
-	<p> $\mathfrak{A}=M_n(\mathbb{C})$ </p>
-	<p> $\omega(A)=\mbox{Tr}\rho A$: faithful state on $\mathfrak{A}$</p>
-	<p> $\pi_l:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
-	<p> $\mathfrak{N}=\pi_l(\mathfrak{A})$ is a von Neumann algebra.</p>
-	<p> Let us consider $\rho^{1/2}$ as a cyclic and separating vector $\Omega$.
-		$$H_{-}=\mathfrak{N}\Omega=\mathfrak{N}^\prime \Omega$$</p>
-  </div>
-</section>
-<!--------------------------------------------------------------------------->
-<section>
-	<div align="left">
-<p> $\bullet$ Consider  anti-linear operoator on $H_{-}$, $S$ and $F$
+<p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
 	$$
 	 \begin{split}
-		 S&:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega\\
-		 F&:\mathfrak{N}^\prime \Omega\ni M\Omega \to M^\ast\Omega\in \mathfrak{N}^\prime \Omega
+		 S&:\mathfrak{M}\Omega\ni \pi_l(N) \Omega \to \pi_l(N)^\ast\Omega\in\mathfrak{M}\Omega\\
+		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(N) \Omega \to \pi_r(N)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
 	 \end{split}
 	$$
-</p>
-<p> $\bullet$ The linear operator on $H_{-}$ defined as follows is called a <font color=red>modular operator.</font>
-	$$
-	\Delta=FS
-	$$
+	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
 </p>
   </div>
 </section>
