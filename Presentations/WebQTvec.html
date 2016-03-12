@@ -80,35 +80,41 @@ Fig. 2    Problem posed in the Holevo's book.
   and $\sqrt{n}e_je_k^T$ ($j,k=1,2,...,n$) constitue an orthonormal basis,
  where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
  We identify $\mathfrak{N}$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
- unitary map given by $v(e_je_k^T)=e_k\otimes e_j$. 
-Here we assume $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
-(f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,g_1)(f_2,g_2)
+ unitary map $v$ given by $v(e_je_k^T)=e_k\otimes e_j$. 
+Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
+(f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,f_2)(g_1,g_2)
 $$
 for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,...n\}$.
  </p>
+ <font color=red> 
+When we consider the bilinearity, the correspondence $v(e_je_k^T)=e_k\otimes e_j$ seems to 
+be wrong; it might be better that $v(e_je_k^\ast)=e_k\otimes e_j$.
+ </font>
+
  <p>
-For $A\in \mathfrak{N}$, $\pi_l(A)$ is given by $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+For $A\in \mathfrak{N}$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
  \begin{split}
  v(\pi_l(A)e_je_k^T)&=v(Ae_je_k^T)=e_k\otimes A e_j\\
- &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T).
+ &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T),
  \end{split} 
  $$
- 
-		 Note that, in the field of matrxi calculus, identifying $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
+and hence $\pi_l(A)=v^\ast\tilde{\pi}_l(A)v$. 
+		 Note that, in the field of matrix calculus, we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
-		we call the operator $v$ a vec operator or a col operator.
+		and call the operator $v$ a vec operator or a col operator.
 On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
-given by $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+represented as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
  \begin{split}
  v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=A^Te_k\otimes  e_j\\
- &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T).
+ &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T),
  \end{split} 
  $$
+and hence $\pi_r(A)=v^\ast\tilde{\pi}_r(A) v$. 
 </p>
 <p>
 In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}$,
@@ -125,7 +131,7 @@ y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 
-Here we can take a natural basis $\{ e_je_k^T\otimes I_2,e_je_k^T\otimes J_2\}$
+Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes J_2\}$
 with the $2\times 2$-identity matrix $I_2$ and
 $$
 J_2=\begin{pmatrix}
@@ -151,9 +157,10 @@ M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq M_{2n}^r(\mathbb{R}
 $$
 </p>
 </section>
-	<!---------------------------------------------------------------------------->
 <section>
+	<!---------------------------------------------------------------------------->
 <h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
+	<!---------------------------------------------------------------------------->
 <div align="left">
 	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is a operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
 	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
@@ -172,16 +179,10 @@ $\tilde{\pi}_l(A)\otimes I_2$ and $\tilde{\pi}_r(A)\otimes I_2$ respectively.
 </section>
 
 
-<!---------------------------------------------------------------------------->
 <section>
-	<h3><font color=skyblue>Tomita-Takesaki Theory for $\mathfrak{M}=\pi(M_n(\mathbb{C}))$</font> </h3>
-<div align="left">
-
-</div>
-</section>
 <!---------------------------------------------------------------------------->
-<section>
 <h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
+<!---------------------------------------------------------------------------->
 <div align="left">
 <p>	 $A,B\in\mathfrak{A}$</p>
 <ol>
@@ -195,10 +196,11 @@ $\tilde{\pi}_l(A)\otimes I_2$ and $\tilde{\pi}_r(A)\otimes I_2$ respectively.
 </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 
 <section>
+<!--------------------------------------------------------------------------->
 <h3><font color=skyblue>Properties of $\langle \cdot,\cdot \rangle$</font> </h3>
+<!--------------------------------------------------------------------------->
 <div align="left">
 <p>	 $A,B\in\mathfrak{A}$</p>
 <ol>
@@ -213,11 +215,12 @@ $\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
 </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 
 
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Matrix expression for GNS representation</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 
 <p>
@@ -233,13 +236,6 @@ x_{2}\\
 x_{n}
 \end{pmatrix}
 $$
-</p>
-	</div>
-</section>
-<!--------------------------------------------------------------------------->
-
-<section>
-<div align="left">
 To get a matrix expression for GNS representation let us consider a map,
 $$
 \mbox{vec}(X)\to\mbox{vec}(\pi_l(A)X), 
@@ -259,9 +255,10 @@ I_n\otimes A
 $$
   </div>
 </section>
-<!--------------------------------------------------------------------------->
 <section>
+<!--------------------------------------------------------------------------->
 <h3><font color=skyblue>Uncertainty Relation</font> </h3>
+<!--------------------------------------------------------------------------->
 <div align="left">
 <p>
 we consider the following bilinear form on
@@ -288,11 +285,10 @@ $$
 </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 <section>
 <!--------------------------------------------------------------------------->
-<section>
 <h3><font color=skyblue>Holevo's commutation operator</font> </h3>
+<!--------------------------------------------------------------------------->
 <div align="left">
 <p>	The anti-Hermitian operator satifying the following conditions is called  <font color=red>commutation operator</font>.</p>
 $$
@@ -349,11 +345,10 @@ Since
 		$$
 	</div>
 </section>
-<!--------------------------------------------------------------------------->
-</section>
-<!--------------------------------------------------------------------------->
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Properties of commutation operator</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 		<ul>
      <li> $1\pm\frac{i}{2}\mathfrak{D}\geq 0$
@@ -364,18 +359,18 @@ Since
   </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 <section>
 <!--------------------------------------------------------------------------->
-<section>
 	<h3><font color=skyblue>Modular operator</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 We explain results of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
-is the GNS representation for the tracial state 
-$\tau(A)=\fram{1}{n}\mbox{Tr} A$. 
+is the GNS representation for the tracial state
+
+$\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
 Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
 $\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
 Then we have 
@@ -387,61 +382,65 @@ In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\i
 $$
 \mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
 $$
-	<p> $\mathfrak{A}=M_n(\mathbb{C})$ </p>
-	<p> $\omega(A)=\mbox{Tr}\rho A$: faithful state on $\mathfrak{A}$</p>
-	<p> $\pi_l:\mathfrak{A}\to \mathfrak{B}(H_{-})$ : GNS representation for $\omega$</p>
-	<p> $\mathfrak{N}=\pi_l(\mathfrak{A})$ is a von Neumann algebra.</p>
-	<p> Let us consider $\rho^{1/2}$ as a cyclic and separating vector $\Omega$.
-		$$H_{-}=\mathfrak{N}\Omega=\mathfrak{N}^\prime \Omega$$</p>
-  </div>
-</section>
-<!--------------------------------------------------------------------------->
-<section>
-	<div align="left">
-<p> $\bullet$ Consider  anti-linear operoator on $H_{-}$, $S$ and $F$
+<p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
 	$$
 	 \begin{split}
-		 S&:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega\\
-		 F&:\mathfrak{N}^\prime \Omega\ni M\Omega \to M^\ast\Omega\in \mathfrak{N}^\prime \Omega
+		 S&:\mathfrak{M}\Omega\ni \pi_l(A) \Omega \to \pi_l(A)^\ast\Omega\in\mathfrak{M}\Omega\\
+		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(A) \Omega \to \pi_r(A)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
 	 \end{split}
 	$$
+	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
 </p>
-<p> $\bullet$ The linear operator on $H_{-}$ defined as follows is called a <font color=red>modular operator.</font>
+<p>
+For the operator $S$, we have 
 	$$
-	\Delta=FS
-	$$
-</p>
-  </div>
-</section>
-<!--------------------------------------------------------------------------->
-</section>
-<!--------------------------------------------------------------------------->
-
-<section>
-	<h3><font color=skyblue>Anti-linear map $S$</font> </h3>
-	<div align="left">
-	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi_l(\mathfrak{A})$</p>
-	<p> $\pi_l(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
-	<p> $S(A\rho^{1/2})=A^\ast \rho^{1/2},\quad A\in M_2(\mathbb{C})$ </p>
-	<p> Putting $X=A\rho^{1/2}$,$Y=A^\ast \rho^{1/2}$, we get
+    S(X)=\rho^{-1/2}X^*\rho^{1/2}.
+ 	$$
+	In fact, putting $X=\pi_l(A)\Omega=A\rho^{1/2}$,$Y=\pi_l(A)^\ast=\pi_l(A^\ast)=A^\ast \rho^{1/2}$,
 	$$
     Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
   $$
-	that is,
+On the other hand, for the operator $F$, we have
+$$
+F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
+$$
+In fact, putting $X=\pi_r(A)\Omega=\rho^{1/2}A$,$Y=\pi_r(A)^\ast=\pi_r(A^\ast)= \rho^{1/2}A^\ast$,
 	$$
-    S(X)=\rho^{-1/2}X^*\rho^{1/2}
- 	$$
+    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2},
+  $$
+Thus we finally have
+$$
+\Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
+$$
+that is, $\Delta=\rho^{-1}\otimes \rho$.
+</p>
+  </div>
+</section>
+
+<section>
+<!--------------------------------------------------------------------------->
+	<h3><font color=skyblue>Anti-linear map $S$</font> </h3>
+<!--------------------------------------------------------------------------->
+	<div align="left">
+	<p> $S:\mathfrak{N}\Omega\ni N \Omega \to N^\ast\Omega\in\mathfrak{N}\Omega,\quad 	\mathfrak{N}=\pi_l(\mathfrak{A})$</p>
+	<p> $\pi_l(A)\Omega=A\rho^{1/2},\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
+	<p> </p>
+	<p> Putting $X=A\rho^{1/2}$,$Y=A^\ast \rho^{1/2}$, we get
+	that is,
   </p>
   </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>$\pi_l(\mathfrak{A})^\prime$</font> </h3>
+<!--------------------------------------------------------------------------->
+
 	<div align="left">
 	<p>
-		Since 
+
+	Since 
 		$
 		\pi_l(A)\sim I_n \otimes A \in M_{n^2}(\mathbb{C}),\quad A\in \mathfrak{A}=M_n(\mathbb{C}),
 		$
@@ -450,6 +449,7 @@ $$
      \pi_l(\mathfrak{A})\sim I_n \otimes \mathfrak{A}. 	
         	$$
 		Therefore
+	
 		$$
      \pi_l(\mathfrak{A})^{\prime}\sim \mathfrak{A}\otimes I_n.
 		$$
@@ -467,9 +467,11 @@ $$
   </div>
 </section>
 
-<!--------------------------------------------------------------------------->
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Anti-linear operator $F$</font> </h3>
+<!--------------------------------------------------------------------------->
+
 	<div align="left">
 	<p> $F:\mathfrak{N}^\prime\Omega\ni M \Omega \to M^\ast\Omega\in\mathfrak{N}^{\prime}\Omega,\quad 	\mathfrak{N}^{\prime}=\tilde{\pi_l}(\mathfrak{A})$</p>
 	<p> $\tilde{\pi_l}(A)\Omega=\rho^{1/2}A^T,\quad A\in \mathfrak{A}=M_2(\mathbb{C})$
@@ -485,9 +487,10 @@ $$
   </p>
   </div>
 </section>
-<!--------------------------------------------------------------------------->
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Matrix Expression of modular operator</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 <p>
 A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
@@ -511,9 +514,10 @@ The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
   </p>
   </div>
 </section>
-<!--------------------------------------------------------------------------->
 <section>
+<!--------------------------------------------------------------------------->
 A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
+<!--------------------------------------------------------------------------->
 a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
 \tilde{a}_{j,k}=
@@ -553,10 +557,11 @@ The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 	</p>
   </div>
 </section>
-<!--------------------------------------------------------------------------->
 
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Relation between modular operator and commutation operator</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 	<p>
 		We get
@@ -572,12 +577,12 @@ The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 	</p>
   </div>
 </section>
-<!--------------------------------------------------------------------------->
 
-<!--------------------------------------------------------------------------->
 
 <section>
+<!--------------------------------------------------------------------------->
 	<h3><font color=skyblue>Main theorem in Tomita-Takesaki Theory</font> </h3>
+<!--------------------------------------------------------------------------->
 	<div align="left">
 	<p>
      We have 
