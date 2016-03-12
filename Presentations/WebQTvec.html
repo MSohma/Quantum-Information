@@ -86,10 +86,6 @@ Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
 $$
 for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,...n\}$.
  </p>
- <font color=red> 
-When we consider the bilinearity, the correspondence $v(e_je_k^T)=e_k\otimes e_j$ seems to 
-be wrong; it might be better that $v(e_je_k^\ast)=e_k\otimes e_j$.
- </font>
 
  <p>
 For $A\in \mathfrak{N}$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
@@ -364,6 +360,7 @@ Since
 	<h3><font color=skyblue>Modular operator</font> </h3>
 <!--------------------------------------------------------------------------->
 	<div align="left">
+		<p>
 We explain results of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
@@ -382,12 +379,21 @@ In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\i
 $$
 \mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
 $$
+</p>
 <p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
 	$$
 	 \begin{split}
 		 S&:\mathfrak{M}\Omega\ni \pi_l(A) \Omega \to \pi_l(A)^\ast\Omega\in\mathfrak{M}\Omega\\
 		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(A) \Omega \to \pi_r(A)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
 	 \end{split}
+	$$
+	Here 
+	$$
+	\pi_l(A)^\ast=(I_n\otimes A)^\ast=I_n\otimes A^\ast=\pi_l(A^\ast),
+	$$
+	and
+	$$
+  \pi_r(A)^\ast=(A^T\otimes I_n)^\ast=(A^T)^\ast\otimes I_n=(A^\ast)^T\otimes I_n=\pi_r(A^\ast).
 	$$
 	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
 </p>
