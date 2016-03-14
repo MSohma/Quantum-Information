@@ -176,6 +176,73 @@ $\tilde{\pi}_l(A)\otimes I_2$ and $\tilde{\pi}_r(A)\otimes I_2$ respectively.
 
 
 <section>
+<!--------------------------------------------------------------------------->
+	<h3><font color=skyblue>Modular operator</font> </h3>
+<!--------------------------------------------------------------------------->
+	<div align="left">
+		<p>
+We explain results of Tomita-Takesaki theory in the case of 
+$\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
+where all difficulties in the theory vanish.
+We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
+is the GNS representation for the tracial state
+
+$\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
+Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
+$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
+Then we have 
+$$
+\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
+$$
+and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
+In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
+$$
+\mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
+$$
+</p>
+<p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
+	$$
+	 \begin{split}
+		 S&:\mathfrak{M}\Omega\ni \pi_l(A) \Omega \to \pi_l(A)^\ast\Omega\in\mathfrak{M}\Omega\\
+		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(A) \Omega \to \pi_r(A)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
+	 \end{split}
+	$$
+	Here 
+	$$
+	\pi_l(A)^\ast=(I_n\otimes A)^\ast=I_n\otimes A^\ast=\pi_l(A^\ast),
+	$$
+	and
+	$$
+  \pi_r(A)^\ast=(A^T\otimes I_n)^\ast=(A^T)^\ast\otimes I_n=(A^\ast)^T\otimes I_n=\pi_r(A^\ast).
+	$$
+	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
+</p>
+<p>
+For the operator $S$, we have 
+	$$
+    S(X)=\rho^{-1/2}X^*\rho^{1/2}.
+ 	$$
+	In fact, putting $X=\pi_l(A)\Omega=A\rho^{1/2}$,$Y=\pi_l(A)^\ast=\pi_l(A^\ast)=A^\ast \rho^{1/2}$,
+	$$
+    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+  $$
+On the other hand, for the operator $F$, we have
+$$
+F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
+$$
+In fact, putting $X=\pi_r(A)\Omega=\rho^{1/2}A$,$Y=\pi_r(A)^\ast=\pi_r(A^\ast)= \rho^{1/2}A^\ast$,
+	$$
+    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2},
+  $$
+Thus we finally have
+$$
+\Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
+$$
+that is, $\Delta=\rho^{-1}\otimes \rho$.
+</p>
+  </div>
+</section>
+<section>
 <!---------------------------------------------------------------------------->
 <h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
 <!---------------------------------------------------------------------------->
@@ -355,73 +422,6 @@ Since
   </div>
 </section>
 
-<section>
-<!--------------------------------------------------------------------------->
-	<h3><font color=skyblue>Modular operator</font> </h3>
-<!--------------------------------------------------------------------------->
-	<div align="left">
-		<p>
-We explain results of Tomita-Takesaki theory in the case of 
-$\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
-where all difficulties in the theory vanish.
-We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
-is the GNS representation for the tracial state
-
-$\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
-Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
-$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
-Then we have 
-$$
-\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
-$$
-and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
-In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
-$$
-\mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
-$$
-</p>
-<p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
-	$$
-	 \begin{split}
-		 S&:\mathfrak{M}\Omega\ni \pi_l(A) \Omega \to \pi_l(A)^\ast\Omega\in\mathfrak{M}\Omega\\
-		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(A) \Omega \to \pi_r(A)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
-	 \end{split}
-	$$
-	Here 
-	$$
-	\pi_l(A)^\ast=(I_n\otimes A)^\ast=I_n\otimes A^\ast=\pi_l(A^\ast),
-	$$
-	and
-	$$
-  \pi_r(A)^\ast=(A^T\otimes I_n)^\ast=(A^T)^\ast\otimes I_n=(A^\ast)^T\otimes I_n=\pi_r(A^\ast).
-	$$
-	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
-</p>
-<p>
-For the operator $S$, we have 
-	$$
-    S(X)=\rho^{-1/2}X^*\rho^{1/2}.
- 	$$
-	In fact, putting $X=\pi_l(A)\Omega=A\rho^{1/2}$,$Y=\pi_l(A)^\ast=\pi_l(A^\ast)=A^\ast \rho^{1/2}$,
-	$$
-    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
-  $$
-On the other hand, for the operator $F$, we have
-$$
-F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
-$$
-In fact, putting $X=\pi_r(A)\Omega=\rho^{1/2}A$,$Y=\pi_r(A)^\ast=\pi_r(A^\ast)= \rho^{1/2}A^\ast$,
-	$$
-    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2},
-  $$
-Thus we finally have
-$$
-\Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
-$$
-that is, $\Delta=\rho^{-1}\otimes \rho$.
-</p>
-  </div>
-</section>
 
 <section>
 <!--------------------------------------------------------------------------->
