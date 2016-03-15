@@ -118,38 +118,40 @@ we view $\mathfrak{H}$ as a real Hilbert space.
 A complex matrix $A=(a_{j,k})\in \mathfrak{N}=M_n(\mathbb{C})$ with 
 $$a_{j,k}=x_{j,k}+iy_{j,k}$$
  corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
+a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{j,k}=
+\hat{a}_{j,k}=
 \begin{pmatrix}
 x_{j,k}&-y_{j,k}\\
 y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
 
-Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes J_2\}$
+Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes O_I\}$
 with the $2\times 2$-identity matrix $I_2$ and
 $$
-J_2=\begin{pmatrix}
+O_I=\begin{pmatrix}
 0&-1\\
 1&0
 \end{pmatrix}.
 $$
-The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$;
-$M^r_{2n}(\mathbb{R})=\{\tilde{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$.
+The ensemble of such real matrices 
+$M^r_{2n}(\mathbb{R})=\{\hat{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$,
+can be identified with $M_{n}(\mathbb{C})$ 
+and we have $\widehat{A^\ast}=\hat{A}^T$.
 
-In addition, we define a bijection $$v_r:M^r_{2n}(\mathbb{R})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+In addition, we define a bijection $$v_r:M_{n}(\mathbb{C})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
 by 
 $$
 \begin{split}
-v_r(e_je_k^T\otimes I_2)&=e_k\otimes e_j\otimes f_1,\\
-v_r(e_je_k^T\otimes J_2)&=e_k\otimes e_j\otimes f_2,
+v_r(e_je_k)&=e_k\otimes e_j\otimes f_1,\\
+v_r(ie_je_k^T)&=e_k\otimes e_j\otimes f_2,
 \end{split}
 $$
 with $f_1=(1,0)^T,f_2=(0,1)^T$. 
 Thus we have obtained convenient relations
 $$
-M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq M_{2n}^r(\mathbb{R})\simeq \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2.
+M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq  \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2.
 $$
 </p>
 </section>
@@ -158,19 +160,19 @@ $$
 <h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
 	<!---------------------------------------------------------------------------->
 <div align="left">
-	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is a operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
+	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
 	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
 The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
-is given by $O_{\ast}=O_T\otimes K_2$ with
+is given by $J=O_T\otimes O_C$ with
 $$
-K_2=\begin{pmatrix}
+O_C=\begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}.
 $$
 The operators $\pi_l(A)$ and $\pi_r(A)$ introduced in the previous section are represented on
 $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ as
-$\tilde{\pi}_l(A)\otimes I_2$ and $\tilde{\pi}_r(A)\otimes I_2$ respectively.
+$\tilde{\pi}_l(\hat{A})\otimes I_2$ and $\tilde{\pi}_r(\hat{A})\otimes I_2$ respectively.
 </div>
 </section>
 
@@ -500,18 +502,18 @@ Since
 	<div align="left">
 <p>
 A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
-a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
+a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{j,k}=
+\hat{a}_{j,k}=
 \begin{pmatrix}
 x_{j,k}&-y_{j,k}\\
 y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
-Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
+Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes O_I\}$
 with a $2\times 2$-identity matrix $I_2$ and
 $$
-J_2=\begin{pmatrix}
+O_I=\begin{pmatrix}
 0&-1\\
 1&0
 \end{pmatrix}.
@@ -524,18 +526,18 @@ The ensemble of such real matrices is denoted by $M^r_{2n}(\mathbb{R})$.
 <!--------------------------------------------------------------------------->
 A complex matrix $A=(a_{j,k})\in M_n(\mathbb{C})$ corresponds to
 <!--------------------------------------------------------------------------->
-a real matrix $\tilde{A}=(\tilde{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
+a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
 $$
-\tilde{a}_{j,k}=
+\hat{a}_{j,k}=
 \begin{pmatrix}
 x_{j,k}&-y_{j,k}\\
 y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
-Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes J_2\}$
+Then we can take a natural basis $\{ e_ie_j^T\otimes I_2,e_ie_j^T\otimes O_I\}$
 with a $2\times 2$-identity matrix $I_2$ and
 $$
-J_2=\begin{pmatrix}
+O_I=\begin{pmatrix}
 0&-1\\
 1&0
 \end{pmatrix}.
