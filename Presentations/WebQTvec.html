@@ -162,13 +162,20 @@ $$
 <div align="left">
 	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
 	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
-The $\ast$-operation on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ 
-is given by $J=O_T\otimes O_C$ with
+	Hence the anti-linear operator $J:\mathfrak{N}\in A\to A^\ast\ni \mathfrak{N}$ is given as
+	$$
+    J=v_r^\ast  (O_T\otimes O_C) v_r, 
+	$$
+	with
 $$
 O_C=\begin{pmatrix}
 1&0\\
 0&-1
 \end{pmatrix}.
+$$
+It is easy to see that $J^2=I$, that is, $J=J^{-1}$ and 
+$$
+J^\ast=v^\ast (O_T\otimes O_C)^T v_r=v^\ast (O_T^T\otimes O_C^T) v_r=J.
 $$
 The operators $\pi_l(A)$ and $\pi_r(A)$ introduced in the previous section are represented on
 $\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ as
@@ -217,7 +224,7 @@ $$
 	$$
   \pi_r(A)^\ast=(A^T\otimes I_n)^\ast=(A^T)^\ast\otimes I_n=(A^\ast)^T\otimes I_n=\pi_r(A^\ast).
 	$$
-	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a <font color=red>modular operator.</font>
+	The linear operator $\Delta=FS$ on $\mathfrak{H}_{\tau}$ is called a modular operator.
 </p>
 <p>
 For the operator $S$, we have 
@@ -240,7 +247,39 @@ Thus we finally have
 $$
 \Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
 $$
-that is, $\Delta=\rho^{-1}\otimes \rho$.
+that is, $\Delta=v^\ast(({\rho}^{-1})^T\otimes \rho) v$.
+It follows that $\Delta^\ast=v^\ast (({\rho}^{-1})^T\otimes \rho)^\ast v=\Delta$.
+Since $\Delta^{-1/2}=v^\ast(({\rho}^{1/2})^T\otimes \rho^{-1/2}) v$, 
+$$
+\Delta^{-1/2}(X)=\rho^{-1/2}X\rho^{1/2}
+$$
+and hence 
+$$
+S(X)=\Delta^{-1/2}(X^\ast)=\Delta^{-1/2}J(X).
+$$
+In a similar way we have
+$$
+F(X)=\Delta^{1/2}J(X).
+$$
+In addition 
+$$
+J\Delta J(X)=(\rho X^\ast \rho^{-1})^\ast=\rho^{-1}X\rho=\Delta^{-1}(X).
+$$
+Since
+$ S^\ast =(\Delta^{-1/2}J)^\ast=J\Delta^{-1/2}$,
+$S^\ast(X)=(\rho^{-1/2}X\rho^{1/2})^\ast=\rho^{1/2}X^\ast \rho^{-1/2}=F(X)$.
+$F^\ast(X)=(\rho^{1/2}X\rho^{-1/2})^\ast=\rho^{-1/2}X^\ast \rho^{1/2}=S(X)$.
+In sammary 
+
+$$
+\begin{split}
+S&=\Delta^{-1/2}J=F^\ast=J\Delta^{1/2}\\
+F&=\Delta^{1/2}J=S^\ast=J\Delta^{-1/2}\\
+J\Delta J&=\Delta^{-1}\\
+JSJ&=J\Delta^{-1/2}J^2=J\Delta^{-1/2}=F\\
+JFJ&=J\Delta^{1/2}J^2=J\Delta^{1/2}=S
+\end{split}
+$$
 </p>
   </div>
 </section>
