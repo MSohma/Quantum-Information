@@ -32,22 +32,23 @@
 
 We will do an exercise given in the Holevo's book in a case of finite dimensional 
 von Neumann algebra. Let us start with GNS construction for a 
-von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
+von Neumann algebra $\mathfrak{N}_f=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
 the vector space $\mathbb{C}^n$ with the inner product $(x,y)=x^Ty$. 
  
 Let $\rho$ be a non-degenerated density operator and 
 $\omega$ be the corresponding normal state given by $\omega(A)=\mbox{Tr}\rho A$.
-We introduce a Hilbert space $\mathfrak{H}=\mathfrak{N}$ with an inner product 
+We introduce a Hilbert space $\mathfrak{H}=\mathfrak{N}_f$ with an inner product 
+
 $$
 \langle A, B \rangle =\omega(A^{\ast}B),
 $$
 and consider a representation 
 $$
-\pi_l:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}),
+\pi_l:\mathfrak{N}_f\to \mathfrak{B}(\mathfrak{H}),
 $$
 where $\mathfrak{B}(\mathfrak{H})$ is the ensemble of bounded operators on $\mathfrak{H}$
 and $\pi_l(A)$ is given by $\pi_l(A)B=AB$. Such a way to give a representation of von Neumann algebra 
-$\mathfrak{N}$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi_l(\mathfrak{N})$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
+$\mathfrak{N}_f$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi_l(\mathfrak{N}_f)$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
 
 $$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}.
@@ -75,11 +76,11 @@ Fig. 2    Problem posed in the Holevo's book.
 	<h3><font color=skyblue>Vector Representation</font> </h3>
 <!--------------------------------------------------------------------------->
  <p>
- For a whle we consider a tracial state $\tau(A)=\frac{1}{n}\mbox{Tr}A$ on $\mathfrak{N}=M_N(\mathbb{C})$.
- Then the inner product on $\mathfrak{N}$ is denotedy by  $\langle \cdot,\cdot\rangle_\tau$,
+ For a whle we consider a tracial state $\tau(A)=\frac{1}{n}\mbox{Tr}A$ on a full matrix algebra $\mathfrak{N}_f=M_n(\mathbb{C})$.
+ Then the inner product on $\mathfrak{N}_f$ is denotedy by  $\langle \cdot,\cdot\rangle_\tau$,
   and $\sqrt{n}e_je_k^T$ ($j,k=1,2,...,n$) constitue an orthonormal basis,
  where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
- We identify $\mathfrak{N}$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
+ We identify $\mathfrak{N}_f$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
  unitary map $v$ given by $v(e_je_k^T)=e_k\otimes e_j$. 
 Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
 (f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,f_2)(g_1,g_2)
@@ -88,7 +89,7 @@ for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,..
  </p>
 
  <p>
-For $A\in \mathfrak{N}$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+For $A\in \mathfrak{N}_f$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
  \begin{split}
@@ -101,7 +102,7 @@ and hence $\pi_l(A)=v^\ast\tilde{\pi}_l(A)v$.
 		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
 		and call the operator $v$ a vec operator or a col operator.
-On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
+On the other hand, $\pi_r(A):\mathfrak{N}_f\in X \to XA\ni\mathfrak{N}_f$ is 
 represented as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
@@ -113,9 +114,9 @@ In fact,
 and hence $\pi_r(A)=v^\ast\tilde{\pi}_r(A) v$. 
 </p>
 <p>
-In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}$,
+In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}_f$,
 we view $\mathfrak{H}$ as a real Hilbert space.
-A complex matrix $A=(a_{j,k})\in \mathfrak{N}=M_n(\mathbb{C})$ with 
+A complex matrix $A=(a_{j,k})\in \mathfrak{N}_f=M_n(\mathbb{C})$ with 
 $$a_{j,k}=x_{j,k}+iy_{j,k}$$
  corresponds to
 a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
@@ -160,9 +161,9 @@ $$
 <h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
 	<!---------------------------------------------------------------------------->
 <div align="left">
-	The transpose operation $\mathfrak{N}\in A \to A^T\ni \mathfrak{N}$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
+	The transpose operation $\mathfrak{N}_f\in A \to A^T\ni \mathfrak{N}_f$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
 	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
-	Hence the anti-linear operator $J:\mathfrak{N}\in A\to A^\ast\ni \mathfrak{N}$ is given as
+	Hence the anti-linear operator $J:\mathfrak{N}_f\in A\to A^\ast\ni \mathfrak{N}_f$ is given as
 	$$
     J=v_r^\ast  (O_T\otimes O_C) v_r, 
 	$$
@@ -191,19 +192,19 @@ $\tilde{\pi}_l(\hat{A})\otimes I_2$ and $\tilde{\pi}_r(\hat{A})\otimes I_2$ resp
 	<div align="left">
 		<p>
 We explain results of Tomita-Takesaki theory in the case of 
-$\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
+$\mathfrak{M}=\pi_l(\mathfrak{N}_f)$ with $\mathfrak{N}_f=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
-We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
+We also assume that $\pi_l:\mathfrak{N}_f\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
 is the GNS representation for the tracial state
 
 $\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
-Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
-$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
+Here $\mathfrak{H}_\tau=\mathfrak{N}_f\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
+$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N}_f)\simeq I_n\otimes\mathfrak{N}_f$.
 Then we have 
 $$
-\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
+\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}_f^\prime=\mathfrak{N}_f\otimes \{I_n\} 
 $$
-and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
+and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N}_f)$.
 In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
 $$
 \mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
@@ -308,6 +309,114 @@ J\pi_l(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast
 </p>
   </div>
 </section>
+
+<section>
+<!---------------------------------------------------------------------------->
+<h3><font color=skyblue>General case</font> </h3>
+<!---------------------------------------------------------------------------->
+<div align="left">
+<p>	
+In this sebsection we prove the Tomita-Takesaki theorem for finite dimensional
+von Neumann algebras.
+The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}_f$ such that
+$$
+\varphi:\mathfrak{N}\simeq \mathfrak{N}_f:=M(m_1,\mathbb{C})\oplus \cdots \oplus M(m_n,\mathbb{C}).
+$$
+Then we can define a faithful tracial state as
+$$
+A\in \mathfrak{N}_f,\tau(A) = {\rm Tr}A /m,\quad m=m_1+\cdots + m_n.
+$$
+Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}_f$ has a positive operator $H\in \mathfrak{N}_f$ such that
+$$
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N}_f,\tag{2.2.1}
+$$
+where $H$ is invertible iff $\omega$ is faithful.
+
+Let us consider GNS representation $\pi:\mathfrak{N}_f\to \mathfrak{B}(\mathfrak{H}_\tau)$ given by a faithful tracial state $\tau$.
+Here from the definition of GNS representation we have
+$\mathfrak{H}_\tau=\mathfrak{N}_f,\pi(A)B=AB,A,B\in \mathfrak{N}_f$ and the inner product of $\mathfrak{H}_\tau$ is given by
+$$
+\langle A,B \rangle_\tau=\tau(A^*B).\tag{2.2.2}
+$$
+Using such derived representation and inner product $\langle \cdot,\cdot\rangle_\tau$ we can represent the state $\omega$ as
+$$
+\omega(A)=\tau(H^{1/2}AH^{1/2})=\langle H^{1/2},\pi(A)H^{1/2}\rangle_\tau,\tag{2.2.3}
+$$
+where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N}_f)$.
+Then  the
+anti-linear operator $S_{0,\tau}$ is defined as
+$$
+S_{0,\tau}:\pi(A)H^{1/2}\to \pi(A)^*H^{1/2}.
+$$
+Putting $X=\pi(A)H^{1/2}=AH^{1/2}$, we have $A=XH^{-1/2}$, $A^*=H^{-1/2}X^*$
+and hence
+$$
+S_{0,\tau}X=H^{-1/2}X^*H^{1/2}.
+$$
+On the other hand, the anti linear operator $F_{0,\tau}$ is defined as
+$$
+F_{0,\tau}:\tilde{\pi}(A)H^{1/2}\to \tilde{\pi}(A)^*H^{1/2},
+$$
+which can be written as
+$$
+F_{0,\tau}:H^{1/2}A^T\to H^{1/2}(A^T)^*
+$$
+Putting $X=H^{1/2}A^T$, we have $A^T=H^{-1/2}X$, $(A^T)^*=X^*H^{-1/2}$ and hence
+$$
+F_0X=H^{1/2}X^*H^{-1/2}.
+$$
+Thus we find that $\Delta_\tau=F_{0,\tau}S_{0,\tau}$
+is given as
+$$
+\begin{split}
+\Delta_\tau X&=F_{0,\tau}S_{0,\tau}X=F_{0,\tau}(H^{-1/2}X^*H^{1/2})\\
+&=H^{1/2}H^{1/2}XH^{-1/2}H^{-1/2}=HXH^{-1}.
+\end{split}
+$$
+
+It follows from this equation that
+$$
+\Delta_\tau ^{-it}\pi(A)\Delta_\tau ^{it}=\pi(H^{-it}AH^{it}),\quad t \in \mathbb{R},
+$$
+that is,
+$$
+\Delta_\tau ^{-it}\pi(\mathfrak{N}_f)\Delta_\tau ^{it}=\pi(\mathfrak{N}_f),\quad t \in \mathbb{R} \tag{2.2.4}.
+$$
+
+Let us consider the state on $\mathfrak{N}$
+$$
+\omega_\xi(A)=(\xi,A\xi),\quad A\in \mathfrak{N},\xi\in \mathfrak{H}.
+$$
+Using this state we can define the state on $\mathfrak{N}_f$
+$$
+\omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}_f.
+$$
+Then we get
+$$
+\langle H^{1/2},\pi(A^* B)H^{1/2}\rangle_\tau=(\xi,\varphi^{-1}(A^* B)\xi),
+$$
+and hence
+$$
+\langle \pi(A)H^{1/2},\pi( B)H^{1/2}\rangle_\tau=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi),
+$$
+which means
+$$
+U:\mathfrak{H}_\tau\ni\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{H}, \quad A\in \mathfrak{N}_f
+$$
+gives a unitary operator from $\mathfrak{H}_\tau$ to $\mathfrak{H}$.
+This unitary operator combines $\Delta$ and $\Delta_{\tau}$ as
+$$
+\Delta_\tau=U^{\ast}\Delta U,
+$$
+and gives the main result of Tomita-Takesaki Theory,
+$$
+\Delta^{-it}\mathfrak{N}\Delta^{it}=\mathfrak{N}.
+$$
+
+</p>
+</div>
+</section>
+
 <section>
 <!---------------------------------------------------------------------------->
 <h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
