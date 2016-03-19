@@ -205,16 +205,16 @@ $$
 \mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}_f^\prime=\mathfrak{N}_f\otimes \{I_n\} 
 $$
 and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N}_f)$.
-In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
+Let us fix a non-degenerated positive operator $H$ as a cyclic and separating vector;
 $$
-\mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
+\mathfrak{H}_\tau=\mathfrak{M}H=\mathfrak{M}^\prime H, \quad H=\rho^{1/2}.
 $$
 </p>
 <p>  Consider  anti-linear operators on $\mathfrak{H}_{\tau}$ 
 	$$
 	 \begin{split}
-		 S&:\mathfrak{M}\Omega\ni \pi_l(A) \Omega \to \pi_l(A)^\ast\Omega\in\mathfrak{M}\Omega\\
-		 F&:\mathfrak{M}^\prime \Omega\ni \pi_r(A) \Omega \to \pi_r(A)^\ast\Omega\in \mathfrak{M}^\prime \Omega.
+		 S&:\mathfrak{M}H\ni \pi_l(A) H \to \pi_l(A)^\ast H\in\mathfrak{M}H\\
+		 F&:\mathfrak{M}^\prime H\ni \pi_r(A) H \to \pi_r(A)^\ast H\in \mathfrak{M}^\prime H.
 	 \end{split}
 	$$
 	Here 
@@ -230,29 +230,29 @@ $$
 <p>
 For the operator $S$, we have 
 	$$
-    S(X)=\rho^{-1/2}X^*\rho^{1/2}.
+    S(X)=H^{-1}X^*H.
  	$$
-	In fact, putting $X=\pi_l(A)\Omega=A\rho^{1/2}$,$Y=\pi_l(A)^\ast=\pi_l(A^\ast)=A^\ast \rho^{1/2}$,
+	In fact, putting $X=\pi_l(A)H$,$Y=\pi_l(A)^\ast=\pi_l(A^\ast)=A^\ast H$,
 	$$
-    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+    Y=(XH^{-1})^\ast H=H^{-1}X^\ast H,
   $$
 On the other hand, for the operator $F$, we have
 $$
-F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
+F(X)=HX^\ast H^{-1},
 $$
-In fact, putting $X=\pi_r(A)\Omega=\rho^{1/2}A$,$Y=\pi_r(A)^\ast=\pi_r(A^\ast)= \rho^{1/2}A^\ast$,
+In fact, putting $X=\pi_r(A)H$,$Y=\pi_r(A)^\ast=\pi_r(A^\ast)= HA^\ast$,
 	$$
-    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2},
+    Y= H(H^{-1}X)^\ast=HX^\ast H^{-1},
   $$
 Thus we finally have
 $$
-\Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
+\Delta(X)=FS(X)=F(H^{-1}X^*H)=H(H^{-1}X^*H)^\ast H^{-1}=H^2 X H^{-2},
 $$
 that is, $\Delta=v^\ast(({\rho}^{-1})^T\otimes \rho) v$.
 It follows that $\Delta^\ast=v^\ast (({\rho}^{-1})^T\otimes \rho)^\ast v=\Delta$.
-Since $\Delta^{-1/2}=v^\ast(({\rho}^{1/2})^T\otimes \rho^{-1/2}) v$, 
+Since $\Delta^{-1/2}=v^\ast(({\rho}^{1/2})^T\otimes H^{-1}) v$, 
 $$
-\Delta^{-1/2}(X)=\rho^{-1/2}X\rho^{1/2}
+\Delta^{-1/2}(X)=H^{-1}XH
 $$
 and hence 
 $$
@@ -264,12 +264,12 @@ F(X)=\Delta^{1/2}J(X).
 $$
 In addition 
 $$
-J\Delta J(X)=(\rho X^\ast \rho^{-1})^\ast=\rho^{-1}X\rho=\Delta^{-1}(X).
+J\Delta J(X)=(H^2 X^\ast H^{-2})^\ast=H^{-2}XH^2=\Delta^{-1}(X).
 $$
 Since
 $ S^\ast =(\Delta^{-1/2}J)^\ast=J\Delta^{-1/2}$,
-$S^\ast(X)=(\rho^{-1/2}X\rho^{1/2})^\ast=\rho^{1/2}X^\ast \rho^{-1/2}=F(X)$.
-$F^\ast(X)=(\rho^{1/2}X\rho^{-1/2})^\ast=\rho^{-1/2}X^\ast \rho^{1/2}=S(X)$.
+$S^\ast(X)=(H^{-1}XH)^\ast=HX^\ast H^{-1}=F(X)$.
+$F^\ast(X)=(HXH^{-1})^\ast=H^{-1}X^\ast H=S(X)$.
 In sammary 
 
 $$
