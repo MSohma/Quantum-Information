@@ -30,26 +30,63 @@
 <section>
 <h3> <font color=skyblue>Introduction: Exercise of operator algebras</font></h3>
 
-We will do an exercise given in the Holevo's book in a case of finite dimensional 
-von Neumann algebra. Let us start with GNS construction for a 
-von Neumann algebra $\mathfrak{N}_f=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
-the vector space $\mathbb{C}^n$ with the inner product $(x,y)=x^Ty$. 
+We will do an exercise given in the Holevo's book in the simplest case. 
+Let us start with GNS construction for a 
+von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
+the vector space $\mathbb{C}^n$ with the inner product $(x,y)=\bar{x}^Ty$. 
  
 Let $\rho$ be a non-degenerated density operator and 
 $\omega$ be the corresponding normal state given by $\omega(A)=\mbox{Tr}\rho A$.
-We introduce a Hilbert space $\mathfrak{H}=\mathfrak{N}_f$ with an inner product 
+We introduce an inner product on $\mathfrak{N}$
 
 $$
-\langle A, B \rangle =\omega(A^{\ast}B),
+\langle A, B \rangle =\frac{1}{2}\omega(BA^{\ast}+A^{\ast}B),
 $$
-and consider a representation 
+and a bilinear form on $\mathfrak{N}$
+</p>
 $$
-\pi_l:\mathfrak{N}_f\to \mathfrak{B}(\mathfrak{H}),
+[A,B]=i\omega(A^{\ast}B-BA^{\ast}).
 $$
-where $\mathfrak{B}(\mathfrak{H})$ is the ensemble of bounded operators on $\mathfrak{H}$
-and $\pi_l(A)$ is given by $\pi_l(A)B=AB$. Such a way to give a representation of von Neumann algebra 
-$\mathfrak{N}_f$ is called GNS construction. In this document our interest is devoted to the von Neumann algebra $\mathfrak{M}=\pi_l(\mathfrak{N}_f)$. For $\mathfrak{M}$, we prove the main theorem of Tomita-Takesaki theory and establish a relation between the modular operator and the Holevo's commutation operator,
 
+Here we can introduce an operator $\mathfrak{D}$ as
+$$
+[A,X]=\langle A, \mathfrak{D}X\rangle.
+$$
+The operator $\mathfrak{D}$, which is  called a commutation operator, plays an important role in quantum estimation thoery.
+In order to relate the commutation operator $\mathfrak{D}$ to the modular operator in 
+Tomita-Takesaki theory, we introduce another inner product as
+$$
+\langle A, B \rangle_\tau =\tau(A^{\ast}B),
+$$
+with a faithful tracial state
+$$
+\tau(A)=\frac{1}{n}\mbox{Tr} A,
+$$
+and get the GNS representation 
+$$
+\pi_l:\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_\tau),
+$$
+where 
+$\mathfrak{H}_\tau=\mathfrak{N}$ is a Hilbert space 
+with the inner product $\langle \cdot,\cdot\rangle_\tau$,
+$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of bounded operators on $\mathfrak{H}_\tau$
+and $\pi_l(A)B=AB$.
+
+<!-- There exists  a positive operator $H\in \mathfrak{N}$ such that
+$$
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N},\tag{2.2.1}
+$$
+where $H$ is invertible iff $\omega$ is faithful.
+-->
+
+The states $\omega$ and $\tau$ are related with each other as
+$$
+\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2})=\langle H^{1/2},\pi_l(A)H^{1/2}\rangle_\tau ,
+$$
+with a cyclic separating vector $H=\rho/n$.
+Now we can define the modular operator $\Delta$ for the von Neumann algebra $\pi_l(\mathfrak{N})$ and its cyclic separating vector $H$. 
+Our purpose is to show such derived modular operator is related to the commutation operator
+as
 $$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}.
 $$
@@ -76,20 +113,24 @@ Fig. 2    Problem posed in the Holevo's book.
 	<h3><font color=skyblue>Vector Representation</font> </h3>
 <!--------------------------------------------------------------------------->
  <p>
- For a whle we consider a tracial state $\tau(A)=\frac{1}{n}\mbox{Tr}A$ on a full matrix algebra $\mathfrak{N}_f=M_n(\mathbb{C})$.
- Then the inner product on $\mathfrak{N}_f$ is denotedy by  $\langle \cdot,\cdot\rangle_\tau$,
-  and $\sqrt{n}e_je_k^T$ ($j,k=1,2,...,n$) constitue an orthonormal basis,
- where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
- We identify $\mathfrak{N}_f$ with $\mathbb{C}^n\otimes \mathbb{C}^n$ using a
- unitary map $v$ given by $v(e_je_k^T)=e_k\otimes e_j$. 
-Here we assume that $\mathbb{C}^n\otimes \mathbb{C}^n$ has an inner product $$
-(f_1\otimes g_1, f_2\otimes g_2 ) =\frac{1}{n}(f_1,f_2)(g_1,g_2)
+ We identify $\mathfrak{N}=M_n(\mathbb{C})$ with $\mathbb{C}^n\otimes\mathbb{C}^n$
+by a linear bijection
 $$
-for which the orthonormal basis is given by $\{\sqrt{n}e_k\otimes e_j;k,j=1,2,...n\}$.
+v:\mathfrak{N}\ni e_je_k^T \to e_k\otimes e_j \in \mathbb{C}^n\otimes\mathbb{C}^n,
+$$
+where $e_j=(\delta_{j1},\delta_{j,2},...,\delta_{j,n})^T$ with the Kronecker delta $\delta_{j,l}$. 
+Note that for $\psi=\sum_j \lambda_j e_j$ and $\phi=\sum_k \mu_k e_k$
+we have
+$$
+\begin{split}
+v(\psi\phi^\ast)&=\sum_{j,k}\lambda_j\bar{\mu}_k v(e_je_k^T)\\
+&=\sum_{j,k}\lambda_j\bar{\mu}_k e_k\otimes e_j=\bar{\phi}\otimes \psi.
+\end{split}
+$$
  </p>
 
  <p>
-For $A\in \mathfrak{N}_f$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
+For $A\in \mathfrak{N}$, $\pi_l(A)$ is represented as $\tilde{\pi}_l(A)=I_n\otimes A$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact
  $$
  \begin{split}
@@ -97,12 +138,12 @@ In fact
  &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T),
  \end{split} 
  $$
-and hence $\pi_l(A)=v^\ast\tilde{\pi}_l(A)v$. 
+ and hence $\pi_l(A)=v^{-1}\tilde{\pi}_l(A)v$. 
 		 Note that, in the field of matrix calculus, we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
 		and call the operator $v$ a vec operator or a col operator.
-On the other hand, $\pi_r(A):\mathfrak{N}_f\in X \to XA\ni\mathfrak{N}_f$ is 
+On the other hand, $\pi_r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
 represented as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
 In fact,
  $$
@@ -111,77 +152,8 @@ In fact,
  &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T),
  \end{split} 
  $$
-and hence $\pi_r(A)=v^\ast\tilde{\pi}_r(A) v$. 
+ and hence $\pi_r(A)=v^{-1}\tilde{\pi}_r(A) v$. 
 </p>
-<p>
-In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}_f$,
-we view $\mathfrak{H}$ as a real Hilbert space.
-A complex matrix $A=(a_{j,k})\in \mathfrak{N}_f=M_n(\mathbb{C})$ with 
-$$a_{j,k}=x_{j,k}+iy_{j,k}$$
- corresponds to
-a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
-$$
-\hat{a}_{j,k}=
-\begin{pmatrix}
-x_{j,k}&-y_{j,k}\\
-y_{j,k}&x_{j,k}
-\end{pmatrix}\in M_2(\mathbb{R}).
-$$
-
-Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes O_I\}$
-with the $2\times 2$-identity matrix $I_2$ and
-$$
-O_I=\begin{pmatrix}
-0&-1\\
-1&0
-\end{pmatrix}.
-$$
-The ensemble of such real matrices 
-$M^r_{2n}(\mathbb{R})=\{\hat{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$,
-can be identified with $M_{n}(\mathbb{C})$ 
-and we have $\widehat{A^\ast}=\hat{A}^T$.
-
-In addition, we define a bijection $$v_r:M_{n}(\mathbb{C})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
-by 
-$$
-\begin{split}
-v_r(e_je_k)&=e_k\otimes e_j\otimes f_1,\\
-v_r(ie_je_k^T)&=e_k\otimes e_j\otimes f_2,
-\end{split}
-$$
-with $f_1=(1,0)^T,f_2=(0,1)^T$. 
-Thus we have obtained convenient relations
-$$
-M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq  \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2.
-$$
-</p>
-</section>
-<section>
-	<!---------------------------------------------------------------------------->
-<h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
-	<!---------------------------------------------------------------------------->
-<div align="left">
-	The transpose operation $\mathfrak{N}_f\in A \to A^T\ni \mathfrak{N}_f$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
-	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
-	Hence the anti-linear operator $J:\mathfrak{N}_f\in A\to A^\ast\ni \mathfrak{N}_f$ is given as
-	$$
-    J=v_r^\ast  (O_T\otimes O_C) v_r, 
-	$$
-	with
-$$
-O_C=\begin{pmatrix}
-1&0\\
-0&-1
-\end{pmatrix}.
-$$
-It is easy to see that $J^2=I$, that is, $J=J^{-1}$ and 
-$$
-J^\ast=v^\ast (O_T\otimes O_C)^T v_r=v^\ast (O_T^T\otimes O_C^T) v_r=J.
-$$
-The operators $\pi_l(A)$ and $\pi_r(A)$ introduced in the previous section are represented on
-$\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ as
-$\tilde{\pi}_l(\hat{A})\otimes I_2$ and $\tilde{\pi}_r(\hat{A})\otimes I_2$ respectively.
-</div>
 </section>
 
 
@@ -192,19 +164,19 @@ $\tilde{\pi}_l(\hat{A})\otimes I_2$ and $\tilde{\pi}_r(\hat{A})\otimes I_2$ resp
 	<div align="left">
 		<p>
 We explain results of Tomita-Takesaki theory in the case of 
-$\mathfrak{M}=\pi_l(\mathfrak{N}_f)$ with $\mathfrak{N}_f=M_n(\mathbb{C})$,
+$\mathfrak{M}=\pi_l(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
-We also assume that $\pi_l:\mathfrak{N}_f\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
+We also assume that $\pi_l:\mathfrak{N}\to\mathfrak{B}(\mathfrak{H}_\tau)$ 
 is the GNS representation for the tracial state
 
 $\tau(A)=\frac{1}{n}\mbox{Tr} A$. 
-Here $\mathfrak{H}_\tau=\mathfrak{N}_f\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
-$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N}_f)\simeq I_n\otimes\mathfrak{N}_f$.
+Here $\mathfrak{H}_\tau=\mathfrak{N}\simeq \mathbb{C}^n\otimes \mathbb{C}^n$,
+$\mathfrak{B}(\mathfrak{H}_\tau)$ is the ensemble of linear maps on $\mathbb{C}^n\otimes \mathbb{C}^n$ and $\mathfrak{M}=\pi_l(\mathfrak{N})\simeq I_n\otimes\mathfrak{N}$.
 Then we have 
 $$
-\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}_f^\prime=\mathfrak{N}_f\otimes \{I_n\} 
+\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
 $$
-and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N}_f)$.
+and hence $\mathfrak{M}^\prime=\pi_r(\mathfrak{N})$.
 In the following we use $\rho^{1/2}$ as a cyclic and separating vector $\Omega\in \mathfrak{H}_\tau$;
 $$
 \mathfrak{H}_\tau=\mathfrak{M}\Omega=\mathfrak{M}^\prime \Omega, \quad \Omega=\rho^{1/2}.
@@ -582,8 +554,80 @@ Since
   </div>
 </section>
 
+<section>
+<!--------------------------------------------------------------------------->
+	<h3><font color=skyblue>Appendix</font> </h3>
+<!--------------------------------------------------------------------------->
+In order to deal with anti-linear operators on $\mathfrak{H}=\mathfrak{N}$,
+we view $\mathfrak{H}$ as a real Hilbert space.
+A complex matrix $A=(a_{j,k})\in \mathfrak{N}=M_n(\mathbb{C})$ with 
+$$a_{j,k}=x_{j,k}+iy_{j,k}$$
+ corresponds to
+a real matrix $\hat{A}=(\hat{a}_{j,k})\in M_{2n}(\mathbb{R})$ with
+$$
+\hat{a}_{j,k}=
+\begin{pmatrix}
+x_{j,k}&-y_{j,k}\\
+y_{j,k}&x_{j,k}
+\end{pmatrix}\in M_2(\mathbb{R}).
+$$
+Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes O_I\}$
+with the $2\times 2$-identity matrix $I_2$ and
+$$
+O_I=\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}.
+$$
+The ensemble of such real matrices 
+$M^r_{2n}(\mathbb{R})=\{\hat{A}\in M_{2n}(\mathbb{R}) ; A\in M_n(\mathbb{C})\}$,
+can be identified with $M_{n}(\mathbb{C})$ 
+and we have $\widehat{A^\ast}=\hat{A}^T$.
 
-	
+In addition, we define a bijection $$v_r:M_{n}(\mathbb{C})\to \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$$
+by 
+$$
+\begin{split}
+v_r(e_je_k)&=e_k\otimes e_j\otimes f_1,\\
+v_r(ie_je_k^T)&=e_k\otimes e_j\otimes f_2,
+\end{split}
+$$
+with $f_1=(1,0)^T,f_2=(0,1)^T$. 
+Thus we have obtained convenient relations
+$$
+M_n(\mathbb{C})\simeq \mathbb{C}^n\otimes \mathbb{C}^n\simeq  \mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2.
+$$
+</section>
+
+
+<section>
+	<!---------------------------------------------------------------------------->
+<h3> <font color=skyblue>Expression on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2$</font></h3>
+	<!---------------------------------------------------------------------------->
+<div align="left">
+	The transpose operation $\mathfrak{N}_f\in A \to A^T\ni \mathfrak{N}_f$ can be represented on $\mathbb{R}^n\otimes \mathbb{R}^n\otimes\mathbb{R}^2 $ by $O_T\otimes I_2$, where $O_T$ is an operator on $\mathbb{R}^n\otimes \mathbb{R}^n$ given by
+	$$O_T(e_k\otimes e_j)=  e_j\otimes e_k.$$
+	Hence the anti-linear operator $J:\mathfrak{N}_f\in A\to A^\ast\ni \mathfrak{N}_f$ is given as
+	$$
+    J=v_r^\ast  (O_T\otimes O_C) v_r, 
+	$$
+	with
+$$
+O_C=\begin{pmatrix}
+1&0\\
+0&-1
+\end{pmatrix}.
+$$
+It is easy to see that $J^2=I$, that is, $J=J^{-1}$ and 
+$$
+J^\ast=v^\ast (O_T\otimes O_C)^T v_r=v^\ast (O_T^T\otimes O_C^T) v_r=J.
+$$
+The operators $\pi_l(A)$ and $\pi_r(A)$ introduced in the previous section are represented on
+$\mathbb{R}^n\otimes \mathbb{R}^n\otimes \mathbb{R}^2$ as
+$\tilde{\pi}_l(\hat{A})\otimes I_2$ and $\tilde{\pi}_r(\hat{A})\otimes I_2$ respectively.
+</div>
+</section>
+
 </div>
 		</div>
 
