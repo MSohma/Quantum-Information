@@ -138,12 +138,12 @@ In fact
  &= (I_n\otimes A)e_k\otimes  e_j=\tilde{\pi}_l(A)v(e_je_k^T),
  \end{split} 
  $$
- and hence $\pi_l(A)=v^{-1}\tilde{\pi}_l(A)v$. 
-		 When we take an inner product 
+ and hence $\pi_l(A)=v^{-1}\tilde{\pi}_l(A)v$, 
+		 where taking an inner product 
 		 $$
 		 (\phi_1\otimes \psi_1,\phi_2\otimes \phi_2)=\frac{1}{n}(\phi_1,\phi_2)(\psi_1,\psi_2),
 		 $$
-		 v is a unitary operator.
+		 we can regard $v$ as a unitary operator, $v^{-1}=v^\ast$.
 		 Note that, in the field of matrix calculus, we identify $\mathbb{C}^n\otimes \mathbb{C}^n$ with $\mathbb{C}^{n^2}$
 		by using the basis $\{e_k\otimes e_j;k,j=1,2,...n\}$,
     
@@ -153,8 +153,8 @@ represented as $\tilde{\pi}_r(A)=A^T\otimes I_n$ on $\mathbb{C}^n\otimes \mathbb
 In fact,
  $$
  \begin{split}
- v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=A^Te_k\otimes  e_j\\
- &= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T),
+ v(\pi_r(A)e_je_k^T)&=v(e_je_k^TA)=v(e_j(A^\ast e_k)^\ast=\overline{A^\ast e_k}\otimes  e_j\\
+ &=A^T e_k \otimes e_j= (A^T\otimes I_n)e_k\otimes  e_j=\tilde{\pi}_r(A)v(e_je_k^T),
  \end{split} 
  $$
  and hence $\pi_r(A)=v^{-1}\tilde{\pi}_r(A) v$. 
