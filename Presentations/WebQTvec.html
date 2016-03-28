@@ -126,11 +126,11 @@ In fact
  and hence $\ell(A)=v^{\ast}\tilde{\ell}(A)v$. 
 On the other hand, $r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
 represented as $\tilde{r}(A)=I_n\otimes A^T$ on $\mathbb{C}^n\otimes \mathbb{C}^n$.
-In fact,
+In fact
  $$
  \begin{split}
  v(r(A)e_je_k^T)&=v(e_je_k^TA)=v(e_j(A^\ast e_k)^\ast)=e_j\otimes \overline{A^\ast e_k}\\
- &= e_j \otimes A^T e_k= (I_n\otimes A^T)e_k\otimes  e_j=\tilde{r}(A)v(e_je_k^T),
+ &= e_j \otimes A^T e_k= (I_n\otimes A^T)e_j\otimes  e_k=\tilde{r}(A)v(e_je_k^T),
  \end{split} 
  $$
  and hence $r(A)=v^{\ast}\tilde{r}(A) v$. 
@@ -148,11 +148,18 @@ We explain results of Tomita-Takesaki theory in the case of
 $\mathfrak{M}=\ell(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 We have 
+$\tilde{\ell}(\mathfrak{N})^\prime=\tilde{r}(\mathfrak{N})$ and $\tilde{r}(\mathfrak{N})^\prime=\tilde{\ell}(\mathfrak{N})$ for 
+$
+\tilde{\ell}(\mathfrak{N})=\mathfrak{N}\otimes I_n,\tilde{r}(\mathfrak{N})=I_n\otimes \mathfrak{N}
+$
+and hence 
 $$
-\mathfrak{M}^\prime\simeq \{I_n\}^\prime\otimes\mathfrak{N}^\prime=\mathfrak{N}\otimes \{I_n\} 
+\begin{split}
+\mathfrak{M}^\prime&=v^\ast \tilde{\ell}(\mathfrak{N})^\prime v= v^\ast \tilde{r}(\mathfrak{N})v=r(\mathfrak{N}) \\
+\mathfrak{M}^{\prime\prime}&=v^\ast \tilde{r}(\mathfrak{N})^\prime v= v^\ast \tilde{\ell}(\mathfrak{N})v=\ell(\mathfrak{N})=\mathfrak{M}.
+\end{split}
 $$
-and hence $\mathfrak{M}^\prime=r(\mathfrak{N})$.
-We use $\rho^{1/2}$ as a cyclic and separating vector; 
+We use $\rho^{1/2}$ as a cyclic and separating vector;
 $$
 \mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2}.
 $$
@@ -334,44 +341,36 @@ $$
 <div align="left">
 <p>	The anti-Hermitian operator satifying the following conditions is called  <font color=red>commutation operator</font>.</p>
 $$
-[A,X]=\langle A, \mathfrak{D}X\rangle, \quad A,X\in H
+[A,X]=\langle A, \mathfrak{D}X\rangle, \quad A,X\in \mathfrak{K}
 $$
-<p>
 Let us obtain a matrix expression of commutation operator.
-</p>
 Since
  $$
  \begin{split}
  [A,X]&=i\omega(A^\ast X-XA^\ast)=i\mbox{Tr}\rho(A^\ast X-XA^\ast)\\
       &=\mbox{Tr}A^\ast i(X\rho-\rho X)\\
  \langle A,Y\rangle&=\omega((YA^\ast+A^\ast Y)/2)=\mbox{Tr}\rho((YA^\ast+A^\ast Y)/2)\\
- &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2,
+ &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2
  \end{split}
  $$
-</div>
-</section>
-
-<section>
-	<div align="left">
-	<p>
-	we have
+ hold for any $A\in\mathfrak{K}$, we have
  $$
  (\rho Y+Y\rho)/2=i(X\rho-\rho X),
  $$
 	which can be written by a vec operator as
-	</p>
 	$$
-	(I_2\otimes \rho + \rho\otimes I_2)\mbox{vec}(Y)=2i(\rho\otimes I_2 -I_2\otimes \rho )\mbox{vec}(X).
+	(I_n\otimes \rho + \rho\otimes I_n)v(Y)=2i(\rho\otimes I_n -I_n\otimes \rho )v(X).
 	$$
 	Thus 
 	$$
-	\mbox{vec}(Y)=2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )\mbox{vec}(X),
+	v(Y)=2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )v(X),
 
 	$$
 	which means that the matrix expression of $\mathfrak{D}$ is given by
 	$$
-	\mathfrak{D}\sim 2i(I_2\otimes \rho + \rho\otimes I_2)^{-1}(\rho\otimes I_2 -I_2\otimes \rho )
+	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v
 	$$
+	</p>
 	</div>
 </section>
 <section>
@@ -379,9 +378,9 @@ Since
 	  Moreover
 		$$
 		\begin{split}
-    1+\frac{i}{2}\mathfrak{D}&\sim 2(I_2\otimes \rho+\rho\otimes I_2)^{-1}  I_2\otimes \rho\\
-    1-\frac{i}{2}\mathfrak{D}&\sim 2(I_2\otimes \rho+\rho\otimes I_2)^{-1}\rho \otimes I_2\\
-    1+\frac{1}{4}\mathfrak{D}^2&\sim 4(I_2\otimes \rho+\rho\otimes I_2)^{-2}\rho \otimes \rho\\
+    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v\\
+    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v\\
+    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v\\
 
     \end{split}
 		$$
@@ -441,7 +440,7 @@ x_{j,k}&-y_{j,k}\\
 y_{j,k}&x_{j,k}
 \end{pmatrix}\in M_2(\mathbb{R}).
 $$
-Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_2,\sqrt{n}e_je_k^T\otimes O_I\}$
+Here we can take a natural basis $\{ \sqrt{n}e_je_k^T\otimes I_n,\sqrt{n}e_je_k^T\otimes O_I\}$
 with the $2\times 2$-identity matrix $I_2$ and
 $$
 O_I=\begin{pmatrix}
