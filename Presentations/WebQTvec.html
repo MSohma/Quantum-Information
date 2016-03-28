@@ -266,156 +266,73 @@ r(A)X=XA.
 </section>
 
 
-<section>
-<!---------------------------------------------------------------------------->
-<h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
-<!---------------------------------------------------------------------------->
-<div align="left">
-<p>	 $A,B\in\mathfrak{A}$</p>
-<ol>
-	<li> $\langle A,B \rangle_{-} = \omega(A^{\ast}B)$ , which is used in the GNS representation </li>
-	<li> $\langle A,B \rangle_{+} = \omega(BA^{\ast})$</li>
-	<li> $\langle A,B \rangle = \omega(\frac{1}{2}(BA^{\ast}+A^{\ast}B))$
-</ol>
-<p>
-	We can consider $\mathfrak{A}$ as a <font color=red>Hilbert space</font> in three different ways.
-	Hilbert spaces with these inner products are denoted by <font color=red>$H_{-},H_{+},H$</font> respectively.</p>
-</div>
-</section>
-
-
-<section>
-<!--------------------------------------------------------------------------->
-<h3><font color=skyblue>Properties of $\langle \cdot,\cdot \rangle$</font> </h3>
-<!--------------------------------------------------------------------------->
-<div align="left">
-<p>	 $A,B\in\mathfrak{A}$</p>
-<ol>
-	<li> Involution $A\to A^*$ is an anti-unitary operator, i.e.
-		$\langle A^{\ast},B^{\ast}\rangle=\overline{\langle A,B\rangle}$</li>
-	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set $\mathfrak{A}_S$ of $\mathfrak{A}$, where
-$\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
-</ol>
-<p> With the inner product $\langle \cdot , \cdot \rangle$, $\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=red>$H_S$</font>.
-</p>
-
-</div>
-</section>
-
-
-
-<section>
-<!--------------------------------------------------------------------------->
-<h3><font color=skyblue>Uncertainty Relation</font> </h3>
-<!--------------------------------------------------------------------------->
-<div align="left">
-<p>
-we consider the following bilinear form on
-$\mathfrak{A}$.
-</p>
-$$
-[A,B]=i\omega(A^{\ast}B-BA^{\ast}),\quad A,B\in\mathfrak{A}
-$$
-<p>
-Then it holds that
-</p>
-$$
-\begin{split}
-\langle A,A\rangle\geq\pm\frac{i}{2}[A,A],A\in H\\
-\langle A,A \rangle +\langle B,B \rangle\geq [A,B],A,B\in H_S\\
-\langle A,A \rangle \langle B,B \rangle\geq \frac{1}{4}[A,B]^2,A,B\in H_S
-\end{split}
-$$
-<p>
-	<font color=green>
-		The last inequality gives the most general form of uncertainty relation.
-</font>
-</p>
-</div>
-</section>
 
 <section>
 <!--------------------------------------------------------------------------->
 <h3><font color=skyblue>Holevo's commutation operator</font> </h3>
 <!--------------------------------------------------------------------------->
 <div align="left">
-<p>	The anti-Hermitian operator satifying the following conditions is called  <font color=red>commutation operator</font>.</p>
+<p>
+In the quantum estimation theory we often consider $\mathfrak{N}$
+as a Hilbert space with the inner product
+	$$
+	\langle A,B \rangle = \omega(\frac{1}{2}(BA^{\ast}+A^{\ast}B)),
+	$$
+	and denote the Hilbert space by $\mathfrak{K}$.
+On the other hand we define 
+the bilinear form on
+$\mathfrak{K}(=\mathfrak{N})$ as
+$$
+[A,B]=i\omega(A^{\ast}B-BA^{\ast}).
+$$
+Then	the anti-Hermitian operator satifying the following conditions is called  commutation operator.
 $$
 [A,X]=\langle A, \mathfrak{D}X\rangle, \quad A,X\in \mathfrak{K}
 $$
-Let us obtain a matrix expression of commutation operator.
-Since
+</p>
+<p>
+Since it holds for $A,X,Y\in \mathfrak{H}=\mathfrak{N}=\mathfrak{K}$
+that 
  $$
  \begin{split}
  [A,X]&=i\omega(A^\ast X-XA^\ast)=i\mbox{Tr}\rho(A^\ast X-XA^\ast)\\
-      &=\mbox{Tr}A^\ast i(X\rho-\rho X)\\
+      &=\mbox{Tr}A^\ast i(X\rho-\rho X)=\langle A, i(X\rho-\rho X)\rangle_2\\
  \langle A,Y\rangle&=\omega((YA^\ast+A^\ast Y)/2)=\mbox{Tr}\rho((YA^\ast+A^\ast Y)/2)\\
- &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2
+ &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2=\langle A, \rho Y+Y\rho \rangle_2,
  \end{split}
  $$
- hold for any $A\in\mathfrak{K}$, we have
+  we have
  $$
  (\rho Y+Y\rho)/2=i(X\rho-\rho X),
  $$
-	which can be written by a vec operator as
+ which can be represented on $\mathfrak{H}\otimes \mathfrak{H}$ as
 	$$
 	(I_n\otimes \rho + \rho\otimes I_n)v(Y)=2i(\rho\otimes I_n -I_n\otimes \rho )v(X).
 	$$
 	Thus 
 	$$
-	v(Y)=2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )v(X),
+	v(\mathfrak{D}X)=v(Y)=2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )v(X),
 
 	$$
-	which means that the matrix expression of $\mathfrak{D}$ is given by
+	that is,
 	$$
 	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v
 	$$
-	</p>
-	</div>
-</section>
-<section>
-	<div align="left">
 	  Moreover
 		$$
 		\begin{split}
-    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v\\
-    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v\\
-    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v\\
+    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v,\\
+    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v,\\
+    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v.\\
 
     \end{split}
 		$$
-	</div>
-</section>
-<section>
-<!--------------------------------------------------------------------------->
-	<h3><font color=skyblue>Properties of commutation operator</font> </h3>
-<!--------------------------------------------------------------------------->
-	<div align="left">
-		<ul>
-     <li> $1\pm\frac{i}{2}\mathfrak{D}\geq 0$
-		 <li> $1+\frac{1}{4}\mathfrak{D}\geq 0$
-     <li> $\omega$is fatihful$\Leftrightarrow$ $1\pm\frac{i}{2}\mathfrak{D}$,
-			 $1+\frac{1}{4}\mathfrak{D}^2$ is non-degenerated.
-		</ul>
-  </div>
-</section>
-
-
-
-
-<section>
-<!--------------------------------------------------------------------------->
-	<h3><font color=skyblue>Relation between modular operator and commutation operator</font> </h3>
-<!--------------------------------------------------------------------------->
-	<div align="left">
 	<p>
-		We get
+	Finally	we get
 		$$
-    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
 		$$
-	</p>
-	<p>
-		Similarly
+		and
 		$$
      \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
 		$$
@@ -602,6 +519,88 @@ $$
 
 </p>
 </div>
+</section>
+
+<section>
+<!---------------------------------------------------------------------------->
+<h3><font color=skyblue>Inner product on a $\ast$-algebra $\mathfrak{A}$</font> </h3>
+<!---------------------------------------------------------------------------->
+<div align="left">
+<p>	 $A,B\in\mathfrak{A}$</p>
+<ol>
+	<li> $\langle A,B \rangle_{-} = \omega(A^{\ast}B)$ , which is used in the GNS representation </li>
+	<li> $\langle A,B \rangle_{+} = \omega(BA^{\ast})$</li>
+	<li> $\langle A,B \rangle = \omega(\frac{1}{2}(BA^{\ast}+A^{\ast}B))$
+</ol>
+<p>
+	We can consider $\mathfrak{A}$ as a <font color=red>Hilbert space</font> in three different ways.
+	Hilbert spaces with these inner products are denoted by <font color=red>$H_{-},H_{+},H$</font> respectively.</p>
+</div>
+</section>
+
+
+
+
+
+<section>
+<!--------------------------------------------------------------------------->
+<h3><font color=skyblue>Uncertainty Relation</font> </h3>
+<!--------------------------------------------------------------------------->
+<div align="left">
+<p>
+we consider the following bilinear form on
+$\mathfrak{A}$.
+</p>
+$$
+[A,B]=i\omega(A^{\ast}B-BA^{\ast}),\quad A,B\in\mathfrak{A}
+$$
+<p>
+Then it holds that
+</p>
+$$
+\begin{split}
+\langle A,A\rangle\geq\pm\frac{i}{2}[A,A],A\in H\\
+\langle A,A \rangle +\langle B,B \rangle\geq [A,B],A,B\in H_S\\
+\langle A,A \rangle \langle B,B \rangle\geq \frac{1}{4}[A,B]^2,A,B\in H_S
+\end{split}
+$$
+<p>
+	<font color=green>
+		The last inequality gives the most general form of uncertainty relation.
+</font>
+</p>
+</div>
+</section>
+
+<section>
+<!--------------------------------------------------------------------------->
+<h3><font color=skyblue>Properties of $\langle \cdot,\cdot \rangle$</font> </h3>
+<!--------------------------------------------------------------------------->
+<div align="left">
+<p>	 $A,B\in\mathfrak{A}$</p>
+<ol>
+	<li> Involution $A\to A^*$ is an anti-unitary operator, i.e.
+		$\langle A^{\ast},B^{\ast}\rangle=\overline{\langle A,B\rangle}$</li>
+	<li> Inner product $\langle A,B \rangle$ give a real inner product on the adjoint set $\mathfrak{A}_S$ of $\mathfrak{A}$, where
+$\mathfrak{A}_S:=\{A\in\mathfrak{A};A=A^\ast\}$
+</ol>
+<p> With the inner product $\langle \cdot , \cdot \rangle$, $\mathfrak{A}_S$ can be considered as a real Hilbert space, which is denoted by <font color=red>$H_S$</font>.
+</p>
+
+</div>
+</section>
+
+<!--------------------------------------------------------------------------->
+	<h3><font color=skyblue>Properties of commutation operator</font> </h3>
+<!--------------------------------------------------------------------------->
+	<div align="left">
+		<ul>
+     <li> $1\pm\frac{i}{2}\mathfrak{D}\geq 0$
+		 <li> $1+\frac{1}{4}\mathfrak{D}\geq 0$
+     <li> $\omega$is fatihful$\Leftrightarrow$ $1\pm\frac{i}{2}\mathfrak{D}$,
+			 $1+\frac{1}{4}\mathfrak{D}^2$ is non-degenerated.
+		</ul>
+  </div>
 </section>
 </div>
 		</div>
