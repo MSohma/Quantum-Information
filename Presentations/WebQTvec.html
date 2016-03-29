@@ -95,7 +95,7 @@ Fig. 2    Problem posed in the Holevo's book.
 
 <!--------------------------------------------------------------------------->
 <section>
-	<h3><font color=skyblue>Vector Representation</font> </h3>
+	<h3><font color=skyblue>Representation on $\mathfrak{H}\otimes\mathfrak{H}$</font> </h3>
 <!--------------------------------------------------------------------------->
  <p>
  We can identify the Hilbert-Schmidt space $\mathfrak{H}_2=\mathfrak{N}=M_n(\mathbb{C})$ on $\mathfrak{H}=\mathbb{C}^n$ with $\mathfrak{H}\otimes\mathfrak{H}$
@@ -261,6 +261,8 @@ J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast
 			 $$
 r(A)X=XA.
 			 $$
+Remark that the above discussion can be easily extend to the case where 
+$\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$
 </p>
   </div>
 </section>
@@ -269,7 +271,7 @@ r(A)X=XA.
 
 <section>
 <!--------------------------------------------------------------------------->
-<h3><font color=skyblue>Holevo's commutation operator</font> </h3>
+<h3><font color=skyblue>Relation between Holevo's commutation operator and modular operator</font> </h3>
 <!--------------------------------------------------------------------------->
 <div align="left">
 <p>
@@ -336,6 +338,7 @@ that
 		$$
      \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
 		$$
+
 	</p>
   </div>
 </section>
@@ -346,102 +349,55 @@ that
 <!--------------------------------------------------------------------------->
 <div align="left">
 <p>	
-In this sebsection we prove the Tomita-Takesaki theorem for finite dimensional
-von Neumann algebras.
-The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}_f$ such that
-$$
-\varphi:\mathfrak{N}\simeq \mathfrak{N}_f:=M(m_1,\mathbb{C})\oplus \cdots \oplus M(m_n,\mathbb{C}).
-$$
-Then we can define a faithful tracial state as
-$$
-A\in \mathfrak{N}_f,\tau(A) = {\rm Tr}A /m,\quad m=m_1+\cdots + m_n.
-$$
-Here let us remember that any state $\omega$ on von Neumann algebras $\mathfrak{N}_f$ has a positive operator $H\in \mathfrak{N}_f$ such that
-$$
-\omega(A)=\tau(AH)=\tau(H^{1/2}AH^{1/2}), A\in \mathfrak{N}_f,\tag{2.2.1}
-$$
-where $H$ is invertible iff $\omega$ is faithful.
-
-Let us consider GNS representation $\pi:\mathfrak{N}_f\to \mathfrak{B}(\mathfrak{H}_2)$ given by a faithful tracial state $\tau$.
-Here from the definition of GNS representation we have
-$\mathfrak{H}_2=\mathfrak{N}_f,\pi(A)B=AB,A,B\in \mathfrak{N}_f$ and the inner product of $\mathfrak{H}_2$ is given by
-$$
-\langle A,B \rangle_2=\tau(A^*B).\tag{2.2.2}
-$$
-Using such derived representation and inner product $\langle \cdot,\cdot\rangle_2$ we can represent the state $\omega$ as
-$$
-\omega(A)=\tau(H^{1/2}AH^{1/2})=\langle H^{1/2},\pi(A)H^{1/2}\rangle_2,\tag{2.2.3}
-$$
-where $H^{1/2}$ is a cyclic and separating vector of $\pi(\mathfrak{N}_f)$.
-Then  the
-anti-linear operator $S_{0,\tau}$ is defined as
-$$
-S_{0,\tau}:\pi(A)H^{1/2}\to \pi(A)^*H^{1/2}.
-$$
-Putting $X=\pi(A)H^{1/2}=AH^{1/2}$, we have $A=XH^{-1/2}$, $A^*=H^{-1/2}X^*$
-and hence
-$$
-S_{0,\tau}X=H^{-1/2}X^*H^{1/2}.
-$$
-On the other hand, the anti linear operator $F_{0,\tau}$ is defined as
-$$
-F_{0,\tau}:\tilde{\pi}(A)H^{1/2}\to \tilde{\pi}(A)^*H^{1/2},
-$$
-which can be written as
-$$
-F_{0,\tau}:H^{1/2}A^T\to H^{1/2}(A^T)^*
-$$
-Putting $X=H^{1/2}A^T$, we have $A^T=H^{-1/2}X$, $(A^T)^*=X^*H^{-1/2}$ and hence
-$$
-F_0X=H^{1/2}X^*H^{-1/2}.
-$$
-Thus we find that $\Delta_\tau=F_{0,\tau}S_{0,\tau}$
-is given as
+In this section we prove the Tomita-Takesaki theorem for a finite dimensional
+von Neumann algebras $\mathfrak{N}$ on a Hilbert space $\mathfrak{K}$.
+We assume there exists a cyclic separating vector $\xi\in \mathfrak{K}$;
+$\mathfrak{K}=\mathfrak{N}\xi=\mathfrak{N}^\prime\xi$.
+Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ on $\mathfrak{K}$ as
 $$
 \begin{split}
-\Delta_\tau X&=F_{0,\tau}S_{0,\tau}X=F_{0,\tau}(H^{-1/2}X^*H^{1/2})\\
-&=H^{1/2}H^{1/2}XH^{-1/2}H^{-1/2}=HXH^{-1}.
+\tilde{S}&:\mathfrak{N}\xi\ni X\xi \to X^\ast \xi \in \mathfrak{N}\xi,\\
+\tilde{F}&:\mathfrak{N}^\prime\xi\ni Y\xi \to Y^\ast \xi \in \mathfrak{N}^\prime\xi,\\
+\tilde{\Delta}&=\tilde{F}\tilde{S}.
 \end{split}
 $$
-
-It follows from this equation that
+The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}_f$ such that
 $$
-\Delta_\tau ^{-it}\pi(A)\Delta_\tau ^{it}=\pi(H^{-it}AH^{it}),\quad t \in \mathbb{R},
-$$
-that is,
-$$
-\Delta_\tau ^{-it}\pi(\mathfrak{N}_f)\Delta_\tau ^{it}=\pi(\mathfrak{N}_f),\quad t \in \mathbb{R} \tag{2.2.4}.
+\varphi:\mathfrak{N}\simeq \mathfrak{N}_f:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})
 $$
 
-Let us consider the state on $\mathfrak{N}$
+Let us consider the state on $\mathfrak{N}$ as
 $$
-\omega_\xi(A)=(\xi,A\xi),\quad A\in \mathfrak{N},\xi\in \mathfrak{H}.
+\omega_\xi(A)=(\xi,A\xi),\quad A\in \mathfrak{N},\xi\in \mathfrak{K}.
 $$
 Using this state we can define the state on $\mathfrak{N}_f$
 $$
 \omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}_f.
 $$
-Then we get
+Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}_f$ and 
+$\omega$, we get
+the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N}_f)$ on the Hilbert space 
+$\mathfrak{H}_2$, the cyclic separating vector $\rho^{1/2}\in \mathfrak{H}_2$
+and operators on $\mathfrak{H}_2$, $S, F$ and $\Delta$.
+
+Then we obtain
 $$
-\langle H^{1/2},\pi(A^* B)H^{1/2}\rangle_2=(\xi,\varphi^{-1}(A^* B)\xi),
-$$
-and hence
-$$
-\langle \pi(A)H^{1/2},\pi( B)H^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi),
+\langle \pi(A)\rho^{1/2},\pi( B)\rho^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi),
 $$
 which means
 $$
-U:\mathfrak{H}_2\ni\pi(A)H^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{H}, \quad A\in \mathfrak{N}_f
+U:\mathfrak{H}_2\ni\pi(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{K}, \quad A\in \mathfrak{N}_f
 $$
-gives a unitary operator from $\mathfrak{H}_2$ to $\mathfrak{H}$.
-This unitary operator combines $\Delta$ and $\Delta_{\tau}$ as
+gives a unitary operator from $\mathfrak{H}_2$ to $\mathfrak{K}$.
+This unitary operator combines $\Delta$ and $\tilde{\Delta}$ as
 $$
-\Delta_\tau=U^{\ast}\Delta U,
+\tilde{\Delta}=U\Delta U^{\ast},
 $$
 and gives the main result of Tomita-Takesaki Theory,
 $$
-\Delta^{-it}\mathfrak{N}\Delta^{it}=\mathfrak{N}.
+\tilde{\Delta}^{-it}\mathfrak{N}\tilde{\Delta}^{it}=\mathfrak{N}.
 $$
+
 
 </p>
 </div>
