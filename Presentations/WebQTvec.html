@@ -69,7 +69,7 @@ The state $\omega$ can be written by the inner product $\langle \cdot, \cdot\ran
 $$
 \omega(A)=\mbox{Tr}(\rho^{1/2}A\rho^{1/2})=\langle \rho^{1/2},\ell(A)\rho^{1/2}\rangle_2 .
 $$
-Now we can define the modular operator $\Delta$ for the von Neumann algebra $\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2}$. 
+Now we can define the modular operator $\Delta$ for the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2}$. 
 Our purpose is to show such derived modular operator is related to the commutation operator
 as
 $$
@@ -144,7 +144,7 @@ In fact
 <!--------------------------------------------------------------------------->
 	<div align="left">
 		<p>
-We explain results of Tomita-Takesaki theory in the case of 
+We give a proof  of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\ell(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 We have 
@@ -173,11 +173,11 @@ $$
 	$$
 	Here 
 	$$
-	\ell(A)^\ast=(A\otimes I_n)^\ast=A^\ast \otimes I_n =\ell(A^\ast),
+	\ell(A)^\ast=v^\ast(A\otimes I_n)^\ast v=v^\ast A^\ast \otimes I_n v=\ell(A^\ast),
 	$$
 	and
 	$$
-  r(A)^\ast=(I_n\otimes A^T)^\ast=I_n\otimes (A^T)^\ast=I_n\otimes (A^\ast)^T=r(A^\ast).
+  r(A)^\ast=v^\ast (I_n\otimes A^T)^\ast v=v^\ast I_n\otimes (A^T)^\ast v=I_n\otimes (A^\ast)^T=r(A^\ast).
 	$$
 	The linear operator $\Delta=FS$ on $\mathfrak{H}_2$ is called a modular operator.
 </p>
@@ -196,15 +196,15 @@ F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
 $$
 In fact, putting $X=r(A)\rho^{1/2}=\rho^{1/2}A$,$Y=r(A)^\ast=r(A^\ast)= \rho^{1/2}A^\ast$,
 	$$
-    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2},
+    Y= \rho^{1/2}(\rho^{-1/2}X)^\ast=\rho^{1/2}X^\ast\rho^{-1/2}.
   $$
-Thus we finally have
+Thus we have
 $$
 \Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
 $$
-that is, $\Delta=v^\ast(({\rho}^{-1})^T\otimes \rho) v$.
-It follows that $\Delta^\ast=v^\ast (({\rho}^{-1})^T\otimes \rho)^\ast v=\Delta$.
-Since $\Delta^{-1/2}=v^\ast(({\rho}^{1/2})^T\otimes \rho^{-1/2}) v$, 
+that is, $\Delta=v^\ast(\rho \otimes ({\rho}^{-1})^T) v$.
+It follows that $\Delta^\ast=v^\ast (\rho\otimes({\rho}^{-1})^T)^\ast v=\Delta$.
+Since $\Delta^{-1/2}=v^\ast(\rho^{-1/2}\otimes ({\rho}^{1/2})^T) v$, 
 $$
 \Delta^{-1/2}(X)=\rho^{-1/2}X\rho^{1/2}
 $$
