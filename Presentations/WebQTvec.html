@@ -32,7 +32,7 @@
 
 We will do an exercise given in the Holevo's book in the simplest case. 
 Let us start with GNS construction for the 
-von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
+on Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, which is the ensemble of bounded linear operators on 
 the Hilbert space $\mathfrak{H}=\mathbb{C}^n$ with the inner product $(x,y)=\bar{x}^Ty$. 
  
 Let $\rho$ be a non-degenerated density operator and 
@@ -221,10 +221,8 @@ In addition
 $$
 J\Delta J(X)=(\rho X^\ast \rho^{-1})^\ast=\rho^{-1}X\rho=\Delta^{-1}(X).
 $$
-Since
-$ S^\ast =(\Delta^{-1/2}J)^\ast=J\Delta^{-1/2}$,
-$S^\ast(X)=(\rho^{-1/2}X\rho^{1/2})^\ast=\rho^{1/2}X^\ast \rho^{-1/2}=F(X)$.
-$F^\ast(X)=(\rho^{1/2}X\rho^{-1/2})^\ast=\rho^{-1/2}X^\ast \rho^{1/2}=S(X)$.
+
+
 In summary 
 
 $$
@@ -262,7 +260,8 @@ J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast
 r(A)X=XA.
 			 $$
 Remark that the above discussion can be easily extend to the case where 
-$\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$
+$\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$.
+The proof of Tomita-Takesaki theory for a finite dimensional von Neumann algebra is given in the Appendix.
 </p>
   </div>
 </section>
@@ -350,35 +349,35 @@ that
 <div align="left">
 <p>	
 In this section we prove the Tomita-Takesaki theorem for a finite dimensional
-von Neumann algebras $\mathfrak{N}$ on a Hilbert space $\mathfrak{K}$.
+von Neumann algebras $\tilde{\mathfrak{N}}$ on a Hilbert space $\mathfrak{K}$.
 We assume there exists a cyclic separating vector $\xi\in \mathfrak{K}$;
-$\mathfrak{K}=\mathfrak{N}\xi=\mathfrak{N}^\prime\xi$.
+$\mathfrak{K}=\tilde{\mathfrak{N}}\xi=\tilde{\mathfrak{N}}^\prime\xi$.
 Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ on $\mathfrak{K}$ as
 $$
 \begin{split}
-\tilde{S}&:\mathfrak{N}\xi\ni X\xi \to X^\ast \xi \in \mathfrak{N}\xi,\\
-\tilde{F}&:\mathfrak{N}^\prime\xi\ni Y\xi \to Y^\ast \xi \in \mathfrak{N}^\prime\xi,\\
+\tilde{S}&:\tilde{\mathfrak{N}}\xi\ni X\xi \to X^\ast \xi \in \tilde{\mathfrak{N}}\xi,\\
+\tilde{F}&:\tilde{\mathfrak{N}}^\prime\xi\ni Y\xi \to Y^\ast \xi \in \tilde{\mathfrak{N}}^\prime\xi,\\
 \tilde{\Delta}&=\tilde{F}\tilde{S}.
 \end{split}
 $$
-The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}_f$ such that
+The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}$ such that
 $$
-\varphi:\mathfrak{N}\simeq \mathfrak{N}_f:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})
+\varphi:\tilde{\mathfrak{N}}\simeq \mathfrak{N}:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})
 $$
 
-Let us consider the state on $\mathfrak{N}$ as
+Let us consider the state on $\tilde{\mathfrak{N}}$ as
 $$
-\omega_\xi(A)=(\xi,A\xi),\quad A\in \mathfrak{N},\xi\in \mathfrak{K}.
+\omega_\xi(A)=(\xi,A\xi),\quad A\in \tilde{\mathfrak{N}},\xi\in \mathfrak{K}.
 $$
-Using this state we can define the state on $\mathfrak{N}_f$
+Using this state we can define the state on $\mathfrak{N}$
 $$
-\omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}_f.
+\omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}.
 $$
-Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}_f$ and 
+Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}$ and 
 $\omega$, we get
-the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N}_f)$ on the Hilbert space 
+the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N})$ on the Hilbert space 
 $\mathfrak{H}_2$, the cyclic separating vector $\rho^{1/2}\in \mathfrak{H}_2$
-and operators on $\mathfrak{H}_2$, $S, F$ and $\Delta$.
+and operators $S, F$ and $\Delta$ on $\mathfrak{H}_2$.
 
 Then we obtain
 $$
@@ -386,7 +385,7 @@ $$
 $$
 which means
 $$
-U:\mathfrak{H}_2\ni\pi(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{K}, \quad A\in \mathfrak{N}_f
+U:\mathfrak{H}_2\ni\pi(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{K}, \quad A\in \mathfrak{N}
 $$
 gives a unitary operator from $\mathfrak{H}_2$ to $\mathfrak{K}$.
 This unitary operator combines $\Delta$ and $\tilde{\Delta}$ as
@@ -395,7 +394,7 @@ $$
 $$
 and gives the main result of Tomita-Takesaki Theory,
 $$
-\tilde{\Delta}^{-it}\mathfrak{N}\tilde{\Delta}^{it}=\mathfrak{N}.
+\tilde{\Delta}^{-it}\tilde{\mathfrak{N}}\tilde{\Delta}^{it}=\tilde{\mathfrak{N}}.
 $$
 
 
