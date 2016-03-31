@@ -1,0 +1,1 @@
+Problem posed in the Holevo's book

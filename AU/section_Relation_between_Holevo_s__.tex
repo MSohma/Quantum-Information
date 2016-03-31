@@ -1,0 +1,48 @@
+\section{Relation between Holevo's commutation operator and modular operator}
+
+Let us represent the modular operator defined by (\ref{commutation opr}) on $\mathfrak{H}\otimes \mathfrak{H}$
+Since it holds for $A,X,Y\in \mathfrak{H}=\mathfrak{N}=\mathfrak{K}$
+that 
+ \begin{equation}
+ \begin{split}
+ [A,X]&=i\omega(A^\ast X-XA^\ast)=i\mbox{Tr}\rho(A^\ast X-XA^\ast)\\
+      &=\mbox{Tr}A^\ast i(X\rho-\rho X)=\langle A, i(X\rho-\rho X)\rangle_2\\
+ \langle A,Y\rangle&=\omega((YA^\ast+A^\ast Y)/2)=\mbox{Tr}\rho((YA^\ast+A^\ast Y)/2)\\
+ &=\mbox{Tr}A^\ast(\rho Y+Y\rho)/2=\langle A, \rho Y+Y\rho \rangle_2,
+ \end{split}
+ \end{equation}
+  we have
+ $$
+ (\rho Y+Y\rho)/2=i(X\rho-\rho X),
+ $$
+ which can be represented on $\mathfrak{H}\otimes \mathfrak{H}$ as
+	$$
+	(I_n\otimes \rho + \rho\otimes I_n)v(Y)=2i(\rho\otimes I_n -I_n\otimes \rho )v(X).
+	$$
+	Thus 
+	$$
+	v(\mathfrak{D}X)=v(Y)=2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )v(X),
+	$$
+	that is,
+	$$
+	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v
+	$$
+	  Moreover
+	\begin{equation}
+		\begin{split}
+    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v,\\
+    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v,\\
+    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v.\\
+
+    \end{split}
+	\end{equation}
+
+	Finally	we get
+		$$
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
+		$$
+		and
+		$$
+     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
+		$$
+
