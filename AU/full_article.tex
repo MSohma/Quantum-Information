@@ -1,102 +1,5 @@
-
-%% bare_jrnl.tex
-%% V1.3
-%% 2007/01/11
-%% by Michael Shell
-%% see http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.7 or later) with an IEEE journal paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
-%% and
-%% http://www.ieee.org/
-
-
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. IEEE's font choices can trigger bugs that do  ***
-% *** not appear when using other class files.                            ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE!
-%% User assumes all risk.
-%% In no event shall IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%
-%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
-%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
-%%*************************************************************************
-
-% Note that the a4paper option is mainly intended so that authors in
-% countries using A4 can easily print to A4 and see how their papers will
-% look in print - the typesetting of the document will not typically be
-% affected with changes in paper size (but the bottom and side margins will).
-% Use the testflow package mentioned above to verify correct handling of
-% both paper sizes by the user's LaTeX system.
-%
-% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
-% should be used if it is desired that the figures are to be displayed in
-% draft mode.
-%
-\documentclass[journal]{IEEEtran}
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[journal]{../sty/IEEEtran}
-
-
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
+\documentclass{article}
+\usepackage[affil-it]{authblk}
 \usepackage{graphicx}
 \usepackage[space]{grffile}
 \usepackage{latexsym}
@@ -104,6 +7,7 @@
 \usepackage{longtable}
 \usepackage{multirow,booktabs}
 \usepackage{amsfonts,amsmath,amssymb}
+\usepackage{natbib}
 \usepackage{url}
 \usepackage{hyperref}
 \hypersetup{colorlinks=false,pdfborder={0 0 0}}
@@ -117,269 +21,9 @@
 
 
 
-% *** CITATION PACKAGES ***
-%
-\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
-% not currently provide for hyperlinked citations.
-% The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
-% The documentation is contained in the cite.sty file itself.
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage[cmex10]{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics. If using
-% it, be sure to load this package with the cmex10 option to ensure that
-% only type 1 fonts will utilized at all point sizes. Without this option,
-% it is possible that some math symbols, particularly those within
-% footnotes, will be rendered in bitmap form which will result in a
-% document that can not be IEEE Xplore compliant!
-%
-% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
-% There is also a support site at:
-% http://algorithms.berlios.de/index.html
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/tools/
-
-
-%\usepackage{mdwmath}
-%\usepackage{mdwtab}
-% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
-% especially mdwmath.sty and mdwtab.sty which are used to format equations
-% and tables, respectively. The MDWtools set is already installed on most
-% LaTeX systems. The lastest version and documentation is available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-%\usepackage{eqparbox}
-% Also of notable interest is Scott Pakin's eqparbox package for creating
-% (automatically sized) equal width boxes - aka "natural width parboxes".
-% Available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
-
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\usepackage[tight,footnotesize]{subfigure}
-% subfigure.sty was written by Steven Douglas Cochran. This package makes it
-% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
-% work, it is a good idea to load it with the tight package option to reduce
-% the amount of white space around the subfigures. subfigure.sty is already
-% installed on most LaTeX systems. The latest version and documentation can
-% be obtained at:
-% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
-% subfigure.sty has been superceeded by subfig.sty.
-
-
-
-%\usepackage[caption=false]{caption}
-%\usepackage[font=footnotesize]{subfig}
-% subfig.sty, also written by Steven Douglas Cochran, is the modern
-% replacement for subfigure.sty. However, subfig.sty requires and
-% automatically loads Axel Sommerfeldt's caption.sty which will override
-% IEEEtran.cls handling of captions and this will result in nonIEEE style
-% figure/table captions. To prevent this problem, be sure and preload
-% caption.sty with its "caption=false" package option. This is will preserve
-% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later
-% (recommended due to many improvements over 1.2) of subfig.sty supports
-% the caption=false option directly:
-%\usepackage[caption=false,font=footnotesize]{subfig}
-%
-% The latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
-% The latest version and documentation of caption.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure. The latest version and documentation can be found at:
-% http://www.ctan.org/tex-archive/macros/latex/base/
-
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
-% Documentation is contained in the stfloats.sty comments as well as in the
-% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
-% does not allow \baselineskip to stretch. Authors submitting work to the
-% IEEE should note that IEEE rarely uses double column equations and
-% that authors should try to avoid such use. Do not be tempted to use the
-% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
-% not format its papers in such ways.
-
-
-%\ifCLASSOPTIONcaptionsoff
-%  \usepackage[nomarkers]{endfloat}
-% \let\MYoriglatexcaption\caption
-% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-%\fi
-% endfloat.sty was written by James Darrell McCauley and Jeff Goldberg.
-% This package may be useful when used in conjunction with IEEEtran.cls'
-% captionsoff option. Some IEEE journals/societies require that submissions
-% have lists of figures/tables at the end of the paper and that
-% figures/tables without any captions are placed on a page by themselves at
-% the end of the document. If needed, the draftcls IEEEtran class option or
-% \CLASSINPUTbaselinestretch interface can be used to increase the line
-% spacing as well. Be sure and use the nomarkers option of endfloat to
-% prevent endfloat from "marking" where the figures would have been placed
-% in the text. The two hack lines of code above are a slight modification of
-% that suggested by in the endfloat docs (section 8.3.1) to ensure that
-% the full captions always appear in the list of figures/tables - even if
-% the user used the short optional argument of \caption[]{}.
-% IEEE papers do not typically make use of \caption[]'s optional argument,
-% so this should not be an issue. A similar trick can be used to disable
-% captions of packages such as subfig.sty that lack options to turn off
-% the subcaptions:
-% For subfig.sty:
-% \let\MYorigsubfloat\subfloat
-% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
-% For subfigure.sty:
-% \let\MYorigsubfigure\subfigure
-% \renewcommand{\subfigure}[2][\relax]{\MYorigsubfigure[]{#2}}
-% However, the above trick will not work if both optional arguments of
-% the \subfloat/subfig command are used. Furthermore, there needs to be a
-% description of each subfigure *somewhere* and endfloat does not add
-% subfigure captions to its list of figures. Thus, the best approach is to
-% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
-% and instead reference/explain all the subfigures within the main caption.
-% The latest version of endfloat.sty and its documentation can obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/endfloat/
-%
-% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
-% later in the document, say, to conditionally put the References on a
-% page by themselves.
-
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
-% Read the url.sty source comments for usage information. Basically,
-% \url{my_url_here}.
-
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-
-
-
-
-
-
 \begin{document}
-%
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-% Do not put math or special symbols in the title.
 
 \title{Modular operator and Holevo's commutation operator}
-
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
 
 
  \author{Masaki Sohma
@@ -387,83 +31,44 @@
 Tamagawa University, Tokyo, Japan}
 
 
+\date{\today}
 
+\bibliographystyle{plain}
 
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-% make the title area
 \maketitle
 
-% As a general rule, do not put math, special symbols or citations
-% in the abstract
 
-
-
-
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%IEEEtran, journal, \LaTeX, paper, template.
-%\end{IEEEkeywords}
-
-
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-\IEEEpeerreviewmaketitle
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-\bibliographystyle{IEEEtran}
 
 
 \section{Introduction}
-This paper reviews results about a modular operator \cite{Longo_1978} and a Holevo's commutation operator \cite{Holevo_1977} in the simplest case.
+This paper reviews results about  modular operators \cite{Longo_1978} and  Holevo's commutation operators \cite{Holevo_1977} in the simplest case.
 We mainly deal with the von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, 
 which is the ensemble of bounded linear operators on 
-the Hilbert space $\mathfrak{H}=\mathbb{C}^n$ with the inner product $(x,y)=\bar{x}^Ty$. 
-
+the Hilbert space $\cal{H}=\mathbb{C}^n$ with the inner product $(x,y)=\bar{x}^Ty$. 
 Let $\rho$ be a non-degenerated density operator and 
 $\omega$ be the corresponding normal state given by $\omega(A)=\mbox{Tr}\rho A$.
-Considering an inner product on $\mathfrak{N}$
-
+We regard $\mathfrak{N}$ as a Hilbert space with an inner product
 \begin{equation}
 \label{innerP}
 \langle A, B \rangle =\frac{1}{2}\omega(BA^{\ast}+A^{\ast}B),
 \end{equation}
-and a bilinear form on $\mathfrak{N}$
-\begin{equation}
-[A,B]=i\omega(A^{\ast}B-BA^{\ast}),
+and denote it by $\mathfrak{H}$.
+In the quantum theory we consider additional bilinear form on $\mathfrak{H}$ 
+\begin{equation}\label{Bform}
+[A,B]=i\omega(A^{\ast}B-BA^{\ast}).
 \end{equation}
-we introduce an operator $\mathfrak{D}$ by 
+and  obtain fundamental inequalities 
+$$
+\langle X, X\rangle \geq \pm \frac{i}{2}[X,X],
+$$
+which yield  the uncertainty relation of the most general form \cite{Holevo_1977}.
+We define a commutation operator $\mathfrak{D}$ by 
 \begin{equation}\label{Copr}
 [A,X]=\langle A, \mathfrak{D}X\rangle.
 \end{equation}
-The operator $\mathfrak{D}$, called a commutation operator, plays an important role in the quantum estimation theory.  
+The operator $\mathfrak{D}$, introduced by Holevo \cite{Holevo_1977}, plays an important role in the non-commutative statistical theory.  
 
-We regard $\mathfrak{N}$ as a Hilbert-Schmidt space with another inner product
+On the other hand we can also regard $\mathfrak{N}$ as a Hilbert-Schmidt space with another inner product
 $$
 \langle A, B \rangle_2 =\mbox{Tr}(A^{\ast}B),
 $$
@@ -479,16 +84,16 @@ $$
 \omega(A)=\mbox{Tr}(\rho^{1/2}A\rho^{1/2})=\langle \rho^{1/2},\ell(A)\rho^{1/2}\rangle_2 .
 $$
 Now we can define the modular operator $\Delta$ for the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2}$. 
-We see such derived modular operator is related to the commutation operator
-as
+In this paper we derive a simple relation between such derived modular operator and the commutation operator:
 $$
-    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1}.
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
 $$
+which is originally shown in \cite{Holevo_1977}.
 
 
-\section{Representation on $\mathfrak{H}\otimes\mathfrak{H}$}
+\section{Representation on $\cal{H}\otimes\cal{H}$}
 
- We identify the Hilbert-Schmidt space $\mathfrak{H}_2(=\mathfrak{N}=M_n(\mathbb{C}))$ on $\mathfrak{H}=\mathbb{C}^n$ with $\mathfrak{H}\otimes\mathfrak{H}$
+ We identify the Hilbert-Schmidt space $\mathfrak{H}_2(=\mathfrak{N}=M_n(\mathbb{C}))$ on $\cal{H}=\mathbb{C}^n$ with $\cal{H}\otimes\cal{H}$
 by a unitary operator satisfying 
 $$
 v(e_je_k^T)=e_j\otimes e_k
@@ -502,8 +107,7 @@ v(\psi\phi^\ast)&=\sum_{j,k}\lambda_j\bar{\mu}_k v(e_je_k^T)\\
 &=\sum_{j,k}\lambda_j\bar{\mu}_k e_j\otimes e_k={\psi}\otimes \overline{\phi}.
 \end{split}
 \end{equation}
-
-In the $\ast$-representation (\ref{star-rep}), $\ell(A)$ is given by $\tilde{\ell}(A)=A\otimes I_n$ on $\mathfrak{H}\otimes\mathfrak{H}$.
+In the $\ast$-representation (\ref{star-rep}), $\ell(A)$ is given by $\tilde{\ell}(A)=A\otimes I_n$ on $\cal{H}\otimes\cal{H}$.
 In fact
  \begin{equation}
  \begin{split}
@@ -512,8 +116,11 @@ In fact
  \end{split} 
  \end{equation}
  and hence $\ell(A)=v^{\ast}\tilde{\ell}(A)v$. 
-On the other hand, $r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}$ is 
-given by $\tilde{r}(A)=I_n\otimes A^T$ on $\mathfrak{H}\otimes\mathfrak{H}$.
+On the other hand, 
+$$
+r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}
+$$ 
+is represented by $\tilde{r}(A)=I_n\otimes A^T$ on $\cal{H}\otimes\cal{H}$.
 In fact
  \begin{equation}
  \begin{split}
@@ -525,7 +132,7 @@ In fact
 
 
 \section{Modular Operator}
-We give a proof  of Tomita-Takesaki theory in the case of 
+We give a proof  of the main results of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\ell(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 Since
@@ -540,12 +147,11 @@ we have
 \mathfrak{M}^{\prime\prime}&=v^\ast \tilde{r}(\mathfrak{N})^\prime v= v^\ast \tilde{\ell}(\mathfrak{N})v=\ell(\mathfrak{N})=\mathfrak{M}.
 \end{split}
 \end{equation}
-We use $\rho^{1/2}$ as a cyclic and separating vector;
+We use $\rho^{1/2}$ as a cyclic and separating vector, i.e. 
 $$
-\mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2}.
+\mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2},
 $$
-
- Consider  anti-linear operators on $\mathfrak{H}_2$ 
+and consider  anti-linear operators on $\mathfrak{H}_2$ 
 \begin{equation}\label{SF}
 	 \begin{split}
 		 S&:\mathfrak{M}\rho^{1/2}\ni \ell(A) \rho^{1/2} \to \ell(A)^\ast\rho^{1/2}\in\mathfrak{M}\rho^{1/2},\\
@@ -568,11 +174,11 @@ For the operator $S$, we have
  	$$
 	In fact, putting $X=\ell(A)\rho^{1/2}=A\rho^{1/2}$,$Y=\ell(A)^\ast\rho^{1/2}=\ell(A^\ast)\rho^{1/2}=A^\ast \rho^{1/2}$,
 	$$
-    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2}.
   $$
 On the other hand, for the operator $F$, we have
 $$
-F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
+F(X)=\rho^{1/2}X^\ast \rho^{-1/2}.
 $$
 In fact, putting $X=r(A)\rho^{1/2}=\rho^{1/2}A$,$Y=r(A)^\ast\rho^{1/2}=r(A^\ast)\rho^{1/2}= \rho^{1/2}A^\ast$,
 	$$
@@ -582,7 +188,10 @@ Thus
 $$
 \Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
 $$
-that is, $\Delta=v^\ast(\rho \otimes ({\rho}^{-1})^T) v$.
+that is, 
+\begin{equation}\label{Delta}
+\Delta=v^\ast(\rho \otimes ({\rho}^{-1})^T) v.
+\end{equation}
 It follows that $\Delta^\ast=v^\ast (\rho\otimes({\rho}^{-1})^T)^\ast v=\Delta$.
 Since $\Delta^{-1/2}=v^\ast(\rho^{-1/2}\otimes ({\rho}^{1/2})^T) v$, 
 $$
@@ -597,36 +206,28 @@ In a similar way we have
 $$
 F(X)=\Delta^{1/2}J(X).
 $$
-In addition 
+Since
+$$\Delta^{-it}\ell(A)\Delta^{it}(X)=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}=\rho^{-it}A\rho^{it}X$$
+and 
 $$
-J\Delta J(X)=(\rho X^\ast \rho^{-1})^\ast=\rho^{-1}X\rho=\Delta^{-1}(X).
+\ell(\rho^{-it}A\rho^{it})X=\rho^{-it}A\rho^{it}X,
 $$
-
-We have 
+we have 
 $$
 \Delta^{-it}\ell(A)\Delta^{it}=\ell(\rho^{-it}A\rho^{it}).
 $$
-Indeed $$\Delta^{-it}\ell(A)\Delta^{it}(X)=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}=\rho^{-it}A\rho^{it}X$$
-and 
+On the other hand,
+we have
 $$
-\ell(\rho^{-it}A\rho^{it})X=\rho^{-it}A\rho^{it}X.
+J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast=r(A^\ast)(X)
 $$
-Thus
-$$
-\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M}.
-$$
-     Finally we have 
-       $$
-          J\mathfrak{M}J=\mathfrak{M}^{\prime},
-       $$
-			 which is obtained from
-			 $$
-J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast
-			 $$
-			 and
-			 $$
-r(A)X=XA.
-			 $$
+Thus we obtain the main results of Tomita-Takesaki theory in our case: 
+\begin{equation}
+\begin{split}
+\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M},\\
+          J\mathfrak{M}J=\mathfrak{M}^{\prime}.
+\end{split}
+\end{equation}
 Remark that the above discussion can be easily extend to the case where 
 $\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$.
 The proof of Tomita-Takesaki theory for a finite dimensional von Neumann algebra is given in the Appendix.
@@ -634,7 +235,7 @@ The proof of Tomita-Takesaki theory for a finite dimensional von Neumann algebra
 
 \section{Relation between Holevo's commutation operator and modular operator}
 
-Let us see how the modular operator defined by  (\ref{Copr}) is described on $\mathfrak{H}\otimes \mathfrak{H}$.
+Let us see how the modular operator defined by  (\ref{Copr}) is described on $\cal{H}\otimes \cal{H}$.
 Since it holds for $A,X,Y=\mathfrak{D}X\in \mathfrak{H}(=\mathfrak{N}=\mathfrak{H}_2)$
 that 
  \begin{equation}
@@ -649,7 +250,7 @@ that
  $$
  (\rho Y+Y\rho)/2=i(X\rho-\rho X),
  $$
- which can be represented on $\mathfrak{H}\otimes \mathfrak{H}$ as
+ which can be represented on $\cal{H}\otimes \cal{H}$ as
 	$$
 	(I_n\otimes \rho + \rho\otimes I_n)v(Y)=2i(\rho\otimes I_n -I_n\otimes \rho )v(X).
 	$$
@@ -659,61 +260,59 @@ that
 	$$
 	that is,
 	$$
-	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v
+	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v.
 	$$
 	  Moreover
-	\begin{equation}
+	\begin{equation}  
 		\begin{split}
     1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v,\\
     1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v,\\
     1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v.\\
     \end{split}
 	\end{equation}
-
-	Finally	we get
+Using these equations and Eq. (\ref{Delta})  we conclude
 		$$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
 		$$
 		and
 		$$
-     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}
+     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}.
 		$$
 
 
 
 \section{Appendix}
-In this section we prove the Tomita-Takesaki theorem for a finite dimensional
-von Neumann algebras $\tilde{\mathfrak{N}}$ on a Hilbert space $\mathfrak{K}$.
-We assume there exists a cyclic separating vector $\xi\in \mathfrak{K}$;
-$\mathfrak{K}=\tilde{\mathfrak{N}}\xi=\tilde{\mathfrak{N}}^\prime\xi$.
-Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ on $\mathfrak{K}$ as
+In this section we prove the main results of Tomita-Takesaki theorem for a finite dimensional
+von Neumann algebras $\tilde{\mathfrak{N}}$ on a Hilbert space $\cal{K}$.
+We assume there exists a cyclic separating vector $\xi\in \cal{K}$;
+$\cal{K}=\tilde{\mathfrak{N}}\xi=\tilde{\mathfrak{N}}^\prime\xi$.
+Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ on $\cal{K}$ as
 \begin{equation}
 \begin{split}
 \tilde{S}&:\tilde{\mathfrak{N}}\xi\ni X\xi \to X^\ast \xi \in \tilde{\mathfrak{N}}\xi,\\
 \tilde{F}&:\tilde{\mathfrak{N}}^\prime\xi\ni Y\xi \to Y^\ast \xi \in \tilde{\mathfrak{N}}^\prime\xi,\\
-\tilde{\Delta}&=\tilde{F}\tilde{S}.
+\tilde{\Delta}&=\tilde{F}\tilde{S},\\
+\tilde{S}&=\tilde{\Delta}^{-1/2}\tilde{J}, \tilde{F}=\tilde{\Delta}^{1/2}\tilde{J}.
 \end{split}
 \end{equation}
 The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\mathfrak{N}$ such that
 $$
-\varphi:\tilde{\mathfrak{N}}\simeq \mathfrak{N}:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})
+\varphi:\tilde{\mathfrak{N}}\simeq \mathfrak{N}:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C}).
 $$
-
 Let us consider the state on $\tilde{\mathfrak{N}}$ as
 $$
-\omega_\xi(A)=(\xi,A\xi)_{\mathfrak{K}},\quad A\in \tilde{\mathfrak{N}},\xi\in \mathfrak{K}.
+\omega_\xi(A)=(\xi,A\xi)_{\mathfrak{K}},\quad A\in \tilde{\mathfrak{N}},\xi\in \cal{K}.
 $$
-Using this state we can define the state on $\mathfrak{N}$
+Using this state we can define a state on $\mathfrak{N}$
 $$
 \omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}.
 $$
-Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}$ and 
+Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}$ and the state
 $\omega$, we get
-the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N})$ on the Hilbert space 
+the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N})$ on  
 $\mathfrak{H}_2$, the cyclic separating vector $\rho^{1/2}\in \mathfrak{H}_2$
-and operators $S, F$ and $\Delta$ on $\mathfrak{H}_2$.
-
-Then we obtain
+and the operators on $\mathfrak{H}_2$, $S, F, J$ and $\Delta$.
+In particular we have
 $$
 \langle \pi(A)\rho^{1/2},\pi( B)\rho^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi)_\mathfrak{K},
 $$
@@ -722,14 +321,20 @@ $$
 U:\mathfrak{H}_2\ni\pi(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{K}, \quad A\in \mathfrak{N}
 $$
 gives a unitary operator from $\mathfrak{H}_2$ to $\mathfrak{K}$.
-This unitary operator combines $\Delta$ and $\tilde{\Delta}$ as
-$$
-\tilde{\Delta}=U\Delta U^{\ast},
-$$
+This unitary operator gives the following relations between operators on $\mathfrak{H}_2$ and $\mathfrak{K}$,
+\begin{equation}
+\begin{split}
+\tilde{\Delta}&=U\Delta U^{\ast},\\
+\tilde{J}&=UJU^\ast ,
+\end{split}
+\end{equation}
 and gives the main result of Tomita-Takesaki Theory,
-$$
-\tilde{\Delta}^{-it}\tilde{\mathfrak{N}}\tilde{\Delta}^{it}=\tilde{\mathfrak{N}}.
-$$
+\begin{equation}
+\begin{split}
+\tilde{\Delta}^{-it}\tilde{\mathfrak{N}}\tilde{\Delta}^{it}=\tilde{\mathfrak{N}}\\
+\tilde{J}\tilde{\mathfrak{N}}\tilde{J}=\tilde{\mathfrak{N}}^\prime.
+\end{split}
+\end{equation}
 
 \bibliography{bibliography/converted_to_latex.bib%
 }

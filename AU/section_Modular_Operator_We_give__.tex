@@ -1,5 +1,5 @@
 \section{Modular Operator}
-We give a proof  of Tomita-Takesaki theory in the case of 
+We give a proof  of the main results of Tomita-Takesaki theory in the case of 
 $\mathfrak{M}=\ell(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
 Since
@@ -14,12 +14,11 @@ we have
 \mathfrak{M}^{\prime\prime}&=v^\ast \tilde{r}(\mathfrak{N})^\prime v= v^\ast \tilde{\ell}(\mathfrak{N})v=\ell(\mathfrak{N})=\mathfrak{M}.
 \end{split}
 \end{equation}
-We use $\rho^{1/2}$ as a cyclic and separating vector;
+We use $\rho^{1/2}$ as a cyclic and separating vector, i.e. 
 $$
-\mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2}.
+\mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2},
 $$
-
- Consider  anti-linear operators on $\mathfrak{H}_2$ 
+and consider  anti-linear operators on $\mathfrak{H}_2$ 
 \begin{equation}\label{SF}
 	 \begin{split}
 		 S&:\mathfrak{M}\rho^{1/2}\ni \ell(A) \rho^{1/2} \to \ell(A)^\ast\rho^{1/2}\in\mathfrak{M}\rho^{1/2},\\
@@ -42,11 +41,11 @@ For the operator $S$, we have
  	$$
 	In fact, putting $X=\ell(A)\rho^{1/2}=A\rho^{1/2}$,$Y=\ell(A)^\ast\rho^{1/2}=\ell(A^\ast)\rho^{1/2}=A^\ast \rho^{1/2}$,
 	$$
-    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2},
+    Y=(X\rho^{-1/2})^\ast \rho^{1/2}=\rho^{-1/2}X^\ast\rho^{1/2}.
   $$
 On the other hand, for the operator $F$, we have
 $$
-F(X)=\rho^{1/2}X^\ast \rho^{-1/2},
+F(X)=\rho^{1/2}X^\ast \rho^{-1/2}.
 $$
 In fact, putting $X=r(A)\rho^{1/2}=\rho^{1/2}A$,$Y=r(A)^\ast\rho^{1/2}=r(A^\ast)\rho^{1/2}= \rho^{1/2}A^\ast$,
 	$$
@@ -56,7 +55,10 @@ Thus
 $$
 \Delta(X)=FS(X)=F(\rho^{-1/2}X^*\rho^{1/2})=\rho^{1/2}(\rho^{-1/2}X^*\rho^{1/2})^\ast \rho^{-1/2}=\rho X \rho^{-1},
 $$
-that is, $\Delta=v^\ast(\rho \otimes ({\rho}^{-1})^T) v$.
+that is, 
+\begin{equation}\label{Delta}
+\Delta=v^\ast(\rho \otimes ({\rho}^{-1})^T) v.
+\end{equation}
 It follows that $\Delta^\ast=v^\ast (\rho\otimes({\rho}^{-1})^T)^\ast v=\Delta$.
 Since $\Delta^{-1/2}=v^\ast(\rho^{-1/2}\otimes ({\rho}^{1/2})^T) v$, 
 $$
@@ -71,36 +73,28 @@ In a similar way we have
 $$
 F(X)=\Delta^{1/2}J(X).
 $$
-In addition 
+Since
+$$\Delta^{-it}\ell(A)\Delta^{it}(X)=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}=\rho^{-it}A\rho^{it}X$$
+and 
 $$
-J\Delta J(X)=(\rho X^\ast \rho^{-1})^\ast=\rho^{-1}X\rho=\Delta^{-1}(X).
+\ell(\rho^{-it}A\rho^{it})X=\rho^{-it}A\rho^{it}X,
 $$
-
-We have 
+we have 
 $$
 \Delta^{-it}\ell(A)\Delta^{it}=\ell(\rho^{-it}A\rho^{it}).
 $$
-Indeed $$\Delta^{-it}\ell(A)\Delta^{it}(X)=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}=\rho^{-it}A\rho^{it}X$$
-and 
+On the other hand,
+we have
 $$
-\ell(\rho^{-it}A\rho^{it})X=\rho^{-it}A\rho^{it}X.
+J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast=r(A^\ast)(X)
 $$
-Thus
-$$
-\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M}.
-$$
-     Finally we have 
-       $$
-          J\mathfrak{M}J=\mathfrak{M}^{\prime},
-       $$
-			 which is obtained from
-			 $$
-J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast
-			 $$
-			 and
-			 $$
-r(A)X=XA.
-			 $$
+Thus we obtain the main results of Tomita-Takesaki theory in our case: 
+\begin{equation}
+\begin{split}
+\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M},\\
+          J\mathfrak{M}J=\mathfrak{M}^{\prime}.
+\end{split}
+\end{equation}
 Remark that the above discussion can be easily extend to the case where 
 $\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$.
 The proof of Tomita-Takesaki theory for a finite dimensional von Neumann algebra is given in the Appendix.
