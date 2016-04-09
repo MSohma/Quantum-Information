@@ -107,10 +107,6 @@ v(\psi\phi^\ast)&=\sum_{j,k}\lambda_j\bar{\mu}_k v(e_je_k^T)\\
 &=\sum_{j,k}\lambda_j\bar{\mu}_k e_j\otimes e_k={\psi}\otimes \overline{\phi}.
 \end{split}
 \end{equation}
-Remark that we have
-$$
-\mathfrak{B}(\mathfrak{H}_2)=v^\ast \mathfrak{B}({\cal H}\otimes{\cal H})v.
-$$
 In the $\ast$-representation (\ref{star-rep}), $\ell(A)$ is given by $\tilde{\ell}(A)=A\otimes I_n$ on $\cal{H}\otimes\cal{H}$.
 In fact
  \begin{equation}
@@ -211,11 +207,12 @@ $$
 F(X)=\Delta^{1/2}J(X).
 $$
 Since
-$$\Delta^{-it}\ell(A)\Delta^{it}(X)=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}=\rho^{-it}A\rho^{it}X$$
-and 
-$$
-\ell(\rho^{-it}A\rho^{it})X=\rho^{-it}A\rho^{it}X,
-$$
+\begin{equation}
+\begin{split}
+\Delta^{-it}\ell(A)\Delta^{it}(X)&=\Delta^{-it}(A\rho^{it}X\rho^{-it})=\rho^{-it}A\rho^{it}X\rho^{-it}\rho^{it}\\
+                                 &=\rho^{-it}A\rho^{it}X=\ell (\rho^{-it}A\rho^{it})(X),
+\end{split}
+\end{equation}
 we have 
 $$
 \Delta^{-it}\ell(A)\Delta^{it}=\ell(\rho^{-it}A\rho^{it}).
@@ -256,22 +253,22 @@ that
  $$
  which can be represented on $\cal{H}\otimes \cal{H}$ as
 	$$
-	(I_n\otimes \rho + \rho\otimes I_n)v(Y)=2i(\rho\otimes I_n -I_n\otimes \rho )v(X).
+	(\rho\otimes I_n+I_n\otimes \rho^T )v(Y)=2i(I_n\otimes \rho^T-\rho\otimes I_n)v(X).
 	$$
 	Thus 
 	$$
-	v(\mathfrak{D}X)=v(Y)=2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )v(X),
+	v(\mathfrak{D}X)=v(Y)=2i(\rho\otimes I_n+I_n\otimes \rho^T )^{-1}(I_n\otimes \rho^T -\rho\otimes I_n )v(X),
 	$$
 	that is,
 	$$
-	\mathfrak{D}=v^\ast[ 2i(I_n\otimes \rho + \rho\otimes I_n)^{-1}(\rho\otimes I_n -I_n\otimes \rho )]v.
+	\mathfrak{D}=v^\ast[ 2i( \rho\otimes I_n+I_n\otimes \rho^T )^{-1}(I_n\otimes \rho^T -\rho\otimes I_n )]v.
 	$$
 	  Moreover
 	\begin{equation}  
 		\begin{split}
-    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}  I_n\otimes \rho]v,\\
-    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(I_n\otimes \rho+\rho\otimes I_n)^{-1}\rho \otimes I_n]v,\\
-    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(I_n\otimes \rho+\rho\otimes I_n)^{-2}\rho \otimes \rho]v.\\
+    1+\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(\rho\otimes I_n+I_n\otimes \rho)^{-1}  \rho \otimes I_n]v,\\
+    1-\frac{i}{2}\mathfrak{D}&=v^\ast [ 2(\rho\otimes I_n+I_n\otimes \rho)^{-1}I_n \otimes \rho^T]v,\\
+    1+\frac{1}{4}\mathfrak{D}^2&=v^\ast[ 4(\rho\otimes I_n+I_n\otimes \rho)^{-2}\rho \otimes \rho^T]v.\\
     \end{split}
 	\end{equation}
 Using these equations and Eq. (\ref{Delta})  we conclude
@@ -280,7 +277,7 @@ Using these equations and Eq. (\ref{Delta})  we conclude
 		$$
 		and
 		$$
-     \frac{i}{2}\mathfrak{D}=(1-\Delta)(1+\Delta)^{-1}.
+     \frac{i}{2}\mathfrak{D}=(\Delta-1)(\Delta+1)^{-1}.
 		$$
 
 
@@ -290,13 +287,13 @@ In this section we prove the main results of Tomita-Takesaki theorem for a finit
 von Neumann algebras $\tilde{\mathfrak{N}}$ on a Hilbert space $\cal{K}$.
 We assume there exists a cyclic separating vector $\xi\in \cal{K}$;
 $\cal{K}=\tilde{\mathfrak{N}}\xi=\tilde{\mathfrak{N}}^\prime\xi$.
-Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ on $\cal{K}$ as
+Then we define operators $\tilde{S},\tilde{F},\tilde{\Delta}$ and $\tilde{J}$ on $\cal{K}$ as
 \begin{equation}
 \begin{split}
-\tilde{S}&:\tilde{\mathfrak{N}}\xi\ni X\xi \to X^\ast \xi \in \tilde{\mathfrak{N}}\xi,\\
-\tilde{F}&:\tilde{\mathfrak{N}}^\prime\xi\ni Y\xi \to Y^\ast \xi \in \tilde{\mathfrak{N}}^\prime\xi,\\
+\tilde{S}&:X\xi \to X^\ast \xi \\
+\tilde{F}&:Y\xi \to Y^\ast \xi \\
 \tilde{\Delta}&=\tilde{F}\tilde{S},\\
-\tilde{S}&=\tilde{\Delta}^{-1/2}\tilde{J}, \tilde{F}=\tilde{\Delta}^{1/2}\tilde{J}.
+\tilde{J}&=\tilde{\Delta}^{1/2}\tilde{S}.
 \end{split}
 \end{equation}
 The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $\ast$-isomorphic to a direct sum of simple matrix algebras. That is, there exists $\ast$-isomorphic function $\varphi$ for von Neumann algebra $\tilde{\mathfrak{N}}$ such that
@@ -305,9 +302,9 @@ $$
 $$
 Let us consider the state on $\tilde{\mathfrak{N}}$ as
 $$
-\omega_\xi(A)=(\xi,A\xi)_{\mathfrak{K}},\quad A\in \tilde{\mathfrak{N}},\xi\in \cal{K}.
+\omega_\xi(A)=(\xi,A\xi)_{\cal K},\quad A\in \tilde{\mathfrak{N}},\xi\in \cal{K}.
 $$
-Using this state we can define a state on $\mathfrak{N}$
+Using this state we can define the state on $\mathfrak{N}$
 $$
 \omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}.
 $$
@@ -318,27 +315,41 @@ $\mathfrak{H}_2$, the cyclic separating vector $\rho^{1/2}\in \mathfrak{H}_2$
 and the operators on $\mathfrak{H}_2$, $S, F, J$ and $\Delta$.
 In particular we have
 $$
-\langle \pi(A)\rho^{1/2},\pi( B)\rho^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi)_\mathfrak{K},
+\langle \ell(A)\rho^{1/2},\ell( B)\rho^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi)_{\cal K},
 $$
 which means
 $$
-U:\mathfrak{H}_2\ni\pi(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in\mathfrak{K}, \quad A\in \mathfrak{N}
+U:\mathfrak{H}_2\ni\ell(A)\rho^{1/2}\to \varphi^{-1}(A)\xi\in {\cal K}, \quad A\in \mathfrak{N}
 $$
-gives a unitary operator from $\mathfrak{H}_2$ to $\mathfrak{K}$.
-This unitary operator gives the following relations between operators on $\mathfrak{H}_2$ and $\mathfrak{K}$,
+gives a unitary operator from $\mathfrak{H}_2$ to ${\cal K}$.
+Using this unitary operator we obtain the following relations
 \begin{equation}
 \begin{split}
-\tilde{\Delta}&=U\Delta U^{\ast},\\
-\tilde{J}&=UJU^\ast ,
+\tilde{S}&=US U^{\ast},\\
+\tilde{F}&=UFU^\ast ,
 \end{split}
 \end{equation}
-and gives the main result of Tomita-Takesaki Theory,
+and hence $\tilde{\Delta}=U\Delta U^\ast$, $\tilde{J}=UJU^\ast$.
+Moreover  
+$$
+\tilde{\mathfrak{N}}=U\ell(\mathfrak{N})U^\ast,
+$$
+since $\varphi^{-1}(X)=U\ell (X) U^\ast$ for $X\in \mathfrak{N}$.
+Thus we conclude the main result of Tomita-Takesaki Theory,
 \begin{equation}
 \begin{split}
 \tilde{\Delta}^{-it}\tilde{\mathfrak{N}}\tilde{\Delta}^{it}=\tilde{\mathfrak{N}}\\
 \tilde{J}\tilde{\mathfrak{N}}\tilde{J}=\tilde{\mathfrak{N}}^\prime.
 \end{split}
 \end{equation}
+
+
+
+
+\paragraph{Acknowledgement}\label{acknowledgement}
+
+I am grateful to A. Ohashi, T. Sogabe and T. Usuda for helpful
+discussions.
 
 \bibliography{bibliography/converted_to_latex.bib%
 }
