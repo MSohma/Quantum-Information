@@ -43,9 +43,9 @@ Tamagawa University, Tokyo, Japan}
 \section{Introduction}
 This paper reviews results about  modular operators \cite{Longo_1978} and  commutation operators \cite{Holevo_1977} in the simplest case.
 We mainly deal with the von Neumann algebra $\mathfrak{N}=M_n(\mathbb{C})$, 
-which is the ensemble of $n\times n$ complex matrices and can be considered as an algebra $\mathfrak{B}({\cal H})$ of bounded linear operators on 
+which is the ensemble of $n\times n$ complex matrices and can also be  considered as an algebra $\mathfrak{B}({\cal H})$ of bounded linear operators on 
 the Hilbert space ${\cal H}=\mathbb{C}^{n}$ with the inner product $(x,y)=\bar{x}^Ty$. 
-Let $\rho$ be a non-degenerated density operator and 
+Let $\rho$ be a non-degenerated density operator on ${\cal H}$ and 
 $\omega$ be the corresponding normal state given by $\omega(A)=\mbox{Tr}\rho A, A\in \mathfrak{N}$.
 We regard $\mathfrak{N}$ as a Hilbert space with the inner product
 \begin{equation}
@@ -72,7 +72,7 @@ On the other hand we can also regard $\mathfrak{N}$ as a Hilbert-Schmidt space w
 $$
 \langle A, B \rangle_2 =\mbox{Tr}(A^{\ast}B),
 $$
-by virtue of its finite-dimensionality and denote it by $\mathfrak{H}_2$.
+and denote it by $\mathfrak{H}_2$.
 Let us consider a $\ast$-representation on $\mathfrak{H}_2$
 \begin{equation}\label{star-rep}
 \ell :\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_2),
@@ -130,16 +130,20 @@ In fact
  \end{equation}
  and hence $r(A)=v^{\ast}\tilde{r}(A) v$. 
 
+Remark that $\tilde{\ell}(\mathfrak{N})=\mathfrak{N}\otimes I_n$ and $\tilde{r}(\mathfrak{N})=I_n\otimes \mathfrak{N}$ are von Neumann algebras in 
+$$\mathfrak{B}({\cal H}\otimes{\cal H})=\mathfrak{B}({\cal H})\otimes \mathfrak{B}({\cal H})=\mathfrak{N}\otimes \mathfrak{N},
+$$
+and 
+\begin{equation}\label{lr}
+\tilde{\ell}(\mathfrak{N})^\prime=\tilde{r}({\mathfrak{N}}),\quad
+\tilde{r}(\mathfrak{N})^\prime=\tilde{\ell}(\mathfrak{N}).
+\end{equation}
 
 \section{Modular Operator}
 We give a proof  of the main results of Tomita-Takesaki theory in the case of 
-$\mathfrak{M}=\ell(\mathfrak{N})$ with $\mathfrak{N}=M_n(\mathbb{C})$,
+$\mathfrak{M}=\ell(\mathfrak{N}) \subset \mathfrak{B}(\mathfrak{H}_2)$ with $\mathfrak{N}=M_n(\mathbb{C})$,
 where all difficulties in the theory vanish.
-Since
-$\tilde{\ell}(\mathfrak{N})^\prime=\tilde{r}(\mathfrak{N})$ and $\tilde{r}(\mathfrak{N})^\prime=\tilde{\ell}(\mathfrak{N})$ for 
-$
-\tilde{\ell}(\mathfrak{N})=\mathfrak{N}\otimes I_n,\tilde{r}(\mathfrak{N})=I_n\otimes \mathfrak{N},
-$
+From Eq. (\ref{lr}),
 we have
 \begin{equation}
 \begin{split}
@@ -306,8 +310,9 @@ $$
 $$
 Using this state we can define the state on $\mathfrak{N}$
 $$
-\omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N}.
+\omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N},
 $$
+which is normal by virtue of finite-dimensionality.
 Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}$ and the state
 $\omega$, we get
 the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N})$ on  
