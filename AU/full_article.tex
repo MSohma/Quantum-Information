@@ -53,6 +53,8 @@ We regard $\mathfrak{N}$ as a Hilbert space with the inner product
 \langle A, B \rangle =\frac{1}{2}\omega(BA^{\ast}+A^{\ast}B),
 \end{equation}
 and denote it by $\mathfrak{H}$.
+
+
 In the quantum theory we consider additional bilinear form on $\mathfrak{H}$ 
 \begin{equation}\label{Bform}
 [A,B]=i\omega(A^{\ast}B-BA^{\ast}).
@@ -66,7 +68,12 @@ We define a commutation operator $\mathfrak{D}$ so that it satisfies
 \begin{equation}\label{Copr}
 [A,X]=\langle A, \mathfrak{D}X\rangle.
 \end{equation}
-The operator $\mathfrak{D}$, firstly introduced by Holevo \cite{Holevo_1977}, plays an important role in the non-commutative statistical theory.  
+The operator $\mathfrak{D}$, firstly introduced by Holevo \cite{Holevo_1977}, plays an important role in the non-commutative statistical theory. From Eq. (\ref{Bform}) it holds that 
+\begin{equation}
+1\pm \frac{i}{2}\mathfrak{D}\geq 0.
+\end{equation}
+
+
 
 On the other hand we can also regard $\mathfrak{N}$ as a Hilbert-Schmidt space with another inner product
 $$
@@ -95,16 +102,18 @@ $$
 %\end{equation}
 %where $\parallel \cdot \parallel_{\cal H}$ is the operator norm for $\mathfrak{B}({\cal H})$
 %and $\parallel \cdot \parallel_2$ is the norm for the Hilbert-Schdmit space %$\mathfrak{H}_2$. 
+
+
 In the present case we have $\mathfrak{H}_2=\mathfrak{H}$, but when we consider an infinite
-dimensional Hilbert space ${\cal H}$ the equality does not hold, i.e. $\mathfrak{H}_2\subset \mathfrak{H}$. This makes it difficult to extend the discussion in Sec. 4 to the infinite dimensional case.
-As stated in Sec. 3,  we can define the
+dimensional Hilbert space ${\cal H}$ the equality does not hold, i.e. $\mathfrak{H}_2\subset \mathfrak{B}({\cal H})\subset \mathfrak{H}$. This makes it difficult to extend the discussion in Sec. 4 to the infinite dimensional case.
+
+As stated in Sec. 3, we can define the
 modular operator $\Delta$ for the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2} \in \mathfrak{H}_2$. 
 In this paper we derive a simple relation between such derived modular operator and the commutation operator:
 $$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
 $$
 which is originally shown in \cite{Holevo_1977}.
-
 
 \section{Representation on $\cal{H}\otimes\cal{H}$}
 
@@ -131,6 +140,8 @@ In fact
  \end{split} 
  \end{equation}
  and hence $\ell(A)=v^{\ast}\tilde{\ell}(A)v$. 
+
+
 On the other hand, 
 $$
 r(A):\mathfrak{N}\in X \to XA\ni\mathfrak{N}
