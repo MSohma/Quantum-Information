@@ -107,7 +107,7 @@ $$
 
 
 In the present case we have $\mathfrak{H}_2=\mathfrak{H}$, but when we consider an infinite
-dimensional Hilbert space ${\cal H}$ the equality does not hold, i.e. $\mathfrak{H}_2\subset \mathfrak{B}({\cal H})\subset \mathfrak{H}$. This makes it difficult to extend the discussion in Sec. 4 to the infinite dimensional case.
+dimensional Hilbert space ${\cal H}$ the equality does not hold, i.e. $\mathfrak{H}_2\subset \mathfrak{B}({\cal H})\subset \mathfrak{H}$. This may make it difficult to extend the discussion in Sec. 4 to the infinite dimensional case.
 
 As stated in Sec. 3, we can define the
 modular operator $\Delta$ for the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2} \in \mathfrak{H}_2$. 
@@ -186,13 +186,12 @@ $$
 \mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2},
 $$
 and consider  anti-linear operators on $\mathfrak{H}_2$ 
-\begin{equation}\label{SF}
-	 \begin{split}
-		 S&:\ell(A) \rho^{1/2} \to \ell(A)^\ast\rho^{1/2},\\
-		 F&:r(A) \rho^{1/2} \to r(A)^\ast\rho^{1/2}.
-	 \end{split}
+\begin{equation}\label{OprS}
+		 S:\ell(A) \rho^{1/2} \to \ell(A)^\ast\rho^{1/2},
 \end{equation}
-
+\begin{equation}\label{OprF}
+		 F:r(A) \rho^{1/2} \to r(A)^\ast\rho^{1/2}.
+\end{equation}
 
 	Here 
 	$$
@@ -263,11 +262,11 @@ $$
 J\ell(A)J(X)=J(AX^\ast)=(AX^\ast)^\ast=XA^\ast=r(A^\ast)(X)
 $$
 Thus we obtain the main results of Tomita-Takesaki theory in our case: 
-\begin{equation}
-\begin{split}
-\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M},\\
+\begin{equation}\label{TT1}
+\Delta^{-it}\mathfrak{M}\Delta^{it}=\mathfrak{M},
+\end{equation}
+\begin{equation}\label{TT2}
           J\mathfrak{M}J=\mathfrak{M}^{\prime}.
-\end{split}
 \end{equation}
 Remark that the above discussion can be easily extend to the case where 
 $\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$.
@@ -349,22 +348,23 @@ $$
 
 
 
-Let us consider the state on $\tilde{\mathfrak{N}}$ as
+Let us consider the faithful state on $\tilde{\mathfrak{N}}$ as
 $$
-\omega_\xi(A)=(\xi,A\xi)_{\cal K},\quad A\in \tilde{\mathfrak{N}},
+\omega_\xi(\tilde{A})=(\xi,\tilde{A}\xi)_{\cal K},\quad \tilde{A}\in \tilde{\mathfrak{N}},
 $$
 where $(\cdot,\cdot)_{\cal K}$ is an inner product of the Hilbert space ${\cal K}$.
 Using this state we can define the state on $\mathfrak{N}$
 $$
 \omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N},
 $$
-which is normal by virtue of finite-dimensionality, i.e. there exists non-degenerated density operator $\rho$ such that $\omega(A)=\mbox{Tr}\rho A$.
+which is normal by virtue of finite-dimensionality and is faithful because $\xi$ is separating, i.e. there exists non-degenerated density operator $\rho$ such that $\omega(A)=\mbox{Tr}\rho A$.
 Applying the discussion in the previous sections to the von Neumann algebra $\mathfrak{N}$ and the state
 $\omega$, we get
 the von Neumann algebra $\mathfrak{M}=\ell (\mathfrak{N})$ on  
 $\mathfrak{H}_2$, the cyclic separating vector $\rho^{1/2}\in \mathfrak{H}_2$
 and the operators on $\mathfrak{H}_2$, $S, F, J$ and $\Delta$.
-In particular we have
+In particular the operators $S$ and $F$ are given by Eqs. (\ref{OprS}) and (\ref{OprF}).
+Here we have
 $$
 \langle \ell(A)\rho^{1/2},\ell( B)\rho^{1/2}\rangle_2=(\varphi^{-1}(A)\xi,\varphi^{-1}(B)\xi)_{\cal K},
 $$
@@ -380,28 +380,25 @@ Using this unitary operator we obtain the following relations
 \tilde{F}&=UFU^\ast ,
 \end{split}
 \end{equation}
-and hence $\tilde{\Delta}=U\Delta U^\ast$, $\tilde{J}=UJU^\ast$.
+and hence 
+\begin{equation}\label{DRel}
+\tilde{\Delta}=U\Delta U^\ast,
+\end{equation}
+\begin{equation}\label{JRel}
+\tilde{J}=UJU^\ast.
+\end{equation}
 Moreover  
-$$
+\begin{equation}\label{MRel}
 \tilde{\mathfrak{N}}=U\ell(\mathfrak{N})U^\ast,
-$$
-since $\varphi^{-1}(X)=U\ell (X) U^\ast$ for $X\in \mathfrak{N}$.
-Thus we conclude the main result of Tomita-Takesaki Theory,
+\end{equation}
+since $\varphi^{-1}(A)=U\ell (A) U^\ast$ for $A\in \mathfrak{N}$.
+From Eqs. (\ref{TT1}),(\ref{TT2}),(\ref{DRel}),(\ref{JRel}) and (\ref{MRel}), we conclude the main result of Tomita-Takesaki theory,
 \begin{equation}
 \begin{split}
 \tilde{\Delta}^{-it}\tilde{\mathfrak{N}}\tilde{\Delta}^{it}=\tilde{\mathfrak{N}}\\
 \tilde{J}\tilde{\mathfrak{N}}\tilde{J}=\tilde{\mathfrak{N}}^\prime.
 \end{split}
 \end{equation}
-
-
-
-
-
-\paragraph{Acknowledgement}\label{acknowledgement}
-
-I am grateful to A. Ohashi, T. Sogabe and T. Usuda for helpful
-discussions.
 
 \bibliography{bibliography/converted_to_latex.bib%
 }
