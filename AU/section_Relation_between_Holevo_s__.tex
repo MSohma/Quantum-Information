@@ -1,6 +1,6 @@
 \section{Relation between Holevo's commutation operator and modular operator}
 
-Let us see how the modular operator defined by  (\ref{Copr}) is described on $\cal{H}\otimes \cal{H}$.
+Let us see how the commutation operator defined by  (\ref{Copr}) is described on $\cal{H}\otimes \cal{H}$.
 Since it holds for $A,X,Y=\mathfrak{D}X\in \mathfrak{H}(=\mathfrak{N}=\mathfrak{H}_2)$
 that 
  \begin{equation}
@@ -27,4 +27,24 @@ that
 	$$
 	\mathfrak{D}=v^\ast[ 2i( \rho\otimes I_n+I_n\otimes \rho^T )^{-1}(I_n\otimes \rho^T -\rho\otimes I_n )]v.
 	$$
-	 
+	 Moreover
+	\begin{equation} \label{plusD} 
+    1+\frac{i}{2}\mathfrak{D}=v^\ast [ 2(\rho\otimes I_n+I_n\otimes \rho)^{-1}  \rho \otimes I_n]v,
+    \end{equation}
+    \begin{equation}\label{minusD}
+    1-\frac{i}{2}\mathfrak{D}=v^\ast [ 2(\rho\otimes I_n+I_n\otimes \rho)^{-1}I_n \otimes \rho^T]v,
+    \end{equation}
+    \begin{equation}
+    1+\frac{1}{4}\mathfrak{D}^2=v^\ast[ 4(\rho\otimes I_n+I_n\otimes \rho)^{-2}\rho \otimes \rho^T]v.
+	\end{equation}
+From our assumption stated in Sec. 1,
+$\rho^{1/2}$ is a non-degenerated operator and hence we can use it as a 
+cyclic and separating vector in Sec. 3.
+Thus, from Eqs. (\ref{plusD}), (\ref{minusD}) and (\ref{Delta})  we conclude
+		$$
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
+		$$
+		and
+		$$
+     \frac{i}{2}\mathfrak{D}=(\Delta-1)(\Delta+1)^{-1}.
+		$$
