@@ -28,4 +28,39 @@ The operator $\mathfrak{D}$, firstly introduced by Holevo \cite{Holevo_1977}, pl
 \begin{equation}
 1\pm \frac{i}{2}\mathfrak{D}\geq 0.
 \end{equation}
-
+On the other hand we can also regard $\mathfrak{N}$ as a Hilbert-Schmidt space with another inner product
+$$
+\langle A, B \rangle_2 =\mbox{Tr}(A^{\ast}B),
+$$
+by virtue of its finite-dimensionality and denote it by $\mathfrak{H}_2$.
+Let us consider a $\ast$-representation on $\mathfrak{H}_2$
+\begin{equation}\label{star-rep}
+\ell :\mathfrak{N}\to \mathfrak{B}(\mathfrak{H}_2),
+\end{equation}
+where $\mathfrak{B}(\mathfrak{H}_2)$ is the ensemble of bounded operators on $\mathfrak{H}_2$
+and $\ell(A)B=AB$.
+Then the state $\omega$ can be written by the inner product $\langle \cdot, \cdot\rangle_2$ as 
+$$
+\omega(A)=\mbox{Tr}(\rho^{1/2}A\rho^{1/2})=\langle \rho^{1/2},\ell(A)\rho^{1/2}\rangle_2 .
+$$
+%Note that the two norms induced from the inner products $\langle \cdot,\cdot \rangle$ and 
+%$\langle \cdot,\cdot \rangle_2$ are related as
+%\begin{equation}
+%\begin{split}
+%\parallel A\parallel^2 &= \langle A,A\rangle \\
+%&=\frac{1}{2}(\langle \rho^{1/2}A,\rho^{1/2}A\rangle_2+\langle %A\rho^{1/2},A\rho^{1/2}\rangle_2  )\\
+%&\leq \frac{1}{2}(\parallel \rho^{1/2}A\parallel_2^2+\parallel A\rho^{1/2}\parallel_2^2)\\
+%&=\parallel \rho^{1/2}\parallel_{\cal H} ^2 \parallel A\parallel_2^2,
+%\end{split}
+%\end{equation}
+%where $\parallel \cdot \parallel_{\cal H}$ is the operator norm for $\mathfrak{B}({\cal H})$
+%and $\parallel \cdot \parallel_2$ is the norm for the Hilbert-Schdmit space %$\mathfrak{H}_2$. 
+{\bf Remark:} In the present case we have $\mathfrak{H}_2=\mathfrak{H}$, but when we consider an infinite
+dimensional Hilbert space ${\cal H}$ the equality does not hold, i.e. $\mathfrak{H}_2\subset \mathfrak{B}({\cal H})\subset \mathfrak{H}$. This may make it difficult to extend the discussion in Sec. 4 to the infinite dimensional case.\\
+As stated in Sec. 3, we can define the
+modular operator $\Delta$ for the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and its cyclic separating vector $\rho^{1/2} \in \mathfrak{H}_2$. 
+In this paper we derive a simple relation between such derived modular operator and the commutation operator:
+$$
+    \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
+$$
+which is originally shown in \cite{Holevo_1977}.

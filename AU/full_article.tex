@@ -70,9 +70,6 @@ The operator $\mathfrak{D}$, firstly introduced by Holevo \cite{Holevo_1977}, pl
 \begin{equation}
 1\pm \frac{i}{2}\mathfrak{D}\geq 0.
 \end{equation}
-
-
-
 On the other hand we can also regard $\mathfrak{N}$ as a Hilbert-Schmidt space with another inner product
 $$
 \langle A, B \rangle_2 =\mbox{Tr}(A^{\ast}B),
@@ -113,7 +110,7 @@ which is originally shown in \cite{Holevo_1977}.
 
 \section{Representation on $\cal{H}\otimes\cal{H}$}
 
- We identify the Hilbert-Schmidt space $\mathfrak{H}_2(=\mathfrak{N}=M_n(\mathbb{C})=\mathfrak{B}({\cal H}))$ on ${\cal H}=\mathbb{C}^n$ with $\cal{H}\otimes\cal{H}$
+ We identify the Hilbert-Schmidt space $\mathfrak{H}_2(=\mathfrak{N}=M_n(\mathbb{C}))$ on ${\cal H}=\mathbb{C}^n$ with $\cal{H}\otimes\cal{H}$
 by a unitary operator satisfying 
 $$
 v(e_je_k^T)=e_j\otimes e_k,
@@ -170,7 +167,7 @@ we have
 \mathfrak{M}^{\prime\prime}&=v^\ast \tilde{r}(\mathfrak{N})^\prime v= v^\ast \tilde{\ell}(\mathfrak{N})v=\ell(\mathfrak{N})=\mathfrak{M}.
 \end{split}
 \end{equation}
-We introduce  a cyclic and separating vector $\rho^{1/2}$, satisfying 
+We introduce  a cyclic separating vector $\rho^{1/2}$, satisfying 
 $$
 \mathfrak{H}_2=\mathfrak{M}\rho^{1/2}=\mathfrak{M}^\prime \rho^{1/2},
 $$
@@ -228,7 +225,6 @@ In a similar way we have
 $$
 F(X)=\Delta^{1/2}J(X).
 $$
-
 Since
 \begin{equation}
 \begin{split}
@@ -255,10 +251,6 @@ Thus we obtain the main results of Tomita-Takesaki theory in our case:
 Remark that the above discussion can be easily extend to the case where 
 $\mathfrak{N}=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C})$.
 The proof of Tomita-Takesaki theory for a finite dimensional von Neumann algebra is given in the Appendix.
-
-
-
-
 
 \section{Relation between Holevo's commutation operator and modular operator}
 
@@ -301,7 +293,7 @@ that
 	\end{equation}
 From our assumption stated in Sec. 1,
 $\rho^{1/2}$ is a non-degenerated operator and hence we can use it as a 
-cyclic and separating vector in Sec. 3.
+cyclic separating vector in Sec. 3.
 Thus, from Eqs. (\ref{plusD}), (\ref{minusD}) and (\ref{Delta})  we conclude
 		$$
     \Delta=\left(1+\frac{i}{2}\mathfrak{D}\right)\left(1-\frac{i}{2}\mathfrak{D}\right)^{-1},
@@ -329,9 +321,6 @@ The Wedderburn theorem states that a finite dimensional $C^{\ast}$ algebra is  $
 $$
 \varphi:\tilde{\mathfrak{N}}\simeq \mathfrak{N}:=M_{m_1}(\mathbb{C})\oplus \cdots \oplus M_{m_n}(\mathbb{C}).
 $$
-
-
-
 Let us consider the faithful state on $\tilde{\mathfrak{N}}$ as
 $$
 \omega_\xi(\tilde{A})=(\xi,\tilde{A}\xi)_{\cal K},\quad \tilde{A}\in \tilde{\mathfrak{N}},
@@ -341,9 +330,9 @@ Using this state we can define the state on $\mathfrak{N}$
 $$
 \omega(A)=\omega_\xi(\varphi^{-1}(A)),A\in \mathfrak{N},
 $$
-which is normal by virtue of finite-dimensionality and is faithful because $\xi$ is separating, i.e. there exists non-degenerated density operator $\rho$ such that $\omega(A)=\mbox{Tr}\rho A$.
+which is normal by virtue of finite-dimensionality and is faithful because $\xi$ is separating, i.e. there exists a non-degenerated density operator $\rho$ such that $\omega(A)=\mbox{Tr}\rho A$.
 Applying the discussion in Sec. 3 to the von Neumann algebra $\mathfrak{M}=\ell(\mathfrak{N})$ and 
-the cyclic and separating vector $\rho^{1/2}$, we get
+the cyclic separating vector $\rho^{1/2}$, we get
 the operators, $S, F, J$ and $\Delta$.
 In particular the operators $S$ and $F$ are given by Eqs. (\ref{OprS}) and (\ref{OprF}).
 Here we have
@@ -371,9 +360,9 @@ and hence
 \end{equation}
 Moreover  
 \begin{equation}\label{MRel}
-\tilde{\mathfrak{N}}=U\ell(\mathfrak{N})U^\ast,
+\tilde{\mathfrak{N}}=U\mathfrak{M}U^\ast,
 \end{equation}
-since $\varphi^{-1}(A)=U\ell (A) U^\ast$ for $A\in \mathfrak{N}$.
+since $\mathfrak{M}=\ell(\mathfrak{N})$ and $\varphi^{-1}(A)=U\ell (A) U^\ast$ for $A\in \mathfrak{N}$.
 From Eqs. (\ref{TT1}),(\ref{TT2}),(\ref{DRel}),(\ref{JRel}) and (\ref{MRel}), we conclude the main result of Tomita-Takesaki theory,
 \begin{equation}
 \begin{split}
